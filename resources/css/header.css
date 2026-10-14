@@ -1,0 +1,4 @@
+/* Site header layout */
+@utility grid-cols-header {
+    grid-template-columns: auto 9rem auto;
+}

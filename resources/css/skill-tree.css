@@ -1,0 +1,91 @@
+@theme {
+    --color-tree-panel: #434235;   /* tree panel background */
+    --color-tree-frame: #8a8977;   /* tree border and header bar */
+    --color-tree-hover: #34342c;   /* hover on the tree's Reset button */
+    --color-tree-line: #ffff64;    /* connector lines and arrowheads, drawn at 59% opacity like in game */
+    --color-tree-fourth: #03ca42;  /* tree 4 points banner (game green) */
+    --animate-reduced: reduced 0.8s ease-out; /* red outline that fades out on skills reset by a cascade */
+
+    @keyframes reduced {
+        0% { box-shadow: 0 0 0 2px #ef4444; }
+        100% { box-shadow: 0 0 0 2px transparent; }
+    }
+}
+
+[x-cloak] {
+    display: none !important;
+}
+
+@utility grid-rows-bar-trees {
+    grid-template-rows: auto 1fr;
+}
+
+/* tree background image */
+@utility bg-tree-tile {
+    background: var(--color-tree-panel) url('/images/tree/background_tile.webp') repeat; 
+}
+
+/* stone ledge behind the tree name */
+@utility bg-tree-ledge-top {
+    background: url('/images/tree/ledge_top.webp') repeat-x left bottom / auto 100%;
+}
+
+/* stone edge left of the first tree */
+@utility bg-tree-ledge-left {
+    background: url('/images/tree/ledge_left.webp') repeat-y center top / 100% auto; 
+}
+
+/* stone edge right of the last tree */
+@utility bg-tree-ledge-right {
+    background: url('/images/tree/ledge_right.webp') repeat-y center top / 100% auto; 
+}
+
+/* stone ledge under the tree's total points */
+@utility bg-tree-ledge-bottom {
+    background: url('/images/tree/ledge_bottom.webp') repeat-x left top / auto 100%;
+}
+
+/* golden frame */
+@utility skill-ready-frame {
+    position: absolute;
+    left: -6px;
+    top: -6px;
+    width: 46px;
+    height: 46px;
+    max-width: none;
+}
+
+/* guardian row beside the icon */
+@utility skill-stat {
+    position: absolute; 
+    left: 39px;
+    height: 10px;
+    padding-left: 14px;
+    background: no-repeat left center / 10px 10px;
+}
+
+/* card width, never wider than the screen */
+@utility skill-card {
+    width: min(24rem, calc(100vw - 16px)); 
+    max-height: calc(100vh - 16px);
+    overflow-y: auto;
+}
+
+/* no image menu on a long press (iPhone) */
+@utility no-callout {
+    -webkit-touch-callout: none;
+}
+
+/* arrowhead */
+@utility arrowhead-d {
+    clip-path: polygon(0 0,100% 0,100% 20%,90% 20%,90% 40%,80% 40%,80% 60%,70% 60%,70% 80%,60% 80%,60% 100%,40% 100%,40% 80%,30% 80%,30% 60%,20% 60%,20% 40%,10% 40%,10% 20%,0 20%);
+}
+@utility arrowhead-u {
+    clip-path: polygon(40% 0,60% 0,60% 20%,70% 20%,70% 40%,80% 40%,80% 60%,90% 60%,90% 80%,100% 80%,100% 100%,0 100%,0 80%,10% 80%,10% 60%,20% 60%,20% 40%,30% 40%,30% 20%,40% 20%);
+}
+@utility arrowhead-l {
+    clip-path: polygon(100% 0,80% 0,80% 10%,60% 10%,60% 20%,40% 20%,40% 30%,20% 30%,20% 40%,0 40%,0 60%,20% 60%,20% 70%,40% 70%,40% 80%,60% 80%,60% 90%,80% 90%,80% 100%,100% 100%);
+}
+@utility arrowhead-r {
+    clip-path: polygon(0 0,20% 0,20% 10%,40% 10%,40% 20%,60% 20%,60% 30%,80% 30%,80% 40%,100% 40%,100% 60%,80% 60%,80% 70%,60% 70%,60% 80%,40% 80%,40% 90%,20% 90%,20% 100%,0 100%);
+}

@@ -1,0 +1,13 @@
+<?php
+
+return [
+    'page_title' => 'Mage Tree',
+    'pageDescription' => 'Explore and Simulate all the Skills of the Mage Class.',
+    'level' => 'Level ',
+    'available_skill_points' => 'Available Skill Points',
+    'reset_all' => 'Reset All',
+    'reset' => 'Reset',
+    'total_points_used_on_tree' => 'Total Points on This Characteristic ',
+    'second_job_divider' => '2nd Job (Lvl +24)',
+    'third_job_divider' => '3rd Job (Lvl +40)',
+];

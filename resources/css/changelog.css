@@ -1,0 +1,12 @@
+/* the underline classes for changelog descriptions (Bleeding red, Poison green) */
+@source inline("underline decoration-2 decoration-red-400 decoration-green-400");
+
+/* before/after table = label column + one column per level */
+@utility levels-grid {
+    grid-template-columns: auto repeat(var(--cols), minmax(0, 1fr));
+}
+
+/* skill box = icon column + content column */
+@utility grid-cols-skill-row {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+}

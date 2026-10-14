@@ -1,0 +1,22 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "test:js": "node --test tests/js/*.test.js"
+    },
+    "devDependencies": {
+        "@tailwindcss/vite": "^4.3.3",
+        "laravel-vite-plugin": "^3.2.0",
+        "prettier": "^3.9.6",
+        "prettier-plugin-tailwindcss": "^0.8.1",
+        "tailwindcss": "^4.3.3",
+        "vite": "^8.2.2"
+    },
+    "dependencies": {
+        "@fontsource/ibm-plex-sans-arabic": "^5.3.0",
+        "alpinejs": "^3.17.4",
+        "modern-screenshot": "^4.7.0"
+    }
+}

@@ -1,0 +1,27 @@
+<?php
+
+return [
+    'name' => 'Skill Tree Simulator',
+    'description' => 'Explore and Simulate all the Skill Trees of the Classes of WOS: Warrior, Mage and Archer.',
+    'home' => 'Home',
+    'warrior' => 'Warrior',
+    'mage' => 'Mage',
+    'archer' => 'Archer',
+    'changelog' => 'Change Log',
+    'change_language_to' => 'Change language to',
+    'copyright' => 'Skill Tree Simulator for ',
+    'wos' => 'World Of Secrets',
+    'urlLabel' => 'World of Secrets Website',
+    'changelogdescr' => 'Change Log for any changes regarding the Skills.',
+    'maintenance_title' => 'Under Maintenance',
+    'maintenance_1st_message' => 'We are down for maintenance.',
+    'maintenance_2nd_message' => 'Be right back!',
+    'not_found' => 'Page Not Found',
+    'not_found_hint' => 'The link may be wrong, or the page was moved.',
+    'server_error' => 'Server Error',
+    'server_error_hint' => 'Something went wrong on our side. Please try again in a moment.',
+    'main_menu' => 'Main menu',
+    'open_menu' => 'Open menu',
+    'close_menu' => 'Close menu',
+    'fourth_tree' => 'Fourth Tree',
+];

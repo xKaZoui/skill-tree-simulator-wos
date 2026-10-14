@@ -1,0 +1,46 @@
+@import './fonts.css' layer(base);
+@import 'tailwindcss';
+@import './skill-tree.css';
+@import './header.css';
+@import './changelog.css';
+
+/* Theme */
+@theme {
+    --color-brown: #4e4130;
+
+    --shadow-white: 0 0 3px 0 rgba(255, 255, 255, 0.1), 0 0 2px 0 rgba(255, 255, 255, 0.06);
+    --shadow-pic: 0 0 3.5px 2px rgba(255, 255, 255, 0.1), 0 0 3.5px 2px rgba(255, 255, 255, 0.06);
+
+    /* black or white outline around text */
+    --text-shadow-points: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    --text-shadow-level: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+    --text-shadow-homeProf: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+
+    --text-xxs: 0.65rem;
+    --text-xxs--line-height: 0.8rem;
+}
+
+
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@layer base {
+    html {
+        font-family: "Saira Semi Condensed", "IBM Plex Sans Arabic", system-ui, sans-serif;
+    }
+}
+
+@layer base {
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+}
