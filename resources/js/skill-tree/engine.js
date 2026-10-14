@@ -84,6 +84,16 @@ export function createEngine(data) {
         };
     }
 
+    // Points in the same tree, in the rows above this skill only.
+    function pointsAbove(state, skill) {
+        let total = 0;
+        for (const [id, n] of Object.entries(state.points)) {
+            const other = skills.get(Number(id));
+            if (other && other.treeId === skill.treeId && other.row < skill.row) total += n;
+        }
+        return total;
+    }
+
     function unmetRequirements(state, skillId, totals = treeTotals(state)) {
         const skill = skills.get(skillId);
         const unmet = [];
@@ -92,8 +102,9 @@ export function createEngine(data) {
             unmet.push({ type: 'job_tier', jobTier: skill.jobTier, level: JOB_TIER_LEVELS[skill.jobTier] });
         }
 
-        if ((skill.requiredPoints ?? 0) > totals.get(skill.treeId)) {
-            unmet.push({ type: 'tree_points', required: skill.requiredPoints, current: totals.get(skill.treeId) });
+        const above = pointsAbove(state, skill);
+        if ((skill.requiredPoints ?? 0) > above) {
+            unmet.push({ type: 'tree_points', required: skill.requiredPoints, current: above });
         }
 
         for (const preId of requires.get(skillId)) {

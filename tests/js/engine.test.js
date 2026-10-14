@@ -114,18 +114,22 @@ test('ctrl + click adds as many points as possible', () => {
 test('removing from a prerequisite cascades to all dependents', () => {
     const s = state(40, { 1: 5, 3: 1, 2: 4, 4: 3 });
     const after = engine.remove(s, 1);
-    assert.deepEqual(after.points, { 1: 4, 2: 4 }); // C and D reset, B stays (8 > 5)
-    assert.deepEqual(engine.reduced(s, after).sort(), [1, 3, 4]);
+    assert.deepEqual(after.points, { 1: 4 }); // C and D reset, B too (row above has 4 < 5)
+    assert.deepEqual(engine.reduced(s, after).sort(), [1, 2, 3, 4]);
 });
 
-test("a skill's own points count toward its row requirement", () => {
-    // 5 in A, 4 in B; removing 1 from A leaves tree total 8 > 5, so B stays.
-    assert.deepEqual(engine.remove(state(40, { 1: 5, 2: 4 }), 1).points, { 1: 4, 2: 4 });
+test('only points in the rows above count toward a row requirement', () => {
+    // 5 in A (row 0), 4 in B (row 1, needs 5). Removing 1 from A leaves 4 above B -> B resets.
+    assert.deepEqual(engine.remove(state(40, { 1: 5, 2: 4 }), 1).points, { 1: 4 });
+    // Points in B's own row don't help it: B5 + C1 can't hold B up without A.
+    assert.deepEqual(engine.normalize(state(40, { 2: 5, 3: 1 })).points, {});
 });
 
-test('row requirement cascade when the tree total drops too low', () => {
-    // A5 + K5 = 10, K needs 10. Removing 1 from A -> 9 < 10 -> K resets.
-    assert.deepEqual(engine.remove(state(40, { 1: 5, 6: 5 }), 1).points, { 1: 4 });
+test('deeper rows cannot hold themselves up', () => {
+    // A5 + B5 = 10 above K (row 2, needs 10). Removing 1 from A -> B and K both reset.
+    assert.deepEqual(engine.remove(state(40, { 1: 5, 2: 5, 6: 5 }), 1).points, { 1: 4 });
+    // K's own 5 points never count toward its 10.
+    assert.ok(types(engine.blockers(state(40, { 1: 5, 6: 4 }), 6)).includes('tree_points'));
 });
 
 test('ctrl + right click returns a skill to 0 and cascades', () => {
