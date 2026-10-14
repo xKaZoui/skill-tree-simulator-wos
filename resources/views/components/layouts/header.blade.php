@@ -58,7 +58,7 @@
                 <x-bi-list x-show="! mobileMenuOpen" aria-hidden="true" class="size-8" />
                 <x-bi-x-lg x-show="mobileMenuOpen" aria-hidden="true" class="size-8 text-red-500" x-cloak />
             </button>
-            <a href="{{ route('locale.switch', $other) }}" data-keep-build class="inline-flex size-10 items-center justify-center"
+            <a href="{{ route('locale.switch', ['locale' => $other, 'to' => request()->getRequestUri()]) }}" data-keep-build class="inline-flex size-10 items-center justify-center"
                 aria-label="{{ __('app.change_language_to') }} {{ config("app.supported_locales.{$other}.name") }}">
                 <x-icon name="flag-country-{{ config('app.supported_locales.'.$other.'.icon') }}" class="h-6 w-6" />
             </a>
@@ -72,7 +72,7 @@
 
         {{-- Language flag beside the menu for large screens --}}
         <div class="absolute top-1/2 hidden -translate-y-1/2 lg:block {{ $locale === 'ar' ? 'right-full -translate-x-8' : 'left-full translate-x-8' }}">
-            <a href="{{ route('locale.switch', $other) }}" data-keep-build class="inline-flex size-10 items-center justify-center"
+            <a href="{{ route('locale.switch', ['locale' => $other, 'to' => request()->getRequestUri()]) }}" data-keep-build class="inline-flex size-10 items-center justify-center"
                 aria-label="{{ __('app.change_language_to') }} {{ config("app.supported_locales.{$other}.name") }}">
                 <x-icon name="flag-country-{{ config('app.supported_locales.'.$other.'.icon') }}" class="h-6 w-6" />
             </a>

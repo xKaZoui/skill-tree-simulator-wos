@@ -58,9 +58,27 @@ it('lists every patch on the change log, newest first', function () {
 
 it('goes back to the same page in English after a language switch', function () {
     $this->from('/mage')
-        ->get('/locale/en')
-        ->assertRedirect('/mage')
+        ->get('/locale/en?to=%2Fchangelog')
+        ->assertRedirect('/changelog')
         ->assertSessionHas('locale', 'en');
 
-    $this->get('/mage')->assertOk()->assertSee('Mage');
+    $this->get('/changelog')->assertOk();
+});
+
+it('keeps the query string after a language switch', function () {
+    $this->get('/locale/en?to='.urlencode('/mage?skill=121'))
+        ->assertRedirect('/mage?skill=121');
+});
+
+it('never redirects to another site after a language switch', function () {
+    foreach (['//example.com', 'https://example.com', '/\\example.com', ''] as $to) {
+        $this->get('/locale/en?to='.urlencode($to))->assertRedirect(route('Home'));
+    }
+    $this->get('/locale/en')->assertRedirect(route('Home'));
+});
+
+it('the language link points back to the current page', function () {
+    $this->get('/changelog')
+        ->assertOk()
+        ->assertSee(e(route('locale.switch', ['locale' => 'en', 'to' => '/changelog'])), false);
 });
