@@ -107,23 +107,12 @@ function requiredPointsText(skill, treeName, labels) {
     return skill.jobTier >= 4 ? labels.learned_job_changed : labels.learned_instantly;
 }
 
-// "60 Points total in: Dragon Slayer, Bloody Song and Soul of Master."
-// Arabic tree names drop their "شجرة" prefix = the label already says "من شجرات"
-function totalPointsText({ points, treeNames }, labels, comma) {
-    const names = treeNames.map((name) => name.replace(/^شجرة\s+/, ''));
-    const last = names.pop();
-    const list = names.length ? `${names.join(comma)}${labels.list_and}${last}` : last;
-
-    return `${points} ${labels.total_points_in} ${list}.`;
-}
-
 /**
  * skill:    payload skill
- * context:  { points, canAdd, labels, locale, treeName, required: [{ name, maxPoints }],
- *             investment?: { points, treeName }, baseTotal?: { points, treeNames } }   (tree 4 only)
+ * context:  { points, canAdd, labels, locale, treeName, required: [{ name, maxPoints }] }
  */
 export function skillCard(skill, context) {
-    const { points, canAdd, labels, locale, treeName, required, investment, baseTotal } = context;
+    const { points, canAdd, labels, locale, treeName, required } = context;
     const tip = skill.tip ?? {};
     const comma = locale === 'ar' ? '، ' : ', ';
 
@@ -131,9 +120,6 @@ export function skillCard(skill, context) {
         [labels.job, jobText(skill.jobTier, labels)],
         [labels.required_skill, required.length ? `${required.map((r) => `${r.name} ${r.maxPoints}/${r.maxPoints}`).join(comma)}.` : labels.do_not_have],
         [labels.required_points, requiredPointsText(skill, treeName, labels)],
-        // tree 4 = attack skills need points in one base tree, passives a total over the 3 base trees
-        investment?.points ? [labels.required_tree_points, pointsText(investment.points, investment.treeName, labels)] : null,
-        baseTotal?.points ? [labels.required_total_points, totalPointsText(baseTotal, labels, comma)] : null,
         [labels.skill_type, tip.typeName],
         // stat skills of tree 4 use no weapon
         [labels.weapon, tip.weapon || labels.do_not_have],

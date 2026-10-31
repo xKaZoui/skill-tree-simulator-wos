@@ -27,9 +27,6 @@ return new class extends Migration
             $table->integer('sguardian_points')->nullable();
             $table->integer('tguardian_points')->nullable();
             $table->integer('required_points')->nullable(); // points in its own tree
-            $table->unsignedSmallInteger('required_total_base_points')->nullable(); // fourth tree: total in the 3 base trees
-            $table->foreignId('required_investment_tree_id')->nullable()->constrained('skill_trees')->restrictOnDelete();
-            $table->unsignedSmallInteger('required_investment_points')->nullable(); // fourth tree: points in that one tree
             $table->json('attribute')->nullable();
             $table->integer('mp_use')->nullable();
             $table->json('attack_type')->nullable();

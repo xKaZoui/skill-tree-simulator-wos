@@ -74,31 +74,23 @@ test('with points: no state, colour by type, level text', () => {
     assert.equal(card.level, 'Lv. 3/5');
 });
 
-test('tree 4: own tree row points, base tree points, no level values yet', () => {
-    const labels = { ...en, required_tree_points: 'Required Tree Points', required_total_points: 'Required Total Points', learned_job_changed: 'Learned Instantly when Job Changed', total_points_in: 'Points total in:', list_and: ' and ' };
+test('tree 4: own tree row points, learned with the job change, no level values yet', () => {
+    const labels = { ...en, learned_job_changed: 'Learned Instantly when Job Changed' };
     const rowsOf = (card) => Object.fromEntries(card.rows.map((r) => [r.label, r.value]));
 
     const attack = skillCard(skill({ type: 'attack', description: 'Hit for :x% for :y.' }, { requiredPoints: 15, jobTier: 4 }), ctx({
-        labels, treeName: 'Fourth Tree', investment: { points: 40, treeName: 'Soul of Master' },
+        labels, treeName: 'Fourth Tree',
     }));
     assert.equal(rowsOf(attack)['Required Points'], '15 Points in Fourth Tree');
-    assert.equal(rowsOf(attack)['Required Tree Points'], '40 Points in Soul of Master');
-    assert.equal(rowsOf(attack)['Required Total Points'], undefined);
     assert.match(attack.description, /Hit for <span[^>]*>\?<\/span>% for <span[^>]*>\?<\/span>\./);
     assert.equal(attack.levels, null);
 
-    const passive = skillCard(skill({ type: 'support' }, { requiredPoints: 0, jobTier: 4 }), ctx({
-        labels, treeName: 'Fourth Tree', baseTotal: { points: 60, treeNames: ['Dragon Slayer', 'Bloody Song', 'Soul of Master'] },
-    }));
+    const passive = skillCard(skill({ type: 'support' }, { requiredPoints: 0, jobTier: 4 }), ctx({ labels, treeName: 'Fourth Tree' }));
     assert.equal(rowsOf(passive)['Required Points'], 'Learned Instantly when Job Changed');
-    assert.equal(rowsOf(passive)['Required Total Points'], '60 Points total in: Dragon Slayer, Bloody Song and Soul of Master.');
 
     const arCard = skillCard(skill({ type: 'passive' }, { jobTier: 4 }), ctx({
         locale: 'ar',
-        labels: { ...labels, total_points_in: 'نقطة مجموع من شجرات:', list_and: ' و', do_not_have: 'لا يوجد' },
-        baseTotal: { points: 60, treeNames: ['شجرة قاهر التنين', 'شجرة أنشودة الهلاك', 'شجرة سيد الأعاصير'] },
+        labels: { ...labels, do_not_have: 'لا يوجد' },
     }));
-    const arRows = Object.fromEntries(arCard.rows.map((r) => [r.label, r.value]));
-    assert.equal(arRows['Required Total Points'], '60 نقطة مجموع من شجرات: قاهر التنين، أنشودة الهلاك وسيد الأعاصير.');
-    assert.equal(arRows.Weapon, 'لا يوجد');
+    assert.equal(rowsOf(arCard).Weapon, 'لا يوجد');
 });

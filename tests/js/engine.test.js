@@ -12,15 +12,12 @@ import {
  * Fixture: one class with 4 trees.
  * Tree 1 (id 1): A(1) r0, B(2) r1, C(3) r1 needs A maxed, K(6) r2, D(4) r2 tier 2 needs C maxed.
  * Tree 2 (id 2): F(10) r0.   Tree 3 (id 3): H(20) r0.
- * Tree 4 (id 4): T1(30) needs 10 points in tree 1; T2(31) needs 30 base points.
+ * Tree 4 (id 4): T1(30) r0, T2(31) r0.
  */
 const skill = (id, treeId, row, column, maxPoints, extra = {}) => ({
     id, treeId, row, column, maxPoints,
     jobTier: 1,
     requiredPoints: row * 5,
-    requiredTotalBasePoints: null,
-    requiredInvestmentTreeId: null,
-    requiredInvestmentPoints: null,
     ...extra,
 });
 
@@ -39,8 +36,8 @@ const data = {
         skill(4, 1, 2, 0, 3, { jobTier: 2 }),
         skill(10, 2, 0, 0, 5),
         skill(20, 3, 0, 0, 5),
-        skill(30, 4, 0, 0, 5, { jobTier: 4, requiredInvestmentTreeId: 1, requiredInvestmentPoints: 10 }),
-        skill(31, 4, 0, 1, 5, { jobTier: 4, requiredTotalBasePoints: 30 }),
+        skill(30, 4, 0, 0, 5, { jobTier: 4 }),
+        skill(31, 4, 0, 1, 5, { jobTier: 4 }),
     ],
     connections: [
         { from: 1, to: 3 },
@@ -164,18 +161,14 @@ test('tree 4 uses only the fourth-job pool', () => {
     assert.equal(engine.summary(s).baseAvailable, 100); // base pool untouched
 });
 
-test('tree 4 specific-tree investment requirement', () => {
-    assert.ok(types(engine.blockers(state(60, { 1: 5 }), 30)).includes('tree_investment'));
-    assert.deepEqual(engine.blockers(state(60, { 1: 5, 2: 5 }), 30), []);
+test('tree 4 first row opens at level 60', () => {
+    assert.deepEqual(engine.blockers(state(60), 30), []);
+    assert.deepEqual(engine.blockers(state(60), 31), []);
 });
 
-test('tree 4 total base points requirement', () => {
-    assert.ok(types(engine.blockers(state(60, { 1: 5, 2: 5 }), 31)).includes('base_points'));
-});
-
-test('resetting an original tree resets tree 4 skills that depended on it', () => {
+test('resetting a tree only clears that tree', () => {
     const after = engine.resetTree(state(60, { 1: 5, 2: 5, 10: 3, 30: 2 }), 1);
-    assert.deepEqual(after.points, { 10: 3 });
+    assert.deepEqual(after.points, { 10: 3, 30: 2 });
 });
 
 test('reset one tree and reset all', () => {

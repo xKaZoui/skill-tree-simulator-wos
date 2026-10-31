@@ -38,7 +38,7 @@ export function jobTierForLevel(level) {
 /**
  * data = {
  *   trees:       [{ id, position }],
- *   skills:      [{ id, treeId, row, column, maxPoints, jobTier, requiredPoints, requiredTotalBasePoints?, requiredInvestmentTreeId?, requiredInvestmentPoints? }],
+ *   skills:      [{ id, treeId, row, column, maxPoints, jobTier, requiredPoints }],
  *   connections: [{ from, to }],   // from skill must be maxed before to accepts points
  * }
  */
@@ -49,9 +49,6 @@ export function createEngine(data) {
 
     for (const s of skills.values()) {
         if (!trees.has(s.treeId)) throw new Error(`Skill ${s.id}: unknown tree ${s.treeId}.`);
-        if (s.requiredInvestmentTreeId != null && !trees.has(s.requiredInvestmentTreeId)) {
-            throw new Error(`Skill ${s.id}: unknown investment tree ${s.requiredInvestmentTreeId}.`);
-        }
         requires.set(s.id, []);
     }
     for (const { from, to } of data.connections) {
@@ -103,7 +100,7 @@ export function createEngine(data) {
         return total;
     }
 
-    function unmetRequirements(state, skillId, totals = treeTotals(state)) {
+    function unmetRequirements(state, skillId) {
         const skill = skills.get(skillId);
         const unmet = [];
 
@@ -119,28 +116,6 @@ export function createEngine(data) {
         for (const preId of requires.get(skillId)) {
             if (pointsOf(state, preId) < skills.get(preId).maxPoints) {
                 unmet.push({ type: 'prerequisite', skillId: preId });
-            }
-        }
-
-        if (skill.requiredTotalBasePoints != null) {
-            let baseTotal = 0;
-            for (const [treeId, n] of totals) {
-                if (trees.get(treeId).position !== FOURTH_TREE_POSITION) baseTotal += n;
-            }
-            if (baseTotal < skill.requiredTotalBasePoints) {
-                unmet.push({ type: 'base_points', required: skill.requiredTotalBasePoints, current: baseTotal });
-            }
-        }
-
-        if (skill.requiredInvestmentTreeId != null && skill.requiredInvestmentPoints != null) {
-            const invested = totals.get(skill.requiredInvestmentTreeId);
-            if (invested < skill.requiredInvestmentPoints) {
-                unmet.push({
-                    type: 'tree_investment',
-                    treeId: skill.requiredInvestmentTreeId,
-                    required: skill.requiredInvestmentPoints,
-                    current: invested,
-                });
             }
         }
 
@@ -191,12 +166,11 @@ export function createEngine(data) {
             while (changed) {
                 changed = false;
                 const current = withPoints(state, points);
-                const totals = treeTotals(current);
                 for (const id of Object.keys(points)) {
-                    if (unmetRequirements(current, Number(id), totals).length > 0) {
+                    if (unmetRequirements(current, Number(id)).length > 0) {
                         points = setPoints(points, id, 0);
                         changed = true;
-                        break; // totals changed, re-evaluate from scratch
+                        break; // points changed, re-evaluate from scratch
                     }
                 }
             }

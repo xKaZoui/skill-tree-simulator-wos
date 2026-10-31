@@ -318,12 +318,6 @@ export function skillTreePage(payload) {
                 locale: payload.locale,
                 treeName: treeNames.get(skill.treeId) ?? '',
                 required: requiredBy.get(skill.id) ?? [],
-                investment: skill.requiredInvestmentTreeId
-                    ? { points: skill.requiredInvestmentPoints, treeName: treeNames.get(skill.requiredInvestmentTreeId) ?? '' }
-                    : null,
-                baseTotal: skill.requiredTotalBasePoints
-                    ? { points: skill.requiredTotalBasePoints, treeNames: payload.trees.filter((t) => t.position < 4).map((t) => t.name) }
-                    : null,
             });
         },
 
