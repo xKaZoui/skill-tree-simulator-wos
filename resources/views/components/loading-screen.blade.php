@@ -10,6 +10,6 @@
         <path d="M22 12a10 10 0 0 0-10-10" stroke="currentColor" stroke-width="3" stroke-linecap="round" />
     </svg>
     @if ($slot->isNotEmpty())
-        <p class="text-lg text-white/80">{{ $slot }}</p>
+        <p class="text-lg text-white/80" dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}">{{ $slot }}</p>
     @endif
 </div>
