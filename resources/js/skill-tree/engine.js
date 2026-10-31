@@ -1,5 +1,5 @@
 // Skill tree rules engine.
-// state = { level: number, points: { [skillId]: number } }
+// state = { level: number, books: number, points: { [skillId]: number } }
 
 export const MIN_LEVEL = 5;
 export const BASE_POOL_MAX_LEVEL = 59;
@@ -9,9 +9,18 @@ export const FOURTH_TREE_POSITION = 4;
 // Minimum level for each job tier
 export const JOB_TIER_LEVELS = { 1: 5, 2: 24, 3: 40, 4: 60 };
 
-export function basePool(level) {
+// Skill Point Book: +1 point per book for trees 1-3, max 10 books
+export const MAX_BOOKS = 10;
+export const BOOK_LEVEL = JOB_TIER_LEVELS[4];
+
+export function booksAllowed(level, books) {
+    if (level < BOOK_LEVEL || !Number.isInteger(books)) return 0;
+    return Math.min(Math.max(books, 0), MAX_BOOKS);
+}
+
+export function basePool(level, books = 0) {
     const capped = Math.min(Math.max(level, MIN_LEVEL - 1), BASE_POOL_MAX_LEVEL);
-    return (capped - (MIN_LEVEL - 1)) * POINTS_PER_LEVEL;
+    return (capped - (MIN_LEVEL - 1)) * POINTS_PER_LEVEL + booksAllowed(level, books);
 }
 
 export function fourthPool(level) {
@@ -70,7 +79,7 @@ export function createEngine(data) {
             if (trees.get(treeId).position === FOURTH_TREE_POSITION) fourthSpent += n;
             else baseSpent += n;
         }
-        const base = basePool(state.level);
+        const base = basePool(state.level, state.books);
         const fourth = fourthPool(state.level);
         return {
             treeTotals: totals,
@@ -166,8 +175,8 @@ export function createEngine(data) {
     }
 
     // Resets everything that breaks a rule until the build is valid
-
-    function normalize(state) {
+    function normalize(input) {
+        const state = { ...input, books: booksAllowed(input.level, input.books) };
         let points = { ...state.points };
 
         for (const [id, n] of Object.entries(points)) {
@@ -255,6 +264,12 @@ export function createEngine(data) {
         return normalize({ ...state, level });
     }
 
+    function setBooks(state, books) {
+        if (!Number.isInteger(books) || books < 0 || books > MAX_BOOKS) throw new Error(`Invalid books ${books}.`);
+        if (books > 0 && state.level < BOOK_LEVEL) throw new Error(`Books need level ${BOOK_LEVEL}.`);
+        return normalize({ ...state, books });
+    }
+
     // Skill ids that had points in 'before' and lost some in 'after'
     function reduced(before, after) {
         return Object.keys(before.points)
@@ -263,7 +278,7 @@ export function createEngine(data) {
     }
 
     function emptyState(level = MIN_LEVEL) {
-        return { level, points: {} };
+        return { level, books: 0, points: {} };
     }
 
     return {
@@ -282,6 +297,7 @@ export function createEngine(data) {
         resetTree,
         resetAll,
         setLevel,
+        setBooks,
         reduced,
     };
 }

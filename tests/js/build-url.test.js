@@ -8,13 +8,21 @@ test('encodes level and points sorted by skill id, skipping zeros', () => {
 });
 
 test('decodes what it encodes', () => {
-    const state = { level: 62, points: { 7: 1, 120: 5 } };
+    const state = { level: 62, books: 0, points: { 7: 1, 120: 5 } };
     assert.deepEqual(decodeBuild(encodeBuild(state)), state);
-    assert.deepEqual(decodeBuild('35:'), { level: 35, points: {} });
+    assert.deepEqual(decodeBuild('35:'), { level: 35, books: 0, points: {} });
+});
+
+test('Skill Point Books are written as b + count after the level', () => {
+    assert.equal(encodeBuild({ level: 80, books: 7, points: { 12: 5 } }), '80b7:12-5');
+    assert.equal(encodeBuild({ level: 80, books: 0, points: {} }), '80:');
+    assert.deepEqual(decodeBuild('80b10:12-5'), { level: 80, books: 10, points: { 12: 5 } });
+    // links without books still work
+    assert.deepEqual(decodeBuild('80:12-5'), { level: 80, books: 0, points: { 12: 5 } });
 });
 
 test('rejects text that is not a build', () => {
-    for (const text of ['', null, 'abc', '80', '80:12', '80:12-', ':12-5', '80:12-5,', '1000:1-1']) {
+    for (const text of ['', null, 'abc', '80', '80:12', '80:12-', ':12-5', '80:12-5,', '1000:1-1', '80b:12-5', '80b100:12-5', 'b7:12-5']) {
         assert.equal(decodeBuild(text), null, text);
     }
 });

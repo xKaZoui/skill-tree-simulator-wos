@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
     createEngine,
+    MAX_BOOKS,
     basePool,
     fourthPool,
     jobTierForLevel,
@@ -191,4 +192,44 @@ test('invalid data is rejected', () => {
 test('invalid level is rejected', () => {
     assert.throws(() => engine.setLevel(state(10), 4));
     assert.throws(() => engine.setLevel(state(10), 10.5));
+});
+// Skill Point Book: +1 base point per book, max 10, only from level 60
+const books = (level, n, points = {}) => ({ level, books: n, points });
+
+test('books add base points only from level 60, up to 10', () => {
+    assert.equal(basePool(80, 7), 117);
+    assert.equal(basePool(80, 15), 110 + MAX_BOOKS);
+    assert.equal(basePool(59, 5), 110); // before the fourth job books do nothing
+    const s = engine.summary(books(80, 7));
+    assert.equal(s.baseAvailable, 117);
+    assert.equal(s.fourthAvailable, 42); // tree 4 pool untouched
+});
+
+test('setBooks validates and keeps the build valid', () => {
+    assert.equal(engine.setBooks(state(70), 3).books, 3);
+    assert.throws(() => engine.setBooks(state(59), 1));
+    assert.throws(() => engine.setBooks(state(70), 11));
+    assert.throws(() => engine.setBooks(state(70), -1));
+    assert.throws(() => engine.setBooks(state(70), 1.5));
+});
+
+test('fewer books remove points from the deepest skills first', () => {
+    // a big skill (120 points) in tree 2 so the whole pool can be spent
+    const big = createEngine({ ...data, skills: [...data.skills, skill(11, 2, 0, 1, 120)] });
+    const s = books(80, 2, { 1: 5, 11: 107 }); // 112 = 110 + 2 books
+    assert.equal(big.summary(s).baseAvailable, 0);
+    const after = big.setBooks(s, 0);
+    assert.deepEqual(after.points, { 1: 5, 11: 105 });
+    assert.deepEqual(big.reduced(s, after), [11]);
+});
+
+test('dropping below level 60 removes the books', () => {
+    const after = engine.setLevel(books(70, 5), 59);
+    assert.equal(after.books, 0);
+    assert.equal(engine.normalize(books(40, 5)).books, 0);
+});
+
+test('reset all keeps the level and the books', () => {
+    const after = engine.resetAll(books(70, 4, { 1: 5 }));
+    assert.deepEqual(after, { level: 70, books: 4, points: {} });
 });

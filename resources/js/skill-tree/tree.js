@@ -1,4 +1,4 @@
-import { createEngine, MIN_LEVEL } from './engine.js';
+import { createEngine, MIN_LEVEL, MAX_BOOKS, BOOK_LEVEL } from './engine.js';
 import { layoutTree } from './layout.js';
 import { skillCard } from './tooltip.js';
 import { encodeBuild, decodeBuild } from './build-url.js';
@@ -38,6 +38,12 @@ const MOVE_TOLERANCE = 10;
 const CARD_OFFSET = 15;
 const CARD_MARGIN = 8;
 
+// Returns the typed whole number if it is between min and max, otherwise null
+function readNumber(text, min, max) {
+    const n = Number.parseInt(text, 10);
+    return Number.isInteger(n) && n >= min && n <= max ? n : null;
+}
+
 export function skillTreePage(payload) {
     const engine = createEngine(payload);
     const skillsById = new Map(payload.skills.map((s) => [s.id, s]));
@@ -74,7 +80,10 @@ export function skillTreePage(payload) {
         trees,
         state: engine.emptyState(payload.defaultLevel ?? MIN_LEVEL),
         levelInput: String(payload.defaultLevel ?? MIN_LEVEL),
+        booksInput: '0',
         minLevel: MIN_LEVEL,
+        maxBooks: MAX_BOOKS,
+        bookLevel: BOOK_LEVEL,
         maxLevel: payload.maxLevel ?? 250,
         recentlyReduced: [],
         dividerLabels: payload.labels?.dividers ?? {},
@@ -123,11 +132,11 @@ export function skillTreePage(payload) {
             }
             if (!build || build.level < MIN_LEVEL || build.level > (payload.maxLevel ?? 250)) return;
             this.state = engine.normalize(build);
-            this.levelInput = String(build.level);
+            this.syncInputs();
             this.saveBuild();
         },
         saveBuild() {
-            const empty = Object.keys(this.state.points).length === 0 && this.state.level === (payload.defaultLevel ?? MIN_LEVEL);
+            const empty = Object.keys(this.state.points).length === 0 && this.state.level === (payload.defaultLevel ?? MIN_LEVEL) && !this.state.books;
             const hash = empty ? '' : `#${encodeBuild(this.state)}`;
             history.replaceState(history.state, '', location.pathname + location.search + hash);
             for (const link of document.querySelectorAll('a[data-keep-build]')) {
@@ -248,8 +257,17 @@ export function skillTreePage(payload) {
                         // no native field look
                         box.style.appearance = 'none';
                         box.textContent = input.getAttribute('value') ?? '';
+                        if (input.hasAttribute('data-capture-text')) {
+                            const total = clone.querySelector('[data-capture-total]');
+                            box.removeAttribute('style');
+                            box.style.fontSize = total?.style.fontSize ?? '';
+                            box.style.lineHeight = total?.style.lineHeight ?? '';
+                            for (const space of ['margin-left', 'margin-right', 'margin-inline-start', 'margin-inline-end']) total?.style.setProperty(space, '0');
+                            total?.parentElement.style.setProperty('column-gap', '0');
+                        }
                         input.replaceWith(box);
                     }
+                    for (const group of clone.querySelectorAll('[data-capture-shrink]')) group.style.width = 'auto';
                 },
             });
             const width = Number(svg.getAttribute('width'));
@@ -327,20 +345,29 @@ export function skillTreePage(payload) {
         resetAll() {
             this.apply(engine.resetAll(this.state), { outline: false });
         },
+        // Level and book boxes: apply the typed value if it is valid, then reset both boxes to the build's current values
         commitLevel() {
-            const level = Number.parseInt(this.levelInput, 10);
-            if (!Number.isInteger(level) || level < MIN_LEVEL || level > (payload.maxLevel ?? 250)) {
-                this.levelInput = String(this.state.level);
-                return;
-            }
-            this.apply(engine.setLevel(this.state, level));
-            this.levelInput = String(level);
+            const level = readNumber(this.levelInput, MIN_LEVEL, this.maxLevel);
+            if (level !== null) this.apply(engine.setLevel(this.state, level));
+            this.syncInputs();
         },
-        // - and + in the level box
+        commitBooks() {
+            const books = this.state.level >= BOOK_LEVEL ? readNumber(this.booksInput, 0, MAX_BOOKS) : null;
+            if (books !== null) this.apply(engine.setBooks(this.state, books));
+            this.syncInputs();
+        },
+        // - and + of the boxes
         stepLevel(step) {
-            const level = Math.min(Math.max(this.state.level + step, this.minLevel), this.maxLevel);
-            this.levelInput = String(level);
+            this.levelInput = String(this.state.level + step);
             this.commitLevel();
+        },
+        stepBooks(step) {
+            this.booksInput = String(this.state.books + step);
+            this.commitBooks();
+        },
+        syncInputs() {
+            this.levelInput = String(this.state.level);
+            this.booksInput = String(this.state.books);
         },
 
         // Skill card. 

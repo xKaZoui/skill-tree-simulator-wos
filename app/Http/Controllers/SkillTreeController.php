@@ -37,6 +37,7 @@ class SkillTreeController extends Controller
 
         $labels = [
             'level' => __("{$class}tree.level"),
+            'books' => __('treehelp.books'),
             'available_points' => __("{$class}tree.available_skill_points"),
             'reset_all' => __("{$class}tree.reset_all"),
             'reset' => __("{$class}tree.reset"),
@@ -49,7 +50,7 @@ class SkillTreeController extends Controller
 
         $payload = [
             'class' => $class,
-            'defaultLevel' => 80,
+            'defaultLevel' => 70,
             'maxLevel' => 80,
             'assets' => $assets,
             'locale' => app()->getLocale(),

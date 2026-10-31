@@ -6,6 +6,7 @@ return [
     'download' => 'Download image',
     'preparing' => 'Preparing the image...',
     'title' => 'How to use',
+    'books' => 'Skill Point Book',
     'level_hint_mouse' => 'Press Enter or click outside the box to update the points...',
     'level_hint_touch' => 'Tap outside the box to update the points...',
     'items' => [
@@ -16,7 +17,8 @@ return [
         ['mouse', 'Mouse over a skill:', 'shows its card.'],
         ['touch', 'Tap a skill:', 'adds +1 point.'],
         ['touch', 'Long press a skill:', 'shows its card with buttons to add or remove points.'],
-        ['all', 'Red outline:', 'the skill lost points after a level change or a removed requirement.'],
+        ['all', 'Skill Point Book:', 'from fourth job (+60), each book adds +1 point for first 3 trees (up to 10).'],
+        ['all', 'Red outline:', 'the skill lost points after a level or book change, or a removed requirement.'],
         ['all', 'Link:', 'the page link holds your build, copy it to share it.'],
     ],
 ];

@@ -11,41 +11,34 @@
 
             {{-- Level --}}
             <div class="flex flex-col items-center justify-center" dir="{{ $dir }}">
-                {{-- buttons --}}
-                <div class="mt-2" x-show="!sideBySide">
-                    @include('skill-tree.partials.toolbar')
-                </div>
                 <div>
                     <span class="text-2xl font-extrabold text-shadow-points">{{ $labels['level'] }}:</span>
-                    {{-- level box with - and + inside --}}
                     <div data-plain-ring class="m-2 inline-flex h-16 w-28 items-center justify-center gap-0.5 rounded-lg bg-black px-2.5 align-middle ring-1 ring-gray-300 ring-inset focus-within:ring-2 focus-within:ring-white">
-                        <button type="button" data-no-capture @click="stepLevel(-1)" :disabled="state.level <= minLevel" aria-label="-1"
-                            class="flex h-full shrink-0 items-center justify-center text-white/60 hover:text-white disabled:cursor-default disabled:opacity-25">
-                            <x-icons.level-step class="size-4" />
-                        </button>
+                        <x-step-button x-on:click="stepLevel(-1)" x-bind:disabled="state.level <= minLevel" />
                         <input type="text" inputmode="numeric" x-model="levelInput" aria-label="{{ $labels['level'] }}"
                             @change="commitLevel()" @keydown.enter.prevent="$event.target.blur()"
                             class="h-full w-14 min-w-0 border-0 bg-transparent p-0 text-center text-3xl font-extrabold text-red-600 caret-white text-shadow-level focus:outline-hidden">
-                        <button type="button" data-no-capture @click="stepLevel(1)" :disabled="state.level >= maxLevel" aria-label="+1"
-                            class="flex h-full shrink-0 items-center justify-center text-white/60 hover:text-white disabled:cursor-default disabled:opacity-25">
-                            <x-icons.level-step plus class="size-4" />
-                        </button>
+                        <x-step-button plus x-on:click="stepLevel(1)" x-bind:disabled="state.level >= maxLevel" />
                     </div>
                 </div>
-                <div x-show="levelInput !== String(state.level)" x-cloak>
+                <div x-show="levelInput !== String(state.level) || booksInput !== String(state.books)" x-cloak>
                     <span class="pointer-coarse:hidden">{{ __('treehelp.level_hint_mouse') }}</span>
                     <span class="hidden pointer-coarse:inline">{{ __('treehelp.level_hint_touch') }}</span>
                 </div>
             </div>
 
-            {{-- Points bars and trees. For wide screens trees 1-3 with their bar and tree 4 with its bar on the right --}}
+            {{-- Points bars and trees --}}
             <div :class="fourInRow && 'grid grid-flow-col grid-rows-bar-trees'">
                 {{-- Available points + reset all  --}}
                 <div class="@container relative flex justify-center border-y-4 border-black text-sm" dir="ltr">
-                    {{-- buttons on the right of the bar when the trees are side by side, on the left when tree 4 is next to the others --}}
-                    <div x-show="sideBySide" class="absolute inset-y-0 flex items-center" :class="fourInRow ? 'left-3' : 'right-3'">
+                    {{-- buttons and books --}}
+                    <div x-show="sideBySide" class="flex flex-1 items-center px-3" :class="fourInRow ? 'order-first' : 'order-last flex-row-reverse'">
                         @include('skill-tree.partials.toolbar')
+                        <div class="flex flex-1 justify-center">
+                            @include('skill-tree.partials.books')
+                        </div>
                     </div>
+                    <div x-show="sideBySide" class="flex-1" :class="fourInRow ? 'order-last' : 'order-first'"></div>
                     <img src="{{ asset('images/background/left_border_apoints.webp') }}" alt="">
                     <div class="flex w-full flex-row items-center justify-center bg-yellow-500 py-1 text-center text-black @xl:px-2 @2xl:w-2/3 @4xl:w-1/3">
                         <div class="flex-none py-0.5">
@@ -63,7 +56,13 @@
                     <img src="{{ asset('images/background/right_border_apoints.webp') }}" alt="">
                 </div>
 
-                {{-- Trees 1, 2, 3 are always left to right, stone ledges on the outer sides --}}
+                {{-- buttons and books under the bar when the trees are stacked --}}
+                <div x-show="!sideBySide" class="flex items-center justify-center gap-3 border-b-4 border-black py-2" dir="ltr">
+                    @include('skill-tree.partials.toolbar')
+                    @include('skill-tree.partials.books')
+                </div>
+
+                {{-- Trees 1, 2, 3 with stone ledges on the outer sides --}}
                 <div class="flex" dir="ltr">
                     <div class="w-5 shrink-0 bg-tree-ledge-left"></div>
                     <div class="flex divide-tree-frame" :class="sideBySide ? 'flex-row divide-x-4' : 'flex-col divide-y-4'">

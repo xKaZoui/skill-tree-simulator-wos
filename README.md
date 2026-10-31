@@ -12,6 +12,7 @@ A skill tree simulator for **World of Secrets** (عالم الأسرار). Plan 
 - **The game's rules.** Points available per level, job tiers, required skills and required tree points are all checked. Skills that lose points after a level change or a removed requirement get a red outline.
 - **Skill cards.** Hover a skill, or long-press it on a phone, to see its card with the values at the current level and a table of every level.
 - **Level box.** Type a level, or use the − and + buttons.
+- **Skill Point Books.** From fourth job, each book (up to 10) adds +1 point for trees 1–3, like the game’s Skill Point Book.
 - **Share link.** The page address holds the build, so copying the link shares it, and it survives a language switch.
 - **Image download.** Saves the whole board as a PNG, with the same layout from any screen.
 - **Change log.** Skill changes from each patch, grouped by date and class, with links to the Discord or forum announcements and an "Open tree" link to each skill.
