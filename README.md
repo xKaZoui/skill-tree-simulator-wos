@@ -2,7 +2,7 @@
 
 A skill tree simulator for **World of Secrets** (عالم الأسرار). Plan a build for any class before spending points in the game, then share it with a link or a picture.
 
-**Live site:** _coming soon_
+**Live site:** [wos-builds.com](https://wos-builds.com)
 
 ![The mage skill trees](public/images/pages/preview-mage.webp)
 
