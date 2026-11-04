@@ -949,7 +949,7 @@ return [
     ],
     [
         'id' => 274,
-        'name' => ['ar' => 'استخدام الدخيرة', 'en' => 'Add Ammo'],
+        'name' => ['ar' => 'استخدام الذخيرة', 'en' => 'Add Ammo'],
         'description' => [
             'ar' => 'تزيد من قوة هجومك بنسبة :x% وذلك عند استخدامك مهارات القوس.',
             'en' => 'Increase your attack by :x% when you use bow skills.',
@@ -1215,9 +1215,9 @@ return [
     ],
     [
         'id' => 282,
-        'name' => ['ar' => 'عين الصقر', 'en' => 'Hawk Eye'],
+        'name' => ['ar' => 'عين النسر', 'en' => 'Hawk Eye'],
         'description' => [
-            'ar' => 'تمنحك عين الصقر الثاقبة لتزيد من مدى قدراتك العادية و مهاراتك الهجومية ب:x أمتار.',
+            'ar' => 'تمنحك عين النسر الثاقبة لتزيد من مدى قدراتك العادية و مهاراتك الهجومية ب:x أمتار.',
             'en' => 'Obtain the hawk eye to increase the range of your normal and skill attacks by :x M.',
         ],
         'levels' => [
@@ -1960,7 +1960,7 @@ return [
     ],
     [
         'id' => 305,
-        'name' => ['ar' => 'تدريب ردة الفعل', 'en' => 'Reflex Training'],
+        'name' => ['ar' => 'تدريب رد الفعل', 'en' => 'Reflex Training'],
         'description' => [
             'ar' => 'تدرب على رد الفعل السريع لزيادة نسبة التفادي بــ+:x%.',
             'en' => 'Train your reflex to increase the chance to dodge for +:x%.',
@@ -2186,11 +2186,11 @@ return [
         'tguardian_points' => 0,
         'required_points' => 10,
         'attribute' => ['en' => null],
-        'mp_use' => 15,
+        'mp_use' => 18,
         'attack_type' => ['en' => null],
         'selected_target' => ['ar' => 'تفعيل فوري', 'en' => 'Instant Activation'],
         'apply_target' => ['ar' => 'ذاتي', 'en' => 'Self'],
-        'cooltime' => 8,
+        'cooltime' => 5,
     ],
     [
         'id' => 312,
@@ -2256,16 +2256,16 @@ return [
         'id' => 314,
         'name' => ['ar' => 'الهجوم المفزع', 'en' => 'Fearful Counterattack'],
         'description' => [
-            'ar' => 'زيادة قوة الهجوم والدفاع بنسبة :x% ولمدة 1 دقيقة و30 ثانية.',
-            'en' => 'Increase your attack and defense for :x% for 1 minute and 30 seconds.',
+            'ar' => 'زيادة قوة الهجوم والدفاع بنسبة :x% و:y% على التوالي ولمدة 1 دقيقة و30 ثانية.',
+            'en' => 'Increase your attack and defense by :x% and :y% respectively for 1 minute and 30 seconds.',
         ],
         'levels' => [
-            ['level' => 0, 'x' => 0],
-            ['level' => 1, 'x' => 2],
-            ['level' => 2, 'x' => 4],
-            ['level' => 3, 'x' => 6],
-            ['level' => 4, 'x' => 8],
-            ['level' => 5, 'x' => 10],
+            ['level' => 0, 'x' => 0, 'y' => 0],
+            ['level' => 1, 'x' => 2, 'y' => 4],
+            ['level' => 2, 'x' => 4, 'y' => 8],
+            ['level' => 3, 'x' => 6, 'y' => 12],
+            ['level' => 4, 'x' => 8, 'y' => 16],
+            ['level' => 5, 'x' => 10, 'y' => 20],
         ],
         'image' => 'archer/soul_of_master/fearful_counterattack.webp',
         'skill_tree_id' => 11,
@@ -2384,7 +2384,7 @@ return [
     ],
     [
         'id' => 318,
-        'name' => ['ar' => 'سيد المنجيق', 'en' => 'Ballista Mastery'],
+        'name' => ['ar' => 'سيد المنجنيق', 'en' => 'Ballista Mastery'],
         'description' => [
             'ar' => 'زيادة قوة هجومك بنسبة :x% عند استخدامك للمنجيق.',
             'en' => 'Increase your attack for :x% when you use a ballista.',
@@ -2546,7 +2546,7 @@ return [
     ],
     [
         'id' => 323,
-        'name' => ['ar' => 'خبرة المنجيق', 'en' => 'Understand Ballista Structure'],
+        'name' => ['ar' => 'خبرة المنجنيق', 'en' => 'Understand Ballista Structure'],
         'description' => [
             'ar' => 'تقلل من فرصة عدم إصابة الهدف بنسبة +:x% عند استخدامك للمنجيق.',
             'en' => 'Reduce your chance to miss by +:x% when you use a ballista.',
@@ -2769,7 +2769,7 @@ return [
         'id' => 330,
         'name' => ['ar' => 'تعزيز الهجوم المفزع', 'en' => 'Enhanced Fearful Counterattack'],
         'description' => [
-            'ar' => 'الرماة الأقوياء بإمكانهم أن يردوا الهجوم بشكل أكثر شراسة، فخلال دقيقة و20 ثانية يزداد الهجوم والدفاع بنسبة :x% وأيضا :y% على التوالي.',
+            'ar' => 'الرماة الأقوياء بإمكانهم أن يردوا الهجوم بشكل أكثر شراسة، فخلال دقيقة و30 ثانية يزداد الهجوم والدفاع بنسبة :x% وأيضا :y% على التوالي.',
             'en' => 'Strong archers can counterattack more aggressively. For 1 minute 30 seconds, attack and defense will increase by :x% and :y% respectively.',
         ],
         'levels' => [
@@ -2960,12 +2960,12 @@ return [
         'id' => 336,
         'name' => ['ar' => 'سحب الضرر', 'en' => 'Archer\'s Soul'],
         'description' => [
-            'ar' => 'تمنحك الحماية التي تمتص :x% من نسبة الحد الأقصى لنقاط الصحة لمدة :y ثانية.',
+            'ar' => 'تمنحك الحماية التي تمتص :x% من نسبة الحد الأقصى لنقاط الطاقة لمدة :y ثانية.',
             'en' => 'A protection that can absorb :x% of the Max MP will be created, it lasts for :y seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
-            ['level' => 1, 'x' => 155, 'y' => 80],
+            ['level' => 1, 'x' => 8, 'y' => 30],
         ],
         'image' => 'archer/soul_of_master/archers_soul.webp',
         'skill_tree_id' => 11,
@@ -2988,7 +2988,7 @@ return [
     ],
     [
         'id' => 337,
-        'name' => ['ar' => 'تسارع المنجيق', 'en' => 'Accelerate Ballista'],
+        'name' => ['ar' => 'تسارع المنجنيق', 'en' => 'Accelerate Ballista'],
         'description' => [
             'ar' => 'زيادة سرعة الهجوم بنسبة :x% وذلك عند استخدامك للمنجيق.',
             'en' => 'Increase your attack speed by :x% when you use a ballista.',
@@ -3155,11 +3155,11 @@ return [
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
-            ['level' => 1, 'x' => 355, 'y' => 330, 'z' => 7],
-            ['level' => 2, 'x' => 400, 'y' => 350, 'z' => 9],
-            ['level' => 3, 'x' => 445, 'y' => 370, 'z' => 11],
-            ['level' => 4, 'x' => 490, 'y' => 390, 'z' => 13],
-            ['level' => 5, 'x' => 535, 'y' => 410, 'z' => 15],
+            ['level' => 1, 'x' => 355, 'y' => 330, 'z' => 11],
+            ['level' => 2, 'x' => 400, 'y' => 350, 'z' => 14],
+            ['level' => 3, 'x' => 445, 'y' => 370, 'z' => 17],
+            ['level' => 4, 'x' => 490, 'y' => 390, 'z' => 20],
+            ['level' => 5, 'x' => 535, 'y' => 410, 'z' => 23],
         ],
         'image' => 'archer/fourth_job/light_weight_bullet.webp',
         'skill_tree_id' => 12,
@@ -3178,7 +3178,7 @@ return [
         'attack_type' => ['ar' => 'عادي', 'en' => 'Normal'],
         'selected_target' => ['ar' => 'وحش', 'en' => 'Monster'],
         'apply_target' => ['ar' => 'وحش', 'en' => 'Monster'],
-        'cooltime' => 6,
+        'cooltime' => 2,
     ],
     [
         'id' => 343,
@@ -3189,11 +3189,11 @@ return [
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
-            ['level' => 1, 'x' => 210, 'y' => 385, 'z' => 9],
-            ['level' => 2, 'x' => 250, 'y' => 405, 'z' => 11],
-            ['level' => 3, 'x' => 290, 'y' => 425, 'z' => 13],
-            ['level' => 4, 'x' => 330, 'y' => 445, 'z' => 15],
-            ['level' => 5, 'x' => 370, 'y' => 465, 'z' => 17],
+            ['level' => 1, 'x' => 210, 'y' => 385, 'z' => 11],
+            ['level' => 2, 'x' => 250, 'y' => 405, 'z' => 14],
+            ['level' => 3, 'x' => 290, 'y' => 425, 'z' => 17],
+            ['level' => 4, 'x' => 330, 'y' => 445, 'z' => 20],
+            ['level' => 5, 'x' => 370, 'y' => 465, 'z' => 23],
         ],
         'image' => 'archer/fourth_job/splintering_arrow.webp',
         'skill_tree_id' => 12,
@@ -3246,7 +3246,7 @@ return [
         'attack_type' => ['ar' => 'عادي', 'en' => 'Normal'],
         'selected_target' => ['ar' => 'وحش', 'en' => 'Monster'],
         'apply_target' => ['ar' => 'وحش', 'en' => 'Monster'],
-        'cooltime' => 18,
+        'cooltime' => 30,
     ],
     [
         'id' => 345,
@@ -3288,11 +3288,11 @@ return [
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
-            ['level' => 1, 'x' => 288, 'y' => 4, 'z' => 8],
-            ['level' => 2, 'x' => 356, 'y' => 7, 'z' => 12],
-            ['level' => 3, 'x' => 424, 'y' => 10, 'z' => 16],
-            ['level' => 4, 'x' => 492, 'y' => 13, 'z' => 20],
-            ['level' => 5, 'x' => 560, 'y' => 16, 'z' => 24],
+            ['level' => 1, 'x' => 210, 'y' => 3, 'z' => 7],
+            ['level' => 2, 'x' => 260, 'y' => 5, 'z' => 10],
+            ['level' => 3, 'x' => 310, 'y' => 7, 'z' => 13],
+            ['level' => 4, 'x' => 360, 'y' => 9, 'z' => 16],
+            ['level' => 5, 'x' => 410, 'y' => 11, 'z' => 19],
         ],
         'image' => 'archer/fourth_job/mid_weight_bullet.webp',
         'skill_tree_id' => 12,
@@ -3311,7 +3311,7 @@ return [
         'attack_type' => ['ar' => 'عادي', 'en' => 'Normal'],
         'selected_target' => ['ar' => 'وحش', 'en' => 'Monster'],
         'apply_target' => ['ar' => 'وحش', 'en' => 'Monster'],
-        'cooltime' => 8,
+        'cooltime' => 12,
     ],
     [
         'id' => 347,
@@ -3781,8 +3781,8 @@ return [
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
-            ['level' => 1, 'x' => 8, 'y' => 3],
-            ['level' => 2, 'x' => 11, 'y' => 5],
+            ['level' => 1, 'x' => 11, 'y' => 5],
+            ['level' => 2, 'x' => 22, 'y' => 10],
         ],
         'image' => 'archer/fourth_job/auto_defense_device.webp',
         'skill_tree_id' => 12,

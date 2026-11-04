@@ -4,7 +4,7 @@
 
     <div class="mx-auto grid w-3/4 rounded-2xl border-4 border-white bg-brown text-white xl:h-96">
 
-        <div class="grid auto-rows-auto rounded-2xl bg-tree-tile lg:grid-cols-3">
+        <div class="grid auto-rows-auto rounded-2xl bg-tree-tile lg:grid-cols-3" dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}">
 
             {{-- Warrior --}}
             <div class="flex items-center justify-center rounded-2xl border-8 border-tree-frame p-2">

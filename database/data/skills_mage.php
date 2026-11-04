@@ -1156,7 +1156,7 @@ return [
     ],
     [
         'id' => 157,
-        'name' => ['ar' => 'الحماية النورية', 'en' => 'Protection of Holy Light'],
+        'name' => ['ar' => 'الحماية النورانية', 'en' => 'Protection of Holy Light'],
         'description' => [
             'ar' => 'تقلل من نسبة تهديد هجماتك بنسبة :x%، لكن قدرات الإسعاف والإنعاش لن تتأثر بهذا النقصان.',
             'en' => 'Reduce the threat ratio of your attack spells by :x%, but it doesn\'t affect the healing and recovery spell.',
@@ -2255,8 +2255,8 @@ return [
         'id' => 192,
         'name' => ['ar' => 'حماية', 'en' => 'Protection'],
         'description' => [
-            'ar' => 'حماية تمتص :x% نسبة من الحد الأقصى لنقاط الطاقة، تستمر الحماية لمدة 1 دقائق وتمتص 20% من كل هجوم.',
-            'en' => 'A protection is created to absorb damage which is equal to :x% of max MP. The protection last for 1 seconds and 20% of each attack will be absorbed.',
+            'ar' => 'حماية تمتص :x% نسبة من الحد الأقصى لنقاط الطاقة، تستمر الحماية لمدة دقيقة واحدة وتمتص 20% من كل هجوم.',
+            'en' => 'A protection is created to absorb damage which is equal to :x% of max MP. The protection lasts for 1 minute and 20% of each attack will be absorbed.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2381,9 +2381,9 @@ return [
     ],
     [
         'id' => 196,
-        'name' => ['ar' => 'تعزي قدرات الرامي', 'en' => 'Enhanced Range Effect'],
+        'name' => ['ar' => 'تعزيز قدرات الرامي', 'en' => 'Enhanced Range Effect'],
         'description' => [
-            'ar' => 'زيادة قوة هجومك الجسدي بنسبة :x% ولمدة 10 دقائق وذلك عند استخدامك للنشاب، القوس أو المنجيق. يمكن استخدام المهارة مع مهارات الضرر الأخرى.',
+            'ar' => 'زيادة قوة هجومك الجسدي بنسبة :x% ولمدة 10 دقائق وذلك عند استخدامك للنشاب، القوس أو المنجنيق. يمكن استخدام المهارة مع مهارات الضرر الأخرى.',
             'en' => 'Your attack is increased by :x% for 10 Minutes when using crossbow, bow or ballista. It can be used along with other damage buff skills.',
         ],
         'levels' => [
@@ -2888,8 +2888,8 @@ return [
         'id' => 212,
         'name' => ['ar' => 'الفخ الترابي', 'en' => 'Sand Trap'],
         'description' => [
-            'ar' => 'تسبب إرتجاجا عنيفا وضررا بنسبة 300% من هجومك السحري للأعداء المحيطين بك، بالإضافة إلى صعق العدو وإغشائه لمدة :x ثواني وبنسبة نجاح :y%.',
-            'en' => 'Shake the earth to inflict 300% of the magic attack on the enemies around you. In addition, stun the enemies for :x seconds for :y%.',
+            'ar' => 'تسبب إرتجاجا عنيفا وضررا بنسبة 100% من هجومك السحري للأعداء المحيطين بك، بالإضافة إلى صعق العدو وإغشائه لمدة :x ثواني وبنسبة نجاح :y%.',
+            'en' => 'Shake the earth to inflict 100% of the magic attack on the enemies around you. In addition, stun the enemies for :x seconds for :y%.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -3007,7 +3007,7 @@ return [
     ],
     [
         'id' => 216,
-        'name' => ['ar' => 'تعزيز سرعة الهجوم الفريق', 'en' => 'Enhanced Party Haste'],
+        'name' => ['ar' => 'تعزيز سرعة هجوم الفريق', 'en' => 'Enhanced Party Haste'],
         'description' => [
             'ar' => 'المقدام يمكنه زيادة سرعة الهجوم العادي (وليس المهارات) بنسبة :x% لتخفيف مقاومة الهواء حول الفريق. هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
             'en' => 'Mighty Archmage can increase the attack speed :x% to reduce the resistance of Air around their party. This skill can be used only when you\'re in a party.',
@@ -3102,7 +3102,7 @@ return [
     ],
     [
         'id' => 219,
-        'name' => ['ar' => 'تركيز حماية فريق', 'en' => 'Party Protection Focused Research'],
+        'name' => ['ar' => 'تركيز حماية الفريق', 'en' => 'Party Protection Focused Research'],
         'description' => [
             'ar' => 'يقل مقدار تهديد حماية الفريق بنسبة :x%.',
             'en' => 'The threat rate that causes the party protection will reduce by :x%.',
@@ -3193,7 +3193,7 @@ return [
         'attack_type' => ['ar' => 'رش', 'en' => 'Splash'],
         'selected_target' => ['ar' => 'تفعيل فوري', 'en' => 'Instant Activation'],
         'apply_target' => ['ar' => 'وحش', 'en' => 'Monster'],
-        'cooltime' => 6,
+        'cooltime' => 2,
     ],
     [
         'id' => 222,
@@ -3323,7 +3323,7 @@ return [
         'attack_type' => ['ar' => 'رش', 'en' => 'Splash'],
         'selected_target' => ['ar' => 'وحش', 'en' => 'Monster'],
         'apply_target' => ['ar' => 'وحش', 'en' => 'Monster'],
-        'cooltime' => 6,
+        'cooltime' => 18,
     ],
     [
         'id' => 226,
@@ -3553,7 +3553,7 @@ return [
         'attack_type' => ['en' => null],
         'selected_target' => ['ar' => 'تفعيل فوري', 'en' => 'Instant Activation'],
         'apply_target' => ['ar' => 'ذاتي', 'en' => 'Self'],
-        'cooltime' => 300,
+        'cooltime' => 60,
     ],
     [
         'id' => 233,
@@ -3714,7 +3714,7 @@ return [
         'attack_type' => ['en' => null],
         'selected_target' => ['ar' => 'تفعيل فوري', 'en' => 'Instant Activation'],
         'apply_target' => ['ar' => 'عضو فريق ضمن هذه المنطقة', 'en' => 'Party Member within Region'],
-        'cooltime' => 300,
+        'cooltime' => 60,
     ],
     [
         'id' => 238,
