@@ -40,11 +40,11 @@
                     </div>
                     <div x-show="sideBySide" class="flex-1" :class="fourInRow ? 'order-last' : 'order-first'"></div>
                     <img src="{{ asset('images/background/left_border_apoints.webp') }}" alt="">
-                    <div class="flex w-full flex-row items-center justify-center bg-yellow-500 py-1 text-center text-black @xl:px-2 @2xl:w-2/3 @4xl:w-1/3">
-                        <div class="flex-none py-0.5">
+                    <div class="flex w-full flex-row items-center justify-center bg-yellow-500 py-1 text-center text-black @xl:px-2 @xl:w-2/3 @4xl:w-1/3">
+                        <div class="flex flex-1 justify-center py-0.5">
                             <x-bi-exclamation-square class="size-6 rounded-sm bg-white stroke-brown" />
                         </div>
-                        <div class="flex-auto items-center px-1 whitespace-nowrap @xl:px-2 @2xl:flex-none" dir="{{ $dir }}">
+                        <div class="flex-none items-center px-1 whitespace-nowrap @xl:px-2" dir="{{ $dir }}">
                             {{ $labels['available_points'] }}
                             <span class="ms-1 inline-block min-w-10 border-b-2 border-current text-center leading-tight @xl:ms-4" x-text="summary.baseAvailable"></span>
                         </div>
@@ -52,6 +52,7 @@
                             class="shrink-0 rounded-sm border border-zinc-700 bg-yellow-600 px-1 py-0.5 text-center text-xs whitespace-nowrap hover:bg-yellow-700 @xl:px-2 @xl:text-sm">
                             {{ $labels['reset_all'] }}
                         </button>
+                        <div class="flex-1"></div>
                     </div>
                     <img src="{{ asset('images/background/right_border_apoints.webp') }}" alt="">
                 </div>
@@ -79,14 +80,15 @@
                         <div class="@container flex justify-center border-y-4 border-black text-sm" dir="ltr">
                             <img src="{{ asset('images/background/left_border_apoints_green.webp') }}" alt="">
                             <div class="flex w-full flex-row items-center justify-center bg-tree-fourth py-1 text-center text-black @xl:px-2"
-                                :class="!fourInRow && '@2xl:w-2/3 @4xl:w-1/3'">
-                                <div class="flex-none py-0.5">
+                                :class="!fourInRow && '@xl:w-2/3 @4xl:w-1/3'">
+                                <div class="flex flex-1 justify-center py-0.5">
                                     <x-bi-exclamation-square class="size-6 rounded-sm bg-white stroke-brown" />
                                 </div>
-                                <div class="flex-auto items-center px-1 whitespace-nowrap @xl:px-2 @2xl:flex-none" dir="{{ $dir }}">
+                                <div class="flex-none items-center px-1 whitespace-nowrap @xl:px-2" dir="{{ $dir }}">
                                     {{ $labels['available_points'] }}
                                     <span class="ms-1 inline-block min-w-10 border-b-2 border-current text-center leading-tight @xl:ms-4" x-text="summary.fourthAvailable"></span>
                                 </div>
+                                <div class="flex-1"></div>
                             </div>
                             <img src="{{ asset('images/background/right_border_apoints_green.webp') }}" alt="">
                         </div>

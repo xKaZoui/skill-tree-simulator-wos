@@ -103,6 +103,8 @@ export function skillTreePage(payload) {
 
         init() {
             this.restoreBuild();
+            // a build link on the same page only changes the '#', without a reload
+            window.addEventListener('hashchange', () => this.restoreBuild());
             this.$watch('state', () => this.saveBuild());
             this.fit();
             // after Alpine has drawn the trees, wait for every image on the page (header, icons, backgrounds)
@@ -122,7 +124,7 @@ export function skillTreePage(payload) {
             });
         },
 
-        // Build in the URL (#level:id-points,...): read on load, rewritten after every change (not affected by language switch).
+        // Build in the URL (#level:id-points,...) read on load and on '#' change, saved after every change.
         restoreBuild() {
             let build = null;
             try {
