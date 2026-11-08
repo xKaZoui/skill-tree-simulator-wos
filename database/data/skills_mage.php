@@ -3329,8 +3329,8 @@ return [
         'id' => 226,
         'name' => ['ar' => 'الاستيعاب الوهاج', 'en' => 'Radiant Understanding'],
         'description' => [
-            'ar' => 'إصابة الهدف بضرر مناخي نسبته :x% من الهجوم السحري، مسببا العدوى القاتلة بنسبة :y% لمدة :z ثانية.',
-            'en' => 'Damages the target with a climate attribute attack that does :x% magical damage. Causes an infection of :y% for :z seconds.',
+            'ar' => 'إصابة الهدف بضرر مناخي نسبته :x% من الهجوم السحري، وتقليل سرعة حركته بنسبة :y% لمدة :z ثانية.',
+            'en' => 'Damages the target with a climate attribute attack that does :x% magical damage and decreases its movement speed by :y% for :z seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
