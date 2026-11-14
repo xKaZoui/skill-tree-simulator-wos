@@ -845,8 +845,8 @@ return [
         'id' => 147,
         'name' => ['ar' => 'العمل الخطير', 'en' => 'Dangerous Business'],
         'description' => [
-            'ar' => 'تنقص من مقدار نقاط الصحة بنسبة :x% من نقاط الصحة المتبقية كل 2 ثواني ولمدة 20 ثانية، ويزيد هجومك السحري بنسبة :y%. المهارة لا تستطيع قتلك.',
-            'en' => 'Decrease your HP by :x% of the remaining HP every 2 seconds for 20 seconds, and increase magic attack by :y%. Skill cannot kill you.',
+            'ar' => 'تنقص من مقدار نقاط الصحة بنسبة :x% من نقاط الصحة المتبقية كل 2 ثواني ولمدة 20 ثانية، ويزيد هجومك السحري بنسبة :y%. المهارة لا تستطيع قتلك. -- استنزاف نقاط الصحة يوقظك من النوم. --',
+            'en' => 'Decrease your HP by :x% of the remaining HP every 2 seconds for 20 seconds, and increase magic attack by :y%. Skill cannot kill you. -- The HP drain wakes you up from sleep. --',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -2671,7 +2671,7 @@ return [
         'id' => 205,
         'name' => ['ar' => 'نعمة الإستعادة', 'en' => 'Blessed Recovery'],
         'description' => [
-            'ar' => 'امنح نفسك البركة لزيادة نسبة الإستعادة بمقدار :x% عند استخدامك مهارات الإسعاف، الإسترداد أو الترياق.',
+            'ar' => 'امنح نفسك البركة لزيادة العلاج الذي تتلقاه بنسبة :x% من مهارات الإسعاف، الإسترداد أو الترياق.',
             'en' => 'Bless yourself to increase the amount of regeneration by :x% when getting healing, recovery or using potion.',
         ],
         'levels' => [
@@ -3368,11 +3368,11 @@ return [
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
-            ['level' => 1, 'x' => 340, 'y' => 85],
-            ['level' => 2, 'x' => 415, 'y' => 130],
-            ['level' => 3, 'x' => 490, 'y' => 175],
-            ['level' => 4, 'x' => 565, 'y' => 220],
-            ['level' => 5, 'x' => 640, 'y' => 265],
+            ['level' => 1, 'x' => 340, 'y' => 80],
+            ['level' => 2, 'x' => 415, 'y' => 100],
+            ['level' => 3, 'x' => 490, 'y' => 120],
+            ['level' => 4, 'x' => 565, 'y' => 140],
+            ['level' => 5, 'x' => 640, 'y' => 160],
         ],
         'image' => 'mage/fourth_job/flame_explosion.webp',
         'skill_tree_id' => 8,

@@ -463,7 +463,7 @@ return [
         'name' => ['ar' => 'الهجوم الطاعن', 'en' => 'Repeated Hit'],
         'description' => [
             'ar' => 'تضرب عدوك مرتين متتاليتين من اليمين واليسار لإلحاق ضرر بنسبة :x% من هجومك في كل ضربة، يتعرض عدوك لانخفاض بنسبة :y% من نقاط صحة الإسعاف لمدة 12 ثانية وبفرصة نجاح 45%.',
-            'en' => 'Rapidly hit your enemy twice from the left and right to inflict :x% damage of your attack with each hit. Your enemy\'s ability to heal will reduced by :y% for 12 seconds at a 45% chance. It is very dangerous skill.',
+            'en' => 'Rapidly hit your enemy twice from the left and right to inflict :x% damage of your attack with each hit. The healing your enemy receives is reduced by :y% for 12 seconds at a 45% chance. It is very dangerous skill.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -1794,8 +1794,8 @@ return [
         'id' => 56,
         'name' => ['ar' => 'انتقام الدماء', 'en' => 'Bloody Revenge'],
         'description' => [
-            'ar' => 'تقلل نقاط الصحة بنسبة :x% من نقاط الصحة المتبقية كل :y ثواني لمدة :z ثانية، مع زيادة الهجوم بنسبة :a%، لكنها لن تستطيع قتلك.',
-            'en' => 'Decrease the HP by :x% of the remaining HP per :y seconds for :z seconds, and increase the attack by :a%. But it cannot kill you.',
+            'ar' => 'تقلل نقاط الصحة بنسبة :x% من نقاط الصحة المتبقية كل :y ثواني لمدة :z ثانية، مع زيادة الهجوم بنسبة :a%، لكنها لن تستطيع قتلك. -- استنزاف نقاط الصحة يوقظك من النوم. --',
+            'en' => 'Decrease the HP by :x% of the remaining HP per :y seconds for :z seconds, and increase the attack by :a%. But it cannot kill you. -- The HP drain wakes you up from sleep. --',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0, 'a' => 0],
@@ -3433,8 +3433,8 @@ return [
         'id' => 107,
         'name' => ['ar' => 'جدار الرعاية', 'en' => 'Indomitability'],
         'description' => [
-            'ar' => 'تحررك من التجميد والنوم والخوف والتحجر، وتمنحك المناعة منها لمدة :x ثانية.',
-            'en' => 'Releases you from ice, slumber, fear, and petrification, and makes you immune for :x seconds.',
+            'ar' => 'تحررك من التجميد والخوف والتحجر والفخاخ، وتمنحك المناعة منها لمدة :x ثانية.',
+            'en' => 'Releases you from ice, fear, petrification and traps, and makes you immune for :x seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -3595,8 +3595,8 @@ return [
         'id' => 112,
         'name' => ['ar' => 'الإرادة الجبارة', 'en' => 'Iron Will'],
         'description' => [
-            'ar' => 'تحررك أنت و أعضاء فريقك فورا من التجميد والنوم والخوف والتحجر، وتمنح المناعة منها لمدة :x ثانية.',
-            'en' => 'Immediately releases you and your party members from ice, slumber, fear, and petrification, and makes them immune for :x seconds.',
+            'ar' => 'تحررك أنت وأعضاء فريقك فورا من التجميد والخوف والتحجر والفخاخ، وتمنح المناعة منها لمدة :x ثانية.',
+            'en' => 'Immediately releases you and your party members from ice, fear, petrification and traps, and makes them immune for :x seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
