@@ -1015,7 +1015,7 @@ return [
         'id' => 276,
         'name' => ['ar' => 'الأسهم المتناثرة', 'en' => 'Multiple Shot'],
         'description' => [
-            'ar' => 'ترمي عدة أسهم لتصب على الهدف بنسبة :x% من هجومك وتسمم الأعداء القريبة من الهدف لمدة :y ثواني وبنسبة نجاح نسبتها 83%.',
+            'ar' => 'ترمي عدة أسهم لتصيب الهدف بنسبة :x% من هجومك وتسمم الأعداء القريبة من الهدف لمدة :y ثواني وبنسبة نجاح نسبتها 83%.',
             'en' => 'Shoot multiple arrows to inflict :x% of your attack to the target and poison enemies near the target for :y seconds with an 83% chance.',
         ],
         'levels' => [
@@ -1118,7 +1118,7 @@ return [
         'name' => ['ar' => 'أغنية الموت', 'en' => 'Bloody Song'],
         'description' => [
             'ar' => 'ينشطر السهم العملاق الذي تصوبه نحو السماء إلى أربعة أسهم من أجل إصابة العدو بنسبة :x% من هجومك، حيث تجعله ينزف لمدة :y ثانية وبفرصة نجاح العملية بنسبة 83%.',
-            'en' => 'The giant arrow you shot towards the sky splits into four different arrows to inflict :x% of your attack. Make the enemy bleed for :y seconds with a 83% chance.',
+            'en' => 'The giant arrow you shot towards the sky splits into four different arrows to inflict :x% of your attack. Make the enemy bleed for :y seconds with an 83% chance.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],

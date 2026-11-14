@@ -41,8 +41,8 @@ return [
         'id' => 2,
         'name' => ['ar' => 'الضرر العميق', 'en' => 'Deep Piercing'],
         'description' => [
-            'ar' => 'اخترق عدوك وألحق به ضرر بنسبة :x% من هجومك مع وجود احتمال بنسبة 85% لتسميمه لمدة :y ثانية.',
-            'en' => 'Pierce your enemy and inflict damage of :x% of your attack, with a 85% chance to poison them for :y seconds.',
+            'ar' => 'اخترق عدوك وألحق به ضرر بنسبة :x% من هجومك مع وجود احتمال بنسبة 85% لإصابته بالعدوى القاتلة لمدة :y ثانية.',
+            'en' => 'Pierce your enemy and inflict damage of :x% of your attack, with an 85% chance to infect them for :y seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -109,8 +109,8 @@ return [
         'id' => 4,
         'name' => ['ar' => 'الضربة الجارحة', 'en' => 'Jump Slash'],
         'description' => [
-            'ar' => 'اضرب عدوك مرتين وأصبه بضرر بنسبة :x% من هجومك في كل ضربة، وأغشيه لمدة 2 ثواني بنسبة نجاح 45%. مع إمكانية ضرر إضافي بنسبة :y% في حالة كان العدو في حالة نزيف أو تسمم.',
-            'en' => 'Strike your enemy twice to inflict :x% of your attack at each time and have a 45% chance to stun them for 2 seconds. Inflict an additional :y% of damage if the enemy is infected or poisoned.',
+            'ar' => 'اضرب عدوك مرتين وأصبه بضرر بنسبة :x% من هجومك في كل ضربة، وأغشيه لمدة 2 ثواني بنسبة نجاح 45%. مع إمكانية ضرر إضافي بنسبة :y% في حالة كان العدو في حالة نزيف أو عدوى قاتلة.',
+            'en' => 'Strike your enemy twice to inflict :x% of your attack at each time and have a 45% chance to stun them for 2 seconds. Inflict an additional :y% of damage if the enemy is bleeding or infected.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -752,8 +752,8 @@ return [
         'id' => 24,
         'name' => ['ar' => 'الفخ الدموي', 'en' => 'Bloody Trap'],
         'description' => [
-            'ar' => 'انصب حولك فخا دمويا بنسبة نجاح 95%، وأصب أعدائك بنزيف بنسبة :x% من هجومك كل 0.25 ثانية. يختفي الفخ عندما تتحرك.',
-            'en' => 'Bloody trap is installed around you for 95% chance, to bleed your enemies with :x% of your attack as damage every 0.25 seconds. The trap will be removed when you move.',
+            'ar' => 'انصب حولك فخا دمويا بنسبة نجاح 95%، ويُصاب الأعداء العالقون فيه بنزيف بنسبة :x% من هجومك كل 0.5 ثانية لمدة 12 ثانية. يختفي الفخ عندما تتحرك.',
+            'en' => 'A bloody trap is placed around you with a 95% chance. Enemies caught in it bleed for :x% of your attack every 0.5 seconds for 12 seconds. The trap is removed when you move.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -1014,7 +1014,7 @@ return [
         'id' => 32,
         'name' => ['ar' => 'الضربة المستديرة', 'en' => 'Roundhouse Hit'],
         'description' => [
-            'ar' => 'قدرتك بنسبة :x% على الهجوم مرتين متتاليتين والإلتفاف 360 درجة في الهواء وجعل عدوك ينزف لمدة :y ثواني بنسبة 45%.',
+            'ar' => 'اضرب عدوك مرتين متتاليتين بالالتفاف 360 درجة في الهواء لتصيبه بنسبة :x% من هجومك، واجعله ينزف لمدة :y ثواني بنسبة نجاح 45%.',
             'en' => 'Inflict :x% of your attack as damage twice by turning around by 360 degree in the air and make your enemy bleed for :y seconds with a 45% chance.',
         ],
         'levels' => [
@@ -1048,8 +1048,8 @@ return [
         'id' => 33,
         'name' => ['ar' => 'الطعنة', 'en' => 'Impale'],
         'description' => [
-            'ar' => 'خد نفسا عميقا وجهز رمحك لتطعن العدو طعنا عميقا بنسبة :x% من هجومك وأصبه بنزيف لمدة :y ثواني بنسبة نجاح 50%.',
-            'en' => 'Take a deep breath and extend your spear to impale your enemy and inflict :x% of your attack. Make your enemy bleed for :y seconds with a 50% chance.',
+            'ar' => 'خذ نفسا عميقا وجهز رمحك لتطعن العدو طعنا عميقا بنسبة :x% من هجومك وأصبه بالعدوى القاتلة لمدة :y ثواني بنسبة نجاح 50%.',
+            'en' => 'Take a deep breath and extend your spear to impale your enemy and inflict :x% of your attack. Infect your enemy for :y seconds with a 50% chance.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -1150,8 +1150,8 @@ return [
         'id' => 36,
         'name' => ['ar' => 'الرمح الهدار', 'en' => 'Repeated Piercing'],
         'description' => [
-            'ar' => 'أصب عدوك مرتين بالرمح بنسبة :x% من هجومك في كل ضربة، وأصبه بنسبة إضافية :y% اذا عدوك ينزف، ونسبة إضافية :z% اذا كان مسموما.',
-            'en' => 'Pierce your enemy twice with a spear and inflict damage :x% of attack at each hit. Inflict extra :y% of attack when if your enemy is bleeding, and extra :z% of attack when if your enemy is poisoned.',
+            'ar' => 'أصب عدوك مرتين بالرمح بنسبة :x% من هجومك في كل ضربة، وأصبه بنسبة إضافية :y% اذا عدوك ينزف، ونسبة إضافية :z% اذا كان مصابا بالعدوى القاتلة.',
+            'en' => 'Pierce your enemy twice with a spear and inflict damage :x% of attack at each hit. Inflict extra :y% of attack if your enemy is bleeding, and extra :z% of attack if your enemy is infected.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -2685,8 +2685,8 @@ return [
         'id' => 84,
         'name' => ['ar' => 'الأثر الحارق', 'en' => 'Scorching Effect'],
         'description' => [
-            'ar' => 'تسبب بضرر ناري بنسبة 10% من هجومك كل 0.5 ثانية لمدة :x ثواني، مع نسبة نجاح :y%.',
-            'en' => 'Cause fire damage of 10% of your attack in every 0.5 seconds for :x seconds, with a :y% success chance.',
+            'ar' => 'تسبب بضرر ناري بنسبة 10% من هجومك كل 0.5 ثانية لمدة :x ثواني، مع نسبة نجاح :y%. -- يُحتسب هذا الضرر نزيفا. --',
+            'en' => 'Cause fire damage of 10% of your attack in every 0.5 seconds for :x seconds, with a :y% success chance. -- This damage counts as bleeding. --',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -2716,7 +2716,7 @@ return [
         'id' => 85,
         'name' => ['ar' => 'السلاح الحاد', 'en' => 'Sharp Weapon'],
         'description' => [
-            'ar' => 'اجعل عدوك ينزف ضرر بنسبة :x% من هجومك لمدة 20 ثانية عند استخدام الهجوم العادي بنسبة نجاح 20%. ولكن هذه المهارة لا يمكن استخدامها بنفس الوقت مع مهارة "الفيتامين".',
+            'ar' => 'اجعل عدوك ينزف بنسبة :x% من هجومك لمدة 20 ثانية عند استخدام الهجوم العادي بنسبة نجاح 20%. ولكن هذه المهارة لا يمكن استخدامها بنفس الوقت مع مهارة "الفيتامين".',
             'en' => 'Make your enemy bleed to inflict :x% of your attack for 20 seconds by using normal attacks with a 20% success chance. However, this skill cannot be used along with "Bloodsucking".',
         ],
         'levels' => [
