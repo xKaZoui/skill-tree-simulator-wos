@@ -3295,8 +3295,8 @@ return [
         'id' => 225,
         'name' => ['ar' => 'الرذاذ', 'en' => 'Spray'],
         'description' => [
-            'ar' => 'مهاجمة الهدف وكل الأعداء المحيطين بنسبة :x% من الضرر السحري، وتقليل سرعة حركتهم بنسبة :y% لمدة :z ثانية.',
-            'en' => 'Attacks the target and all surrounding enemies with :x% magical damage and decreases their movement speed by :y% for :z seconds.',
+            'ar' => 'مهاجمة الهدف وكل الأعداء المحيطين بنسبة :x% من الضرر السحري، وتقليل سرعة هجومهم بنسبة :y% لمدة :z ثانية.',
+            'en' => 'Attacks the target and all surrounding enemies with :x% magical damage and decreases their attack speed by :y% for :z seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -3918,8 +3918,8 @@ return [
         'id' => 244,
         'name' => ['ar' => 'الزلزال العظيم', 'en' => 'Grand Earthquake'],
         'description' => [
-            'ar' => 'جعل نفسك مركزا للهجوم على الوحوش المحيطة بالخصائص الأرضية لإحداث ضرر سحري نسبته :x%، ثم إصابتهم بضرر سحري نسبته :y% كل ثانية لمدة :z ثانية، وتكسب خلالها مناعة ضد الهجمات الجسدية.',
-            'en' => 'Sets self as the center and attacks surrounding enemies with an earth attribute attack which does :x% magical damage, then deals :y% magical damage every second for :z seconds, during which the user becomes invincible to physical attacks.',
+            'ar' => 'جعل نفسك مركزا للهجوم على الوحوش المحيطة بالخصائص الأرضية لإحداث ضرر سحري نسبته :x%، ثم إصابتهم بضرر سحري نسبته :y% كل ثانية لمدة :z ثانية، وتكسب مناعة ضد الهجمات الجسدية والسحرية لمدة 7 ثوان.',
+            'en' => 'Sets self as the center and attacks surrounding enemies with an earth attribute attack which does :x% magical damage, then deals :y% magical damage every second for :z seconds. The user also becomes invincible to physical and magical attacks for 7 seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],

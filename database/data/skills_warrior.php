@@ -3136,8 +3136,8 @@ return [
         'id' => 98,
         'name' => ['ar' => 'الإلتواء القاسي', 'en' => 'Smash Ankle'],
         'description' => [
-            'ar' => 'إصابة الأعداء المحيطين بضرر نسبته :x% من قوة هجومك، وتقليل سرعة هجومهم بنسبة :y% لمدة :z ثانية.',
-            'en' => 'Damage surrounding enemies by :x% of your attack and decrease their attack speed by :y% for :z seconds.',
+            'ar' => 'إصابة الأعداء المحيطين بضرر نسبته :x% من قوة هجومك، وتقليل سرعة حركتهم بنسبة :y% لمدة :z ثانية.',
+            'en' => 'Damage surrounding enemies by :x% of your attack and decrease their movement speed by :y% for :z seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -3201,8 +3201,8 @@ return [
         'id' => 100,
         'name' => ['ar' => 'السيف الدوار', 'en' => 'Sword Charge'],
         'description' => [
-            'ar' => 'إصابة الهدف بضرر نسبته :x% من قوة هجومك، وتقليل سرعة حركته بنسبة :y% لمدة :z ثانية.',
-            'en' => 'Damage the target by :x% of your attack and decrease their movement speed by :y% for :z seconds.',
+            'ar' => 'إصابة الهدف بضرر نسبته :x% من قوة هجومك، وتقليل سرعة هجومه بنسبة :y% لمدة :z ثانية.',
+            'en' => 'Damage the target by :x% of your attack and decrease their attack speed by :y% for :z seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
