@@ -41,8 +41,8 @@ return [
         'id' => 2,
         'name' => ['ar' => 'الضرر العميق', 'en' => 'Deep Piercing'],
         'description' => [
-            'ar' => 'اخترق عدوك وألحق به ضرر بنسبة :x% من هجومك مع وجود احتمال بنسبة 85% لإصابته بالعدوى القاتلة لمدة :y ثانية.',
-            'en' => 'Pierce your enemy and inflict damage of :x% of your attack, with an 85% chance to infect them for :y seconds.',
+            'ar' => 'اخترق عدوك وألحق به ضرر بنسبة :x% من هجومك مع وجود احتمال بنسبة 85% لإصابته [بالعدوى القاتلة]{infection} لمدة :y ثانية.',
+            'en' => 'Pierce your enemy and inflict damage of :x% of your attack, with an 85% chance to [infect]{infection} them for :y seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -109,8 +109,8 @@ return [
         'id' => 4,
         'name' => ['ar' => 'الضربة الجارحة', 'en' => 'Jump Slash'],
         'description' => [
-            'ar' => 'اضرب عدوك مرتين وأصبه بضرر بنسبة :x% من هجومك في كل ضربة، وأغشيه لمدة 2 ثواني بنسبة نجاح 45%. مع إمكانية ضرر إضافي بنسبة :y% في حالة كان العدو في حالة نزيف أو عدوى قاتلة.',
-            'en' => 'Strike your enemy twice to inflict :x% of your attack at each time and have a 45% chance to stun them for 2 seconds. Inflict an additional :y% of damage if the enemy is bleeding or infected.',
+            'ar' => 'اضرب عدوك مرتين وأصبه بضرر بنسبة :x% من هجومك في كل ضربة، [وأغشيه]{stun} لمدة 2 ثواني بنسبة نجاح 45%. مع إمكانية ضرر إضافي بنسبة :y% في حالة كان العدو في حالة [نزيف]{bleed} أو [عدوى قاتلة]{infection}.',
+            'en' => 'Strike your enemy twice to inflict :x% of your attack at each time and have a 45% chance to [stun]{stun} them for 2 seconds. Inflict an additional :y% of damage if the enemy is [bleeding]{bleed} or [infected]{infection}.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -174,8 +174,8 @@ return [
         'id' => 6,
         'name' => ['ar' => 'التركيز', 'en' => 'Focus'],
         'description' => [
-            'ar' => 'نسبة الحصول على ضربة حرجة تزداد بقيمة +:x% عند استخدامك الهجوم العادي أو المهارات.',
-            'en' => 'Your chance of critical strike is increased for +:x% when you use normal attacks or skills.',
+            'ar' => 'نسبة الحصول على [ضربة حرجة]{crit-chance} تزداد بقيمة +:x% عند استخدامك الهجوم العادي أو المهارات.',
+            'en' => 'Your chance of [critical strike]{crit-chance} is increased for +:x% when you use normal attacks or skills.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -242,8 +242,8 @@ return [
         'id' => 8,
         'name' => ['ar' => 'الضربة المشحونة', 'en' => 'Charge'],
         'description' => [
-            'ar' => 'تهجم على عدوك بهجيان وتغشيه لمدة :x ثواني.',
-            'en' => 'Charge at your enemy like an angry bull and stun him for :x seconds.',
+            'ar' => 'تهجم على عدوك بهجيان [وتغشيه]{stun} لمدة :x ثواني.',
+            'en' => 'Charge at your enemy like an angry bull and [stun]{stun} him for :x seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -306,8 +306,8 @@ return [
         'id' => 10,
         'name' => ['ar' => 'تعزيز قوة الفريق', 'en' => 'Party Concentration Witcheryer'],
         'description' => [
-            'ar' => 'تعزيز القدرة لدى كل أعضاء الفريق ليضربوا بزيادة +:x%، هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
-            'en' => 'Enhance all your party member\'s chance to hit for +:x%. This skill can be used only when you\'re in a party.',
+            'ar' => 'تعزيز القدرة لدى كل أعضاء الفريق [ليضربوا]{accuracy-up} بزيادة +:x%، هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
+            'en' => 'Enhance all your party member\'s [chance to hit]{accuracy-up} for +:x%. This skill can be used only when you\'re in a party.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -336,8 +336,8 @@ return [
         'id' => 11,
         'name' => ['ar' => 'الإستفزاز', 'en' => 'Provoke'],
         'description' => [
-            'ar' => 'استفز عدوك ليهاجمك أنت فقط لمدة :x ثواني بنسبة نجاح 95%، إلى جانب التسبب في نسبة تهديد عالية.',
-            'en' => 'Provoke your enemy to attack only you for :x seconds for 95%. In addition to leading to a high threat ratio.',
+            'ar' => '[استفز]{provoke} عدوك ليهاجمك أنت فقط لمدة :x ثواني بنسبة نجاح 95%، إلى جانب التسبب في نسبة تهديد عالية.',
+            'en' => '[Provoke]{provoke} your enemy to attack only you for :x seconds for 95%. In addition to leading to a high threat ratio.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -398,8 +398,8 @@ return [
         'id' => 13,
         'name' => ['ar' => 'تركيز الفريق', 'en' => 'Party Focus'],
         'description' => [
-            'ar' => 'ازدياد نسبة الحصول على ضربة حرجة لأعضاء الفريق بقيمة +:x% عند استخدام الهجوم العادي أو المهارات. هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
-            'en' => 'Your party member\'s chance of critical strike is increased for +:x% when they use normal attacks or skills. This skill can be used only when you\'re in a party.',
+            'ar' => 'ازدياد نسبة الحصول على [ضربة حرجة]{crit-chance} لأعضاء الفريق بقيمة +:x% عند استخدام الهجوم العادي أو المهارات. هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
+            'en' => 'Your party member\'s chance of [critical strike]{crit-chance} is increased for +:x% when they use normal attacks or skills. This skill can be used only when you\'re in a party.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -428,8 +428,8 @@ return [
         'id' => 14,
         'name' => ['ar' => 'قاصمة الصخر', 'en' => 'Strike Down'],
         'description' => [
-            'ar' => 'اضرب عدوك بالسيف ذو القبضة الواحدة واصعق الأعداء المحيطين لمدة 4 ثواني بنسبة نجاح :x%. ألحق ضرر انفجاري يعادل :y% من هجومك.',
-            'en' => 'Strike down your enemy with an one-handed sword to stun the surrounding enemies for 4 seconds with a :x% chance of success. Deal splash damage equals to :y% of your attack.',
+            'ar' => 'اضرب عدوك بالسيف ذو القبضة الواحدة [واصعق]{stun} الأعداء المحيطين لمدة 4 ثواني بنسبة نجاح :x%. ألحق ضرر انفجاري يعادل :y% من هجومك.',
+            'en' => 'Strike down your enemy with an one-handed sword to [stun]{stun} the surrounding enemies for 4 seconds with a :x% chance of success. Deal splash damage equals to :y% of your attack.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -462,8 +462,8 @@ return [
         'id' => 15,
         'name' => ['ar' => 'الهجوم الطاعن', 'en' => 'Repeated Hit'],
         'description' => [
-            'ar' => 'تضرب عدوك مرتين متتاليتين من اليمين واليسار لإلحاق ضرر بنسبة :x% من هجومك في كل ضربة، يتعرض عدوك لانخفاض بنسبة :y% من نقاط صحة الإسعاف لمدة 12 ثانية وبفرصة نجاح 45%.',
-            'en' => 'Rapidly hit your enemy twice from the left and right to inflict :x% damage of your attack with each hit. The healing your enemy receives is reduced by :y% for 12 seconds at a 45% chance. It is very dangerous skill.',
+            'ar' => 'تضرب عدوك مرتين متتاليتين من اليمين واليسار لإلحاق ضرر بنسبة :x% من هجومك في كل ضربة، يتعرض عدوك لانخفاض بنسبة :y% من [نقاط صحة الإسعاف]{heal-curse} لمدة 12 ثانية وبفرصة نجاح 45%.',
+            'en' => 'Rapidly hit your enemy twice from the left and right to inflict :x% damage of your attack with each hit. The [healing]{heal-curse} your enemy receives is reduced by :y% for 12 seconds at a 45% chance. It is very dangerous skill.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -530,8 +530,8 @@ return [
         'id' => 17,
         'name' => ['ar' => 'الإستفزاز العنيف', 'en' => 'Wide Provoke'],
         'description' => [
-            'ar' => 'قم بتحريض واستفزاز الأعداء المحيطين بك بنسبة نجاح :x%ليقوموا بالهجوم عليك فقط لمدة :y ثواني. هذه المهارة تسبب تهديد عالي جدا.',
-            'en' => 'Provoke the surrounding enemies by a :x% chance to only attack you for :y seconds. It causes high level threat.',
+            'ar' => 'قم [بتحريض]{provoke} واستفزاز الأعداء المحيطين بك بنسبة نجاح :x%ليقوموا بالهجوم عليك فقط لمدة :y ثواني. هذه المهارة تسبب تهديد عالي جدا.',
+            'en' => '[Provoke]{provoke} the surrounding enemies by a :x% chance to only attack you for :y seconds. It causes high level threat.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -560,8 +560,8 @@ return [
         'id' => 18,
         'name' => ['ar' => 'التحطيم المدمر', 'en' => 'Heavy Crasher'],
         'description' => [
-            'ar' => 'هجومك خلال الـ:x ثواني القادمة عنده القدرة على اغشاء الأعداء لمدة :y ثواني واحداث ضرر أكثر ب:z مرة، لكنها لا تستخدم إلا مرة واحدة.',
-            'en' => 'Your attacks within the next :x seconds have a chance to stun the enemy for :y seconds and cause :z times bigger damage. But it is limited to one time use only.',
+            'ar' => '[هجومك]{dragonslayer} خلال الـ:x ثواني القادمة عنده القدرة على [اغشاء]{stun} الأعداء لمدة :y ثواني واحداث ضرر أكثر ب:z مرة، لكنها لا تستخدم إلا مرة واحدة.',
+            'en' => '[Your attacks]{dragonslayer} within the next :x seconds have a chance to [stun]{stun} the enemy for :y seconds and cause :z times bigger damage. But it is limited to one time use only.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -722,8 +722,8 @@ return [
         'id' => 23,
         'name' => ['ar' => 'سيد الإنقاذ', 'en' => 'Master of Survival'],
         'description' => [
-            'ar' => 'إلغاء كل الضرر الجسدي والقاتل وتحويله إلى نقاط صحة لمدة :x ثواني، لكن لن تلغي الضرر المستديم (DOT).',
-            'en' => 'Cancel all physical damage and fatal damage and convert it to the HP for :x seconds. But DOT damage is not included.',
+            'ar' => 'إلغاء كل الضرر الجسدي والقاتل [وتحويله إلى نقاط صحة]{physical-conversion} لمدة :x ثواني، لكن لن تلغي الضرر المستديم (DOT).',
+            'en' => 'Cancel all physical damage and fatal damage and [convert it to the HP]{physical-conversion} for :x seconds. But DOT damage is not included.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -752,8 +752,8 @@ return [
         'id' => 24,
         'name' => ['ar' => 'الفخ الدموي', 'en' => 'Bloody Trap'],
         'description' => [
-            'ar' => 'انصب حولك فخا دمويا بنسبة نجاح 95%، ويُصاب الأعداء العالقون فيه بنزيف بنسبة :x% من هجومك كل 0.5 ثانية لمدة 12 ثانية. يختفي الفخ عندما تتحرك.',
-            'en' => 'A bloody trap is placed around you with a 95% chance. Enemies caught in it bleed for :x% of your attack every 0.5 seconds for 12 seconds. The trap is removed when you move.',
+            'ar' => 'انصب حولك فخا دمويا بنسبة نجاح 95%، ويُصاب الأعداء العالقون فيه [بنزيف]{bleed} بنسبة :x% من هجومك كل 0.5 ثانية لمدة 12 ثانية. يختفي الفخ عندما تتحرك.',
+            'en' => 'A bloody trap is placed around you with a 95% chance. Enemies caught in it [bleed]{bleed} for :x% of your attack every 0.5 seconds for 12 seconds. The trap is removed when you move.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -820,8 +820,8 @@ return [
         'id' => 26,
         'name' => ['ar' => 'الضربة العرضية', 'en' => 'Crosscut'],
         'description' => [
-            'ar' => 'تركيز كل طاقتك على الهجوم بالسيف والضرب به بشكل عرضي لإصابة عدوك بنسبة :x% من هجومك في كل ضربة، وتصيب عدوك بالخوف لمدة :y ثواني وبنسبة نجاح 45%.',
-            'en' => 'Concentrate your energy on a sword and slash crosswise on your enemy to inflict :x% damage of your attack with each hit. Make your enemy fear you for :y seconds with a 45% chance of success.',
+            'ar' => 'تركيز كل طاقتك على الهجوم بالسيف والضرب به بشكل عرضي لإصابة عدوك بنسبة :x% من هجومك في كل ضربة، وتصيب عدوك [بالخوف]{fear} لمدة :y ثواني وبنسبة نجاح 45%.',
+            'en' => 'Concentrate your energy on a sword and slash crosswise on your enemy to inflict :x% damage of your attack with each hit. Make your enemy [fear]{fear} you for :y seconds with a 45% chance of success.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -954,8 +954,8 @@ return [
         'id' => 30,
         'name' => ['ar' => 'جنون الحرب', 'en' => 'Mad Charge'],
         'description' => [
-            'ar' => 'تجعلك تهجم على عدوك بشراسة كالكركدن الهائج لمدة :x دقائق، وتصعقه. مدى هذه المهارة أكبر مقارنة بمهارة "الضربة المشحونة".',
-            'en' => 'It allows you to aggressively attack the enemy like a rhino for :x seconds, and stun them. The range of the spell is longer compared to other "Charge" skill.',
+            'ar' => 'تجعلك تهجم على عدوك بشراسة كالكركدن الهائج لمدة :x دقائق، [وتصعقه]{stun}. مدى هذه المهارة أكبر مقارنة بمهارة "الضربة المشحونة".',
+            'en' => 'It allows you to aggressively attack the enemy like a rhino for :x seconds, and [stun]{stun} them. The range of the spell is longer compared to other "Charge" skill.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -984,8 +984,8 @@ return [
         'id' => 31,
         'name' => ['ar' => 'الترس المنيع', 'en' => 'Impenetrable Shield'],
         'description' => [
-            'ar' => 'استخدام الترس لزيادة نسبة صد الهجمات بـ:x% لمدة :y دقيقة و:z ثانية.',
-            'en' => 'Use your shield to increase the chance to block attacks by :x% chance for :y minute :z seconds.',
+            'ar' => 'استخدام الترس لزيادة [نسبة صد الهجمات]{shield-wall} بـ:x% لمدة :y دقيقة و:z ثانية.',
+            'en' => 'Use your shield to increase the [chance to block attacks]{shield-wall} by :x% chance for :y minute :z seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -1014,8 +1014,8 @@ return [
         'id' => 32,
         'name' => ['ar' => 'الضربة المستديرة', 'en' => 'Roundhouse Hit'],
         'description' => [
-            'ar' => 'اضرب عدوك مرتين متتاليتين بالالتفاف 360 درجة في الهواء لتصيبه بنسبة :x% من هجومك، واجعله ينزف لمدة :y ثواني بنسبة نجاح 45%.',
-            'en' => 'Inflict :x% of your attack as damage twice by turning around by 360 degree in the air and make your enemy bleed for :y seconds with a 45% chance.',
+            'ar' => 'اضرب عدوك مرتين متتاليتين بالالتفاف 360 درجة في الهواء لتصيبه بنسبة :x% من هجومك، واجعله [ينزف]{bleed} لمدة :y ثواني بنسبة نجاح 45%.',
+            'en' => 'Inflict :x% of your attack as damage twice by turning around by 360 degree in the air and make your enemy [bleed]{bleed} for :y seconds with a 45% chance.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -1048,8 +1048,8 @@ return [
         'id' => 33,
         'name' => ['ar' => 'الطعنة', 'en' => 'Impale'],
         'description' => [
-            'ar' => 'خذ نفسا عميقا وجهز رمحك لتطعن العدو طعنا عميقا بنسبة :x% من هجومك وأصبه بالعدوى القاتلة لمدة :y ثواني بنسبة نجاح 50%.',
-            'en' => 'Take a deep breath and extend your spear to impale your enemy and inflict :x% of your attack. Infect your enemy for :y seconds with a 50% chance.',
+            'ar' => 'خذ نفسا عميقا وجهز رمحك لتطعن العدو طعنا عميقا بنسبة :x% من هجومك وأصبه [بالعدوى القاتلة]{infection} لمدة :y ثواني بنسبة نجاح 50%.',
+            'en' => 'Take a deep breath and extend your spear to impale your enemy and inflict :x% of your attack. [Infect]{infection} your enemy for :y seconds with a 50% chance.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -1116,8 +1116,8 @@ return [
         'id' => 35,
         'name' => ['ar' => 'الهجوم المركز', 'en' => 'Concentrated Attack'],
         'description' => [
-            'ar' => 'زيادة هجومك بنسبة :x%، مع 10% إضافية عند استخدام الرمح، لكن بالمقابل فإن دفاعك ينقص مقابل ذلك بنسبة :y%.',
-            'en' => 'Your attack is increased by :x%, with additional 10% when using Spear. However, your defense will decrease by :y%.',
+            'ar' => 'زيادة [هجومك]{attack-up} بنسبة :x%، مع 10% إضافية عند استخدام الرمح، لكن بالمقابل فإن [دفاعك]{defense-loss} ينقص مقابل ذلك بنسبة :y%.',
+            'en' => 'Your [attack]{attack-up} is increased by :x%, with additional 10% when using Spear. However, your [defense]{defense-loss} will decrease by :y%.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -1150,8 +1150,8 @@ return [
         'id' => 36,
         'name' => ['ar' => 'الرمح الهدار', 'en' => 'Repeated Piercing'],
         'description' => [
-            'ar' => 'أصب عدوك مرتين بالرمح بنسبة :x% من هجومك في كل ضربة، وأصبه بنسبة إضافية :y% اذا عدوك ينزف، ونسبة إضافية :z% اذا كان مصابا بالعدوى القاتلة.',
-            'en' => 'Pierce your enemy twice with a spear and inflict damage :x% of attack at each hit. Inflict extra :y% of attack if your enemy is bleeding, and extra :z% of attack if your enemy is infected.',
+            'ar' => 'أصب عدوك مرتين بالرمح بنسبة :x% من هجومك في كل ضربة، وأصبه بنسبة إضافية :y% اذا عدوك [ينزف]{bleed}، ونسبة إضافية :z% اذا كان مصابا [بالعدوى القاتلة]{infection}.',
+            'en' => 'Pierce your enemy twice with a spear and inflict damage :x% of attack at each hit. Inflict extra :y% of attack if your enemy is [bleeding]{bleed}, and extra :z% of attack if your enemy is [infected]{infection}.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -1184,8 +1184,8 @@ return [
         'id' => 37,
         'name' => ['ar' => 'صرخة الجبل', 'en' => 'Howl of Stamina'],
         'description' => [
-            'ar' => 'تسلق الجبل في الصباح الباكر وازأر للعالم بصوت عال. تزيد عندك نقاط الصحة بنسبة :x%، ولكن هذه الزيادة لا تتضمن النقاط المضافة من الدروع والمهارات الأخرى.',
-            'en' => 'Climb up the mountain early in the morning, and roar to the world loudly. Increase your HP by :x%. However, this does not include the points for items or other skills.',
+            'ar' => 'تسلق الجبل في الصباح الباكر وازأر للعالم بصوت عال. تزيد عندك [نقاط الصحة]{hp-blessing} بنسبة :x%، ولكن هذه الزيادة لا تتضمن النقاط المضافة من الدروع والمهارات الأخرى.',
+            'en' => 'Climb up the mountain early in the morning, and roar to the world loudly. Increase your [HP]{hp-blessing} by :x%. However, this does not include the points for items or other skills.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -1252,8 +1252,8 @@ return [
         'id' => 39,
         'name' => ['ar' => 'تدعيم الضرر', 'en' => 'Amplified Damage'],
         'description' => [
-            'ar' => 'عند استخدامك لمهارات أخرى، هناك فرصة بنسبة :x% لتفعيل هذه المهارة، التي تمنحك زيادة في الضرر بنسبة +:y% لمدة دقيقتين و30 ثانية. يمكن تكرار هذا التأثير وتراكمه حتى :z مرات.',
-            'en' => 'When you use other skills, there is a :x% chance that this skill will activate, granting you :y% damage increase for 2 minutes and 30 seconds. This effect can be repeated and stacked up to :z times.',
+            'ar' => 'عند استخدامك لمهارات أخرى، هناك فرصة بنسبة :x% لتفعيل هذه المهارة، التي تمنحك [زيادة في الضرر]{additional-damage} بنسبة +:y% لمدة دقيقتين و30 ثانية. يمكن تكرار هذا التأثير وتراكمه حتى :z مرات.',
+            'en' => 'When you use other skills, there is a :x% chance that this skill will activate, granting you :y% [damage increase]{additional-damage} for 2 minutes and 30 seconds. This effect can be repeated and stacked up to :z times.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -1350,8 +1350,8 @@ return [
         'id' => 42,
         'name' => ['ar' => 'صرخة الجبل فريق', 'en' => 'Party Howl of Stamina'],
         'description' => [
-            'ar' => 'زيادة نقاط الحيوية عند أعضاء فريقك بنسبة :x%، هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
-            'en' => 'Enhance your party member\'s stamina points by :x%. This skill can be used only when you\'re in a party.',
+            'ar' => 'زيادة [نقاط الحيوية]{hp-blessing} عند أعضاء فريقك بنسبة :x%، هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
+            'en' => 'Enhance your party member\'s [stamina points]{hp-blessing} by :x%. This skill can be used only when you\'re in a party.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -1380,8 +1380,8 @@ return [
         'id' => 43,
         'name' => ['ar' => 'الضربة الطولية', 'en' => 'Uppercut'],
         'description' => [
-            'ar' => 'تركيز كل طاقتك لتصيب العدو بجرح علوي وتصيبه بضرر بنسبة :x% من هجومك واغشائه بنسبة :y% لمدة 6 ثواني وتقليل سرعة حركته بنسبة :z% لمدة 15 ثواني. هذه المهارة تحمل نسبة تهديد عالية.',
-            'en' => 'Concentrate all your energy to throw an uppercut to inflict a damage of :x% of your attack. For a :y% chance stun your enemy for 6 seconds and decrease his movement speed by :z% for 15 seconds. It has a high threat rate.',
+            'ar' => 'تركيز كل طاقتك لتصيب العدو بجرح علوي وتصيبه بضرر بنسبة :x% من هجومك [واغشائه]{stun} بنسبة :y% لمدة 6 ثواني وتقليل [سرعة حركته]{slow} بنسبة :z% لمدة 15 ثواني. هذه المهارة تحمل نسبة تهديد عالية.',
+            'en' => 'Concentrate all your energy to throw an uppercut to inflict a damage of :x% of your attack. For a :y% chance [stun]{stun} your enemy for 6 seconds and decrease his [movement speed]{slow} by :z% for 15 seconds. It has a high threat rate.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -1414,8 +1414,8 @@ return [
         'id' => 44,
         'name' => ['ar' => 'الريشة الطائرة', 'en' => 'Featherlike Movement'],
         'description' => [
-            'ar' => 'تشعر وكأنك تتطاير في الهواء، وتزداد براعتك بمقدار :x%، ولكن هذه الزيادة لا تتضمن النقاط المضافة من الدروع والمهارات الأخرى.',
-            'en' => 'Your movement becomes lighter as a feather in the wind. Your dexterity is instantly increased by :x%. But, it doesn\'t include the dexterity which is increased by the items or other skills.',
+            'ar' => 'تشعر وكأنك تتطاير في الهواء، وتزداد [براعتك]{dexterity-blessing} بمقدار :x%، ولكن هذه الزيادة لا تتضمن النقاط المضافة من الدروع والمهارات الأخرى.',
+            'en' => 'Your movement becomes lighter as a feather in the wind. Your [dexterity]{dexterity-blessing} is instantly increased by :x%. But, it doesn\'t include the dexterity which is increased by the items or other skills.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -1482,8 +1482,8 @@ return [
         'id' => 46,
         'name' => ['ar' => 'تعزيز القوة', 'en' => 'Enhanced Concentration Witcheryer'],
         'description' => [
-            'ar' => 'تزيد من ميزات الهجوم لكنها قد تعطي ميزات سيئة وخطيرة بالمقابل. تزيد من الهجوم بنسبة :x%، مع زيادة إضافية بنسبة 15% عند استخدام الرمح، ولكنها تقلل من الدفاع بنسبة :y%.',
-            'en' => 'It increases the advantage of attack, but the disadvantage is also critical. Increase attack by :x% with an additional 15% when using a Spear, while decrease defense by :y%.',
+            'ar' => 'تزيد من ميزات الهجوم لكنها قد تعطي ميزات سيئة وخطيرة بالمقابل. تزيد من [الهجوم]{attack-up} بنسبة :x%، مع زيادة إضافية بنسبة 15% عند استخدام الرمح، ولكنها تقلل من [الدفاع]{defense-loss} بنسبة :y%.',
+            'en' => 'It increases the advantage of attack, but the disadvantage is also critical. Increase [attack]{attack-up} by :x% with an additional 15% when using a Spear, while decrease [defense]{defense-loss} by :y%.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -1516,8 +1516,8 @@ return [
         'id' => 47,
         'name' => ['ar' => 'التملص', 'en' => 'Avoid'],
         'description' => [
-            'ar' => 'تهاجم العدو بكل قوة. تزيد من قدرة التفادي بنسبة +:x% لمدة :y ثانية.',
-            'en' => 'Attack the enemy with full strength. Increase the avoid percentage by +:x% for :y seconds.',
+            'ar' => 'تهاجم العدو بكل قوة. تزيد من [قدرة التفادي]{dodge-up} بنسبة +:x% لمدة :y ثانية.',
+            'en' => 'Attack the enemy with full strength. Increase the [avoid percentage]{dodge-up} by +:x% for :y seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -1546,8 +1546,8 @@ return [
         'id' => 48,
         'name' => ['ar' => 'الإختفاء', 'en' => 'Hide'],
         'description' => [
-            'ar' => 'اخفي نفسك لمدة :x ثانية، ولكن هذه المهارة لا يمكن أن تستخدم في حالة المعركة أو عند القتال. وتقل نسبة اكتشافك من قبل العدو إلا إذا أصبحت قريبا جدا منهم.',
-            'en' => 'Make yourself invisible for :x seconds. It can be used only in a non-combat situation. Your enemy\'s detection range will decrease, but you can be detected if you get too close to them.',
+            'ar' => '[اخفي نفسك]{stealth} لمدة :x ثانية، ولكن هذه المهارة لا يمكن أن تستخدم في حالة المعركة أو عند القتال. وتقل نسبة اكتشافك من قبل العدو إلا إذا أصبحت قريبا جدا منهم.',
+            'en' => 'Make yourself [invisible]{stealth} for :x seconds. It can be used only in a non-combat situation. Your enemy\'s detection range will decrease, but you can be detected if you get too close to them.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -1576,8 +1576,8 @@ return [
         'id' => 49,
         'name' => ['ar' => 'الضعف', 'en' => 'Weaken'],
         'description' => [
-            'ar' => 'اصرخ على عدوك بنسبة نجاح :x% لتقلل من سرعة هجومه وحركته بنسبة :y% لمدة :z ثانية بالإضافة لنسبة تهديد عالية.',
-            'en' => 'Shout at your enemy with a :x% chance to decrease his attacking and moving speed by :y% for :z seconds. In addition to leading a high threat ratio.',
+            'ar' => 'اصرخ على عدوك بنسبة نجاح :x% لتقلل من [سرعة هجومه]{attack-slow} [وحركته]{slow} بنسبة :y% لمدة :z ثانية بالإضافة لنسبة تهديد عالية.',
+            'en' => 'Shout at your enemy with a :x% chance to decrease his [attacking]{attack-slow} and [moving speed]{slow} by :y% for :z seconds. In addition to leading a high threat ratio.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -1640,8 +1640,8 @@ return [
         'id' => 51,
         'name' => ['ar' => 'الإختفاء السريع', 'en' => 'Fast Hide'],
         'description' => [
-            'ar' => 'أوقف المعركة وأخفي نفسك لمدة :x ثانية وبفرصة نجاح :y%. هذه المهارة يمكن استخدامها حتى لو كنت في المعركة أو عند القتال.',
-            'en' => 'Stop fighting altogether and hide yourself for :x seconds with a :y% chance. This skill can be used even when you are in battle or in a combat state.',
+            'ar' => 'أوقف المعركة [وأخفي نفسك]{stealth} لمدة :x ثانية وبفرصة نجاح :y%. هذه المهارة يمكن استخدامها حتى لو كنت في المعركة أو عند القتال.',
+            'en' => 'Stop fighting altogether and [hide yourself]{stealth} for :x seconds with a :y% chance. This skill can be used even when you are in battle or in a combat state.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -1670,8 +1670,8 @@ return [
         'id' => 52,
         'name' => ['ar' => 'الإستعادة المدهشة', 'en' => 'Amazing Recovery Force'],
         'description' => [
-            'ar' => 'نقاط الصحة تتم استعادتها بمقدار :x كل :y ثواني لمدة :z ثانية. يمكن استخدامها مع مهارة "قوة الإستعادة".',
-            'en' => 'You will recover :x HP every :y seconds for :z seconds. It can be used with the Recovery Force.',
+            'ar' => '[نقاط الصحة تتم استعادتها]{hp-regen} بمقدار :x كل :y ثواني لمدة :z ثانية. يمكن استخدامها مع مهارة "قوة الإستعادة".',
+            'en' => 'You will [recover :x HP]{hp-regen} every :y seconds for :z seconds. It can be used with the Recovery Force.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -1700,8 +1700,8 @@ return [
         'id' => 53,
         'name' => ['ar' => 'رياح الظلم', 'en' => 'Wind Slasher'],
         'description' => [
-            'ar' => 'تدور حول العدو ثلاث مرات وتضرب نقاط الضعف لديه بالرمح لتسبب له ضرر بنسبة :x% من هجومك حيث تصيب العدو بصمت لمدة 6 ثواني بنسبة نجاح :y%، حتى لا يستطيعوا استخدام مهارات.',
-            'en' => 'Circle three times rapidly and strike your enemy\'s weak points with a spear to cause :x% of your attack as damage. Make the enemy silent for 6 seconds by :y% success chance, so they cannot use spells.',
+            'ar' => 'تدور حول العدو ثلاث مرات وتضرب نقاط الضعف لديه بالرمح لتسبب له ضرر بنسبة :x% من هجومك حيث تصيب العدو [بصمت]{silence} لمدة 6 ثواني بنسبة نجاح :y%، حتى لا يستطيعوا استخدام مهارات.',
+            'en' => 'Circle three times rapidly and strike your enemy\'s weak points with a spear to cause :x% of your attack as damage. Make the enemy [silent]{silence} for 6 seconds by :y% success chance, so they cannot use spells.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -1764,8 +1764,8 @@ return [
         'id' => 55,
         'name' => ['ar' => 'سيد التخفي', 'en' => 'Hide Extension Mastery'],
         'description' => [
-            'ar' => 'تزيد من وقت الإختفاء لمدة :x ثانية، وتزيد الإختفاء السريع أيضا.',
-            'en' => 'Increase your hiding time by +:x seconds. Your Fast Hide is also increased.',
+            'ar' => 'تزيد من وقت [الإختفاء]{stealth} لمدة :x ثانية، وتزيد الإختفاء السريع أيضا.',
+            'en' => 'Increase your [hiding]{stealth} time by +:x seconds. Your Fast Hide is also increased.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -1794,8 +1794,8 @@ return [
         'id' => 56,
         'name' => ['ar' => 'انتقام الدماء', 'en' => 'Bloody Revenge'],
         'description' => [
-            'ar' => 'تقلل نقاط الصحة بنسبة :x% من نقاط الصحة المتبقية كل :y ثواني لمدة :z ثانية، مع زيادة الهجوم بنسبة :a%، لكنها لن تستطيع قتلك. -- استنزاف نقاط الصحة يوقظك من النوم. --',
-            'en' => 'Decrease the HP by :x% of the remaining HP per :y seconds for :z seconds, and increase the attack by :a%. But it cannot kill you. -- The HP drain wakes you up from sleep. --',
+            'ar' => 'تقلل [نقاط الصحة]{hp-drain} بنسبة :x% من نقاط الصحة المتبقية كل :y ثواني لمدة :z ثانية، مع زيادة [الهجوم]{physical-focus} بنسبة :a%، لكنها لن تستطيع قتلك. -- استنزاف نقاط الصحة يوقظك من [النوم]{sleep}. --',
+            'en' => 'Decrease the [HP]{hp-drain} by :x% of the remaining HP per :y seconds for :z seconds, and increase the [attack]{physical-focus} by :a%. But it cannot kill you. -- The HP drain wakes you up from [sleep]{sleep}. --',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0, 'a' => 0],
@@ -1824,8 +1824,8 @@ return [
         'id' => 57,
         'name' => ['ar' => 'الخطوات الهادئة', 'en' => 'Disguise Mastery'],
         'description' => [
-            'ar' => 'تقلل من نسبة اكتشافك من الأعداء بنسبة :x% وذلك عند اختفائك وبذلك لن يكون بمقدور أحد أن يكتشف مكانك مهما كان قريبا منك.',
-            'en' => 'Your enemy\'s detection range is further decreased by :x% when you hide yourself, and they won\'t be able to detect you even when you are closer to them.',
+            'ar' => 'تقلل من نسبة اكتشافك من الأعداء بنسبة :x% وذلك عند [اختفائك]{stealth} وبذلك لن يكون بمقدور أحد أن يكتشف مكانك مهما كان قريبا منك.',
+            'en' => 'Your enemy\'s detection range is further decreased by :x% when you [hide yourself]{stealth}, and they won\'t be able to detect you even when you are closer to them.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -1888,8 +1888,8 @@ return [
         'id' => 59,
         'name' => ['ar' => 'الفخ السري', 'en' => 'Secret Trap'],
         'description' => [
-            'ar' => 'انصب فخا لعدوك لمدة :x ثانية وبفرصة نجاح :y%. هذه المهارة تستخدم فقط عندما تكون متخفي، في حالة الإخفاق يمكنك البقاء متخفيا.',
-            'en' => 'Trap your enemy for :x seconds with a :y% success chance. This skill can only be used when you\'re hiding. You can continue to hide even after you miss.',
+            'ar' => 'انصب [فخا]{trap} لعدوك لمدة :x ثانية وبفرصة نجاح :y%. هذه المهارة تستخدم فقط عندما تكون [متخفي]{stealth}، في حالة الإخفاق يمكنك البقاء متخفيا.',
+            'en' => '[Trap]{trap} your enemy for :x seconds with a :y% success chance. This skill can only be used when you\'re [hiding]{stealth}. You can continue to hide even after you miss.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -1918,8 +1918,8 @@ return [
         'id' => 60,
         'name' => ['ar' => 'الضربة الحرجة', 'en' => 'Critical Strike'],
         'description' => [
-            'ar' => 'ضرر إضافي بنسبة +:x% لكل ضربة حرجة لمدة 5 دقائق.',
-            'en' => 'Inflict +:x% more damage for each critical strike for 5 minutes.',
+            'ar' => 'ضرر إضافي بنسبة +:x% لكل [ضربة حرجة]{crit-damage} لمدة 5 دقائق.',
+            'en' => 'Inflict +:x% more damage for each [critical strike]{crit-damage} for 5 minutes.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -1952,8 +1952,8 @@ return [
         'id' => 61,
         'name' => ['ar' => 'تميز الثائر', 'en' => 'Body of Berserker'],
         'description' => [
-            'ar' => 'عندما يصبح اختصاصك ثائر تزداد سرعة هجومك بشكل غريب لمدة :x ثانية، لن يكون أحد قادرا على إيقافك.',
-            'en' => 'You become a Berserker burning in rage, and your attack speed will radically increase by :x seconds. Nothing can stop you.',
+            'ar' => 'عندما يصبح اختصاصك ثائر تزداد [سرعة هجومك]{attack-speed-up} بشكل غريب لمدة :x ثانية، لن يكون أحد قادرا على إيقافك.',
+            'en' => 'You become a Berserker burning in rage, and your [attack speed]{attack-speed-up} will radically increase by :x seconds. Nothing can stop you.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2080,8 +2080,8 @@ return [
         'id' => 65,
         'name' => ['ar' => 'كشف نقطة الضعف', 'en' => 'Weak Point Analysis'],
         'description' => [
-            'ar' => 'نسبة الحصول على ضربة حرجة تزداد بنسبة +:x%. هذه المهارة يمكن استخدامها مع مهارة "التركيز".',
-            'en' => 'Your chance of a critical strike is increased by +:x%. This skill may be stacked with "Focus".',
+            'ar' => 'نسبة الحصول على [ضربة حرجة]{grasp-weakness} تزداد بنسبة +:x%. هذه المهارة يمكن استخدامها مع مهارة "التركيز".',
+            'en' => 'Your chance of a [critical strike]{grasp-weakness} is increased by +:x%. This skill may be stacked with "Focus".',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2308,8 +2308,8 @@ return [
         'id' => 72,
         'name' => ['ar' => 'منطقة الخوف', 'en' => 'Weakened Area'],
         'description' => [
-            'ar' => 'تصرخ على الأعداء من حولك مع فرصة نجاح :x% للتقليل من سرعة هجومهم وحركتهم بنسبة :y% لمدة :z ثانية بالإضافة إلى زيادة نسبة التهديد عندك.',
-            'en' => 'Shout at the enemies around you with :x% chance to decrease their attacking and movement speed by :y% for :z seconds. In addition to leading to a higher threat ratio.',
+            'ar' => '[تصرخ على الأعداء من حولك]{curse-of-panic} مع فرصة نجاح :x% للتقليل من سرعة هجومهم [وحركتهم]{slow} بنسبة :y% لمدة :z ثانية بالإضافة إلى زيادة نسبة التهديد عندك.',
+            'en' => '[Shout at the enemies around you]{curse-of-panic} with :x% chance to decrease their attacking and [movement speed]{slow} by :y% for :z seconds. In addition to leading to a higher threat ratio.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -2399,8 +2399,8 @@ return [
         'id' => 75,
         'name' => ['ar' => 'الرمانة اليدوية', 'en' => 'Grenade'],
         'description' => [
-            'ar' => 'اغشي العدو لمدة 4 ثواني، وسبب له ضرر بنسبة :x% من هجومك، الأعداء البعيدون عن الهدف الرئيسي يتلقون ضررا أقل. -- تحتاج إلى "سيف ذو القبضتين" لإستخدام المهارة ضد اللاعبين وفي الحروب. --',
-            'en' => 'Stun the enemy for 4 seconds and cause :x% of your attack as damage. Enemies standing far away from the main target receive less damage. -- You need a "TwoHand Sword" to be able to use the skill against players and in wars. --',
+            'ar' => '[اغشي]{stun} العدو لمدة 4 ثواني، وسبب له ضرر بنسبة :x% من هجومك، الأعداء البعيدون عن الهدف الرئيسي يتلقون ضررا أقل. -- تحتاج إلى "سيف ذو القبضتين" لإستخدام المهارة ضد اللاعبين وفي الحروب. --',
+            'en' => '[Stun]{stun} the enemy for 4 seconds and cause :x% of your attack as damage. Enemies standing far away from the main target receive less damage. -- You need a "TwoHand Sword" to be able to use the skill against players and in wars. --',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2531,8 +2531,8 @@ return [
         'id' => 79,
         'name' => ['ar' => 'الدرع المدمر', 'en' => 'Destroy Armor'],
         'description' => [
-            'ar' => 'استخدم الهجوم العادي لتقليل قوة دفاع عدوك بنسبة :x% وبفرصة نجاح 30%، يمكن أن تستخدم حتى 5 مرات.',
-            'en' => 'Use normal attacks to decrease your enemies defense by :x% for a 30% success chance. This can be used up to 5 times.',
+            'ar' => 'استخدم الهجوم العادي لتقليل [قوة دفاع عدوك]{defense-decay} بنسبة :x% وبفرصة نجاح 30%، يمكن أن تستخدم حتى 5 مرات.',
+            'en' => 'Use normal attacks to decrease your [enemies defense]{defense-decay} by :x% for a 30% success chance. This can be used up to 5 times.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2593,8 +2593,8 @@ return [
         'id' => 81,
         'name' => ['ar' => 'التمويه', 'en' => 'Camouflage'],
         'description' => [
-            'ar' => 'يتم إعادة قيمة تهديدك للوحوش إلى قيمتها الأولية عند إخفاء شخصيتك، وتقليل نسبة تهديد هجماتك بنسبة :x% لمدة :y دقائق.',
-            'en' => 'Initialize your threat ratio to monsters by disguising yourself, and reduce the threat ratio of your attacks by :x% for :y minutes.',
+            'ar' => 'يتم إعادة قيمة تهديدك للوحوش إلى قيمتها الأولية عند إخفاء شخصيتك، وتقليل [نسبة تهديد هجماتك]{aggro-reduction} بنسبة :x% لمدة :y دقائق.',
+            'en' => 'Initialize your threat ratio to monsters by disguising yourself, and reduce the [threat ratio of your attacks]{aggro-reduction} by :x% for :y minutes.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -2654,8 +2654,8 @@ return [
         'id' => 83,
         'name' => ['ar' => 'الشظايا الحادة', 'en' => 'Sharp Splinter'],
         'description' => [
-            'ar' => 'كل الأعداء المتضررون من الشظايا يتلقون ضررا إضافيا بنسبة :x% من هجومك لمدة 30 ثانية مع فرصة نجاح 30% لتسميمهم.',
-            'en' => 'All enemies damaged by splinters will receive additional damage of :x% of your attack for 30 seconds with a 30% success chance of poisoning them.',
+            'ar' => 'كل الأعداء المتضررون من الشظايا يتلقون ضررا إضافيا بنسبة :x% من هجومك لمدة 30 ثانية مع فرصة نجاح 30% [لتسميمهم]{poison}.',
+            'en' => 'All enemies damaged by splinters will receive additional damage of :x% of your attack for 30 seconds with a 30% success chance of [poisoning]{poison} them.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2685,8 +2685,8 @@ return [
         'id' => 84,
         'name' => ['ar' => 'الأثر الحارق', 'en' => 'Scorching Effect'],
         'description' => [
-            'ar' => 'تسبب بضرر ناري بنسبة 10% من هجومك كل 0.5 ثانية لمدة :x ثواني، مع نسبة نجاح :y%. -- يُحتسب هذا الضرر نزيفا. --',
-            'en' => 'Cause fire damage of 10% of your attack in every 0.5 seconds for :x seconds, with a :y% success chance. -- This damage counts as bleeding. --',
+            'ar' => 'تسبب بضرر ناري بنسبة 10% من هجومك كل 0.5 ثانية لمدة :x ثواني، مع نسبة نجاح :y%. -- يُحتسب هذا الضرر [نزيفا]{bleed}. --',
+            'en' => 'Cause fire damage of 10% of your attack in every 0.5 seconds for :x seconds, with a :y% success chance. -- This damage counts as [bleeding]{bleed}. --',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -2716,8 +2716,8 @@ return [
         'id' => 85,
         'name' => ['ar' => 'السلاح الحاد', 'en' => 'Sharp Weapon'],
         'description' => [
-            'ar' => 'اجعل عدوك ينزف بنسبة :x% من هجومك لمدة 20 ثانية عند استخدام الهجوم العادي بنسبة نجاح 20%. ولكن هذه المهارة لا يمكن استخدامها بنفس الوقت مع مهارة "الفيتامين".',
-            'en' => 'Make your enemy bleed to inflict :x% of your attack for 20 seconds by using normal attacks with a 20% success chance. However, this skill cannot be used along with "Bloodsucking".',
+            'ar' => 'اجعل عدوك [ينزف]{bleed} بنسبة :x% من هجومك لمدة 20 ثانية عند استخدام الهجوم العادي بنسبة نجاح 20%. ولكن هذه المهارة لا يمكن استخدامها بنفس الوقت مع مهارة "الفيتامين".',
+            'en' => 'Make your enemy [bleed]{bleed} to inflict :x% of your attack for 20 seconds by using normal attacks with a 20% success chance. However, this skill cannot be used along with "Bloodsucking".',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2943,8 +2943,8 @@ return [
         'id' => 92,
         'name' => ['ar' => 'الفيتامين', 'en' => 'Bloodsucking'],
         'description' => [
-            'ar' => 'استعادة نقاط الصحة بنسبة :x% من الضرر الذي تطبقه عند القيام بالهجوم العادي بنسبة نجاح 50% ولمدة 20 ثانية. لا يمكن استخدامها بنفس الوقت مع مهارة "السلاح الحاد".',
-            'en' => 'Recover HP for :x% of the damage when using normal attacks for 50% success chance and for 20 seconds. But, this skill cannot be used with "Sharp Weapon".',
+            'ar' => '[استعادة نقاط الصحة]{vampire} بنسبة :x% من الضرر الذي تطبقه عند القيام بالهجوم العادي بنسبة نجاح 50% ولمدة 20 ثانية. لا يمكن استخدامها بنفس الوقت مع مهارة "السلاح الحاد".',
+            'en' => '[Recover HP]{vampire} for :x% of the damage when using normal attacks for 50% success chance and for 20 seconds. But, this skill cannot be used with "Sharp Weapon".',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2977,8 +2977,8 @@ return [
         'id' => 93,
         'name' => ['ar' => 'الحظ السعيد', 'en' => 'Pray of Blessing'],
         'description' => [
-            'ar' => 'تزيد من نقاط الحظ لديك بنسبة :x%. ولكن هذه الزيادة لا تتضمن النقاط المضافة من الدروع والمهارات الأخرى.',
-            'en' => 'Increase your luck points by :x%. However, this does not include the points increased by items or other skills.',
+            'ar' => 'تزيد من [نقاط الحظ]{luck-blessing} لديك بنسبة :x%. ولكن هذه الزيادة لا تتضمن النقاط المضافة من الدروع والمهارات الأخرى.',
+            'en' => 'Increase your [luck points]{luck-blessing} by :x%. However, this does not include the points increased by items or other skills.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -3011,8 +3011,8 @@ return [
         'id' => 94,
         'name' => ['ar' => 'صلابة الحياة', 'en' => 'Last Survivor'],
         'description' => [
-            'ar' => 'استعادة نقاط الصحة مباشرة بمقدار :x، وحصول على حصانة من الضرر الجسدي لمدة :y ثانية.',
-            'en' => 'Immediately recover the :x HP, and gain immunity against physical attack for :y seconds.',
+            'ar' => 'استعادة نقاط الصحة مباشرة بمقدار :x، وحصول على حصانة من [الضرر الجسدي]{immune-physical} لمدة :y ثانية.',
+            'en' => 'Immediately recover the :x HP, and gain immunity against [physical attack]{immune-physical} for :y seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -3041,8 +3041,8 @@ return [
         'id' => 95,
         'name' => ['ar' => 'قذيفة التهشيم', 'en' => 'Fragmentation Grenade'],
         'description' => [
-            'ar' => 'اغشي العدو لمدة :x ثواني، وسبب له ضررا بنسبة :y% من هجومك. الأعداء البعيدون عن الهدف الرئيسي يتلقون ضررا أقل. -- تحتاج إلى "سيف ذو القبضتين" لإستخدام المهارة ضد اللاعبين وفي الحروب. --',
-            'en' => 'Stun the enemy for :x seconds and cause :y% of your attack as damage. Enemies standing far away from the main target will receive less damage. -- You need a "TwoHand Sword" to be able to use the skill against players and in wars. --',
+            'ar' => '[اغشي]{stun} العدو لمدة :x ثواني، وسبب له ضررا بنسبة :y% من هجومك. الأعداء البعيدون عن الهدف الرئيسي يتلقون ضررا أقل. -- تحتاج إلى "سيف ذو القبضتين" لإستخدام المهارة ضد اللاعبين وفي الحروب. --',
+            'en' => '[Stun]{stun} the enemy for :x seconds and cause :y% of your attack as damage. Enemies standing far away from the main target will receive less damage. -- You need a "TwoHand Sword" to be able to use the skill against players and in wars. --',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -3071,8 +3071,8 @@ return [
         'id' => 96,
         'name' => ['ar' => 'ذرات الغضب', 'en' => 'Spinning Slash'],
         'description' => [
-            'ar' => 'إصابة الأعداء المحيطين بضرر نسبته :x% من قوة هجومك، وتقليل سرعة هجومهم بنسبة :y% لمدة :z ثانية.',
-            'en' => 'Damage surrounding enemies by :x% of your attack and decrease their attack speed by :y% for :z seconds.',
+            'ar' => 'إصابة الأعداء المحيطين بضرر نسبته :x% من قوة هجومك، وتقليل [سرعة هجومهم]{attack-slow} بنسبة :y% لمدة :z ثانية.',
+            'en' => 'Damage surrounding enemies by :x% of your attack and decrease their [attack speed]{attack-slow} by :y% for :z seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -3136,8 +3136,8 @@ return [
         'id' => 98,
         'name' => ['ar' => 'الإلتواء القاسي', 'en' => 'Smash Ankle'],
         'description' => [
-            'ar' => 'إصابة الأعداء المحيطين بضرر نسبته :x% من قوة هجومك، وتقليل سرعة حركتهم بنسبة :y% لمدة :z ثانية.',
-            'en' => 'Damage surrounding enemies by :x% of your attack and decrease their movement speed by :y% for :z seconds.',
+            'ar' => 'إصابة الأعداء المحيطين بضرر نسبته :x% من قوة هجومك، وتقليل [سرعة حركتهم]{slow} بنسبة :y% لمدة :z ثانية.',
+            'en' => 'Damage surrounding enemies by :x% of your attack and decrease their [movement speed]{slow} by :y% for :z seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -3201,8 +3201,8 @@ return [
         'id' => 100,
         'name' => ['ar' => 'السيف الدوار', 'en' => 'Sword Charge'],
         'description' => [
-            'ar' => 'إصابة الهدف بضرر نسبته :x% من قوة هجومك، وتقليل سرعة هجومه بنسبة :y% لمدة :z ثانية.',
-            'en' => 'Damage the target by :x% of your attack and decrease their attack speed by :y% for :z seconds.',
+            'ar' => 'إصابة الهدف بضرر نسبته :x% من قوة هجومك، وتقليل [سرعة هجومه]{attack-slow} بنسبة :y% لمدة :z ثانية.',
+            'en' => 'Damage the target by :x% of your attack and decrease their [attack speed]{attack-slow} by :y% for :z seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -3235,8 +3235,8 @@ return [
         'id' => 101,
         'name' => ['ar' => 'الجرح الدموي', 'en' => 'Bloody Bash'],
         'description' => [
-            'ar' => 'إصابة الهدف بضرر نسبته :x% من قوة هجومك، مسببا له نزيفا بنسبة :y% من قوة هجومك لمدة :z ثانية يتضرر منه كل 2 ثانية.',
-            'en' => 'Damage the target by :x% of your attack and cause them to bleed by :y% of your attack for :z seconds, dealing damage every 2 seconds.',
+            'ar' => 'إصابة الهدف بضرر نسبته :x% من قوة هجومك، مسببا له [نزيفا]{bleed} بنسبة :y% من قوة هجومك لمدة :z ثانية يتضرر منه كل 2 ثانية.',
+            'en' => 'Damage the target by :x% of your attack and cause them to [bleed]{bleed} by :y% of your attack for :z seconds, dealing damage every 2 seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -3269,8 +3269,8 @@ return [
         'id' => 102,
         'name' => ['ar' => 'سهم السموم', 'en' => 'Poison Spear'],
         'description' => [
-            'ar' => 'إصابة الهدف بضرر نسبته :x% من قوة هجومك، وتسميمه بنسبة :y% من قوة هجومك لمدة :z ثانية يتضرر منه كل 2 ثانية.',
-            'en' => 'Damage the target by :x% of your attack and poison them by :y% of your attack for :z seconds, dealing damage every 2 seconds.',
+            'ar' => 'إصابة الهدف بضرر نسبته :x% من قوة هجومك، [وتسميمه]{poison} بنسبة :y% من قوة هجومك لمدة :z ثانية يتضرر منه كل 2 ثانية.',
+            'en' => 'Damage the target by :x% of your attack and [poison]{poison} them by :y% of your attack for :z seconds, dealing damage every 2 seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -3334,8 +3334,8 @@ return [
         'id' => 104,
         'name' => ['ar' => 'تحطيم الأمل', 'en' => 'Behead'],
         'description' => [
-            'ar' => 'إصابة الهدف بضرر نسبته :x% من قوة هجومك، وإصابته بعدوى قاتلة بنسبة :y% من قوة هجومك لمدة :z ثانية يتضرر منها كل 2 ثانية.',
-            'en' => 'Damage the target by :x% of your attack and infect them by :y% of your attack for :z seconds, dealing damage every 2 seconds.',
+            'ar' => 'إصابة الهدف بضرر نسبته :x% من قوة هجومك، وإصابته [بعدوى قاتلة]{infection} بنسبة :y% من قوة هجومك لمدة :z ثانية يتضرر منها كل 2 ثانية.',
+            'en' => 'Damage the target by :x% of your attack and [infect]{infection} them by :y% of your attack for :z seconds, dealing damage every 2 seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -3433,8 +3433,8 @@ return [
         'id' => 107,
         'name' => ['ar' => 'جدار الرعاية', 'en' => 'Indomitability'],
         'description' => [
-            'ar' => 'تحررك من التجميد والخوف والتحجر والفخاخ، وتمنحك المناعة منها لمدة :x ثانية.',
-            'en' => 'Releases you from ice, fear, petrification and traps, and makes you immune for :x seconds.',
+            'ar' => 'تحررك من [التجميد]{freeze} [والخوف]{fear} [والتحجر]{petrify} [والفخاخ]{trap}، وتمنحك المناعة منها لمدة :x ثانية.',
+            'en' => 'Releases you from [ice]{freeze}, [fear]{fear}, [petrification]{petrify} and [traps]{trap}, and makes you immune for :x seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -3530,8 +3530,8 @@ return [
         'id' => 110,
         'name' => ['ar' => 'الطعنة القاتلة', 'en' => 'Stab Soul'],
         'description' => [
-            'ar' => 'إصابة الهدف بضرر نسبته :x% من قوة هجومك، وتقليل قدرته على الاستشفاء بنسبة :y%.',
-            'en' => 'Damages the target for :x% of your attack, and decreases their ability to heal by :y%.',
+            'ar' => 'إصابة الهدف بضرر نسبته :x% من قوة هجومك، وتقليل [قدرته على الاستشفاء]{heal-curse} بنسبة :y%.',
+            'en' => 'Damages the target for :x% of your attack, and decreases their [ability to heal]{heal-curse} by :y%.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -3595,8 +3595,8 @@ return [
         'id' => 112,
         'name' => ['ar' => 'الإرادة الجبارة', 'en' => 'Iron Will'],
         'description' => [
-            'ar' => 'تحررك أنت وأعضاء فريقك فورا من التجميد والخوف والتحجر والفخاخ، وتمنح المناعة منها لمدة :x ثانية.',
-            'en' => 'Immediately releases you and your party members from ice, fear, petrification and traps, and makes them immune for :x seconds.',
+            'ar' => 'تحررك أنت وأعضاء فريقك فورا من [التجميد]{freeze} [والخوف]{fear} [والتحجر]{petrify} [والفخاخ]{trap}، وتمنح المناعة منها لمدة :x ثانية.',
+            'en' => 'Immediately releases you and your party members from [ice]{freeze}, [fear]{fear}, [petrification]{petrify} and [traps]{trap}, and makes them immune for :x seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -3660,8 +3660,8 @@ return [
         'id' => 114,
         'name' => ['ar' => 'الدوامة الحنونة', 'en' => 'Tornado of Passion'],
         'description' => [
-            'ar' => 'زيادة هجومك الجسدي بنسبة :x%، وهجومك السحري بنسبة :y%، وسرعة حركتك بنسبة :z%.',
-            'en' => 'Increases your physical attack by :x%, magic attack by :y%, and movement speed by :z%.',
+            'ar' => 'زيادة [هجومك الجسدي]{physical-focus} بنسبة :x%، [وهجومك السحري]{transcendent-focus} بنسبة :y%، [وسرعة حركتك]{move-speed-up} بنسبة :z%.',
+            'en' => 'Increases your [physical attack]{physical-focus} by :x%, [magic attack]{transcendent-focus} by :y%, and [movement speed]{move-speed-up} by :z%.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -3723,8 +3723,8 @@ return [
         'id' => 116,
         'name' => ['ar' => 'الغضب العارم', 'en' => 'King\'s Rage'],
         'description' => [
-            'ar' => 'عكس :x% من الضرر الجسدي والسحري الذي تتلقاه، وصعق المهاجم لمدة :y ثانية دون إمكانية إزالة الصعق.',
-            'en' => 'Reflects :x% of the physical and magic damage you receive, and stuns the attacker for :y seconds (cannot be removed).',
+            'ar' => 'عكس :x% من الضرر الجسدي والسحري الذي تتلقاه، [وصعق]{stun} المهاجم لمدة :y ثانية دون إمكانية إزالة الصعق.',
+            'en' => 'Reflects :x% of the physical and magic damage you receive, and [stuns]{stun} the attacker for :y seconds (cannot be removed).',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -3757,8 +3757,8 @@ return [
         'id' => 117,
         'name' => ['ar' => 'زيادة سرعة الإلقاء', 'en' => 'Increase Skill Casting Speed'],
         'description' => [
-            'ar' => 'عند الهجوم، فرصة 50% لزيادة سرعة إلقاء المهارات بنسبة :x% لمدة 60 ثانية.',
-            'en' => 'When you attack, 50% chance to increase your skill casting speed by :x% for 60 seconds.',
+            'ar' => 'عند الهجوم، فرصة 50% لزيادة [سرعة إلقاء المهارات]{cast-speed} بنسبة :x% لمدة 60 ثانية.',
+            'en' => 'When you attack, 50% chance to increase your [skill casting speed]{cast-speed} by :x% for 60 seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -3791,8 +3791,8 @@ return [
         'id' => 118,
         'name' => ['ar' => 'عاصفة العواطف', 'en' => 'Storm of Passion'],
         'description' => [
-            'ar' => 'زيادة الهجوم الجسدي لفريقك بنسبة :x%، والهجوم السحري بنسبة :y%، وسرعة الهجوم بنسبة :z%.',
-            'en' => 'Increases your party\'s physical attack by :x%, magic attack by :y%, and attack speed by :z%.',
+            'ar' => 'زيادة [الهجوم الجسدي]{physical-focus} لفريقك بنسبة :x%، [والهجوم السحري]{transcendent-focus} بنسبة :y%، [وسرعة الحركة]{move-speed-up} بنسبة :z%.',
+            'en' => 'Increases your party\'s [physical attack]{physical-focus} by :x%, [magic attack]{transcendent-focus} by :y%, and [movement speed]{move-speed-up} by :z%.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -3853,8 +3853,8 @@ return [
         'id' => 120,
         'name' => ['ar' => 'عاصفة الغضب', 'en' => 'Violent Storm'],
         'description' => [
-            'ar' => 'استحضار عاصفة من السيوف حولك لتصيب أعدائك بضرر نسبته :x% من قوة هجومك كل 2 ثانية، ويستمر تأثيرها لمدة 12 ثانية.',
-            'en' => 'Creates a storm of blades to damage nearby enemies by :x% of your attack every 2 seconds. This effect continues for 12 seconds.',
+            'ar' => 'استحضار [عاصفة من السيوف]{blade-storm} حولك لتصيب أعدائك بضرر نسبته :x% من قوة هجومك كل 2 ثانية، ويستمر تأثيرها لمدة 12 ثانية.',
+            'en' => 'Creates a [storm of blades]{blade-storm} to damage nearby enemies by :x% of your attack every 2 seconds. This effect continues for 12 seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],

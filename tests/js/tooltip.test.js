@@ -33,6 +33,24 @@ test('description: notes in purple, every placeholder replaced, html escaped', (
     assert.match(html, /&lt;b&gt;/);
 });
 
+test('description: state tags with an icon become an image, other tags are removed', () => {
+    const html = describe('burns{flame} and fades{no-icon}', { level: 1 }, '/images/states', { flame: 'decoration-pink-500' });
+    assert.match(html, /burns<img src="\/images\/states\/flame\.webp"[^>]*> and/);
+    assert.match(html, /fades$/);
+    assert.doesNotMatch(html, /\{|\}/);
+});
+
+test('description: icons next to each other are split by a dash', () => {
+    const html = describe('burns{burn}{no-icon} {flame}.', { level: 1 }, '/images/states', { burn: 'decoration-red-500', flame: 'decoration-pink-500' });
+    assert.match(html, /burns<img src="\/images\/states\/burn\.webp"[^>]*> -<img src="\/images\/states\/flame\.webp"[^>]*>\.$/);
+});
+
+test('description: [words] before a state tag are underlined in its colour', () => {
+    const html = describe('[burns]{flame} and [fades]{no-icon}', { level: 1 }, '/images/states', { flame: 'decoration-pink-500' });
+    assert.match(html, /^<span class="underline decoration-2 underline-offset-4 decoration-pink-500">burns<\/span><img src="\/images\/states\/flame\.webp"/);
+    assert.match(html, / and fades$/);
+});
+
 test('levels table skips level 0, shows N/A for 0 and marks the current level', () => {
     const table = levelsTable([{ level: 0, x: 0 }, { level: 1, x: 0, y: 3 }, { level: 2, x: 5, y: 6 }], 2);
     assert.deepEqual(table.keys, ['x', 'y']);

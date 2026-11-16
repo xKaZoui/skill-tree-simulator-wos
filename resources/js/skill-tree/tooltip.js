@@ -48,8 +48,20 @@ export function formatCooltime(seconds, labels, locale) {
     return `${minutes} ${minuteLabel}${restText} (${seconds} ${ar ? labels.second : labels.seconds})`;
 }
 
-export function describe(description, levelValues) {
+export function describe(description, levelValues, statesUrl = '', stateColors = {}) {
     let html = escapeHtml(description ?? '');
+
+    // {state} tags become the game's state icon (tags without an icon are removed)
+    // [words]{state}: the words are underlined in the icon's colour
+    html = html.replace(/(?:\[([^\]]*)\])?(\{[a-z-]+\}(?:\s*\{[a-z-]+\})*)/g, (match, words, tags) => {
+        const names = [...tags.matchAll(/\{([a-z-]+)\}/g)].map(([, name]) => name).filter((name) => Object.hasOwn(stateColors, name));
+        const icons = names.map((name) => `<img src="${statesUrl}/${name}.webp" alt="" class="ms-1 inline size-6 align-text-bottom">`).join(' -');
+        if (words === undefined) {
+            return icons;
+        }
+
+        return (names.length ? `<span class="underline decoration-2 underline-offset-4 ${stateColors[names[0]]}">${words}</span>` : words) + icons;
+    });
 
     // --note-- parts in purple
     html = html.replace(/--(.*?)--/g, (match, note) => `<span class="text-violet-300 ltr:font-medium rtl:font-bold">${note}</span>`);
@@ -112,7 +124,7 @@ function requiredPointsText(skill, treeName, labels) {
  * context:  { points, canAdd, labels, locale, treeName, required: [{ name, maxPoints }] }
  */
 export function skillCard(skill, context) {
-    const { points, canAdd, labels, locale, treeName, required } = context;
+    const { points, canAdd, labels, locale, treeName, required, statesUrl, stateColors } = context;
     const tip = skill.tip ?? {};
     const comma = locale === 'ar' ? '، ' : ', ';
 
@@ -144,7 +156,7 @@ export function skillCard(skill, context) {
         textClass: points === 0 ? 'text-gray-400' : 'text-white',
         status,
         rows: rows.map(([label, value]) => ({ label, value })),
-        description: describe(tip.description, tip.levels?.find((row) => row.level === points)),
+        description: describe(tip.description, tip.levels?.find((row) => row.level === points), statesUrl, stateColors),
         levels: levelsTable(tip.levels, points),
     };
 }

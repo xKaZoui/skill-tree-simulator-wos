@@ -7,8 +7,8 @@ return [
         'id' => 121,
         'name' => ['ar' => 'طلقات النار', 'en' => 'Fire Bullet'],
         'description' => [
-            'ar' => 'تهاجم خصمك بكرات نارية لإصابته بضرر نسبته :x% من قوة هجومك. وإصابته بضرر إضافي نسبته :y% من الضرر عندما يكون الخصم معرضا للنار.',
-            'en' => 'Attack your enemy with a powerful fireball to inflict :x% of your magic attack. Inflict additional :y% damage when the enemy is under the fire or cursed.',
+            'ar' => 'تهاجم خصمك بكرات نارية لإصابته بضرر نسبته :x% من قوة هجومك. وإصابته بضرر إضافي نسبته :y% من الضرر عندما يكون الخصم معرضا [للنار]{flame}{burn}.',
+            'en' => 'Attack your enemy with a powerful fireball to inflict :x% of your magic attack. Inflict additional :y% damage when the enemy is under the [fire]{flame}{burn} or [cursed]{curse}.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -41,8 +41,8 @@ return [
         'id' => 122,
         'name' => ['ar' => 'نيران الأرض', 'en' => 'Fire of Earth'],
         'description' => [
-            'ar' => 'تحدث ضرر سحري بنسبة :x% وتحرق العدو لمدة :y ثواني وبنسبة نجاح 95%.',
-            'en' => 'Cause an earthquake and summon the fire from hell to inflict :x% of the magic attack. In addition, the enemy burns for :y seconds with a 95% chance.',
+            'ar' => 'تحدث ضرر سحري بنسبة :x% [وتحرق]{flame} العدو لمدة :y ثواني وبنسبة نجاح 95%.',
+            'en' => 'Cause an earthquake and summon the fire from hell to inflict :x% of the magic attack. In addition, the enemy [burns]{flame} for :y seconds with a 95% chance.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -75,8 +75,8 @@ return [
         'id' => 123,
         'name' => ['ar' => 'التنوير', 'en' => 'Enlightened'],
         'description' => [
-            'ar' => 'علم الآخرين بما تعرفه من علوم. تزيد الحد الأعظم لنقاط الطاقة بنسبة :x%',
-            'en' => 'Enlighten others by teaching them. Increase their maximum MP for :x%',
+            'ar' => 'علم الآخرين بما تعرفه من علوم. تزيد [الحد الأعظم لنقاط الطاقة]{mana-increase} بنسبة :x%',
+            'en' => 'Enlighten others by teaching them. Increase their [maximum MP]{mana-increase} for :x%',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -143,8 +143,8 @@ return [
         'id' => 125,
         'name' => ['ar' => 'الهالة الظلامية', 'en' => 'Aura of Darkness'],
         'description' => [
-            'ar' => 'تصنع هالة ظلامية حول الخصم لإصابته بنسبة :x% من هجومك السحري. بالإضافة إلى لعنة الغضب التي تحل على الخصم لمدة :y ثانية وبنسبة 95%.',
-            'en' => 'Create an aura of darkness around the target to inflict :x% of your magic attack. In addition, curse the enemy for :y seconds with a 95% chance.',
+            'ar' => 'تصنع هالة ظلامية حول الخصم لإصابته بنسبة :x% من هجومك السحري. بالإضافة إلى [لعنة الغضب]{curse} التي تحل على الخصم لمدة :y ثانية وبنسبة 95%.',
+            'en' => 'Create an aura of darkness around the target to inflict :x% of your magic attack. In addition, [curse]{curse} the enemy for :y seconds with a 95% chance.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -207,8 +207,8 @@ return [
         'id' => 127,
         'name' => ['ar' => 'تنوير الفريق', 'en' => 'Party Enlightened'],
         'description' => [
-            'ar' => 'تزيد الحد الأعظم لنقاط الطاقة بنسبة :x%. هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
-            'en' => 'Increase your party member\'s maximum MP for :x%. This skill can be used only when you\'re in a party.',
+            'ar' => 'تزيد [الحد الأعظم لنقاط الطاقة]{mana-increase} بنسبة :x%. هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
+            'en' => 'Increase your party member\'s [maximum MP]{mana-increase} for :x%. This skill can be used only when you\'re in a party.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -237,8 +237,8 @@ return [
         'id' => 128,
         'name' => ['ar' => 'محيط الحرائق', 'en' => 'Ocean of Fire'],
         'description' => [
-            'ar' => 'تحدث ضرر سحري بنسبة :x% على شكل نيران. تحرق العدو لمدة :y ثواني وبنسبة 95%.',
-            'en' => 'Incur :x% magical damage by causing fire. Burn the opponent for :y seconds by 95% chance.',
+            'ar' => 'تحدث ضرر سحري بنسبة :x% على شكل نيران. [تحرق]{flame} العدو لمدة :y ثواني وبنسبة 95%.',
+            'en' => 'Incur :x% magical damage by causing fire. [Burn]{flame} the opponent for :y seconds by 95% chance.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -271,8 +271,8 @@ return [
         'id' => 129,
         'name' => ['ar' => 'ظل الخوف', 'en' => 'Shadow of Fear'],
         'description' => [
-            'ar' => 'تخيف الأعداء حولك لمدة :x ثواني وذلك بنسبة نجاح نسبتها :y%,',
-            'en' => 'Frighten the enemies around you for :x Seconds with a :y% chance.',
+            'ar' => '[تخيف]{fear} الأعداء حولك لمدة :x ثواني وذلك بنسبة نجاح نسبتها :y%,',
+            'en' => '[Frighten]{fear} the enemies around you for :x Seconds with a :y% chance.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -301,8 +301,8 @@ return [
         'id' => 130,
         'name' => ['ar' => 'زيادة الطاقة', 'en' => 'Mental Witcheryer Infusion'],
         'description' => [
-            'ar' => 'تمنح طاقتك إلى أحد اللاعبين لزيادة نقاط الذكاء لديه بنسبة :x% مع أن هذه الزيادة لا تتضمن النقاط المضافة من الدروع والمهارات الأخرى.',
-            'en' => 'Give your mental power to a player to enhance their intelligence for :x% points. However, this does not include the points increased from items or other skills.',
+            'ar' => 'تمنح طاقتك إلى أحد اللاعبين لزيادة [نقاط الذكاء]{intelligence-blessing} لديه بنسبة :x% مع أن هذه الزيادة لا تتضمن النقاط المضافة من الدروع والمهارات الأخرى.',
+            'en' => 'Give your mental power to a player to enhance their [intelligence]{intelligence-blessing} for :x% points. However, this does not include the points increased from items or other skills.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -369,8 +369,8 @@ return [
         'id' => 132,
         'name' => ['ar' => 'زيادة طاقة الفريق', 'en' => 'Party Mental Witcheryer Infusion'],
         'description' => [
-            'ar' => 'زيادة نقاط الذكاء لدى فريقك بمعدل :x%. هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
-            'en' => 'Increase your party member\'s intelligence for :x% points. This skill can only be used when you\'re in a party.',
+            'ar' => 'زيادة [نقاط الذكاء]{intelligence-blessing} لدى فريقك بمعدل :x%. هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
+            'en' => 'Increase your party member\'s [intelligence]{intelligence-blessing} for :x% points. This skill can only be used when you\'re in a party.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -399,8 +399,8 @@ return [
         'id' => 133,
         'name' => ['ar' => 'الشهاب', 'en' => 'Meteor'],
         'description' => [
-            'ar' => 'استدع نيزكا ضخما من السماء لإلحاق ضرر انفجاري بنسبة :x% على الأعداء القريبين منك. الأعداء المحترقون يتلقون ضررا إضافيا بمقدار :y%.',
-            'en' => 'Summon a giant meteor from the sky to inflict :x% splash damage on the enemies near you. Enemies on fire will take an additional :y% of damage.',
+            'ar' => 'استدع نيزكا ضخما من السماء لإلحاق ضرر انفجاري بنسبة :x% على الأعداء القريبين منك. الأعداء [المحترقون]{flame}{burn} يتلقون ضررا إضافيا بمقدار :y%.',
+            'en' => 'Summon a giant meteor from the sky to inflict :x% splash damage on the enemies near you. Enemies [on fire]{flame}{burn} will take an additional :y% of damage.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -433,8 +433,8 @@ return [
         'id' => 134,
         'name' => ['ar' => 'لم الشمل', 'en' => 'Summon Demon'],
         'description' => [
-            'ar' => 'استدعِ الشياطين من الجحيم لإلحاق ضرر :x% من هجومك السحري. الأعداء المحترقون يتلقون ضررًا إضافيًا بمقدار :y%، والأعداء الملعونون يتلقون ضررًا إضافيًا بمقدار :z%.',
-            'en' => 'Summon the demons from hell to inflict :x% of your magic attack. Damage additionally when the enemy is on fire for :y%, and when it\'s cursed for :z%.',
+            'ar' => 'استدعِ الشياطين من الجحيم لإلحاق ضرر :x% من هجومك السحري. الأعداء [المحترقون]{flame}{burn} يتلقون ضررًا إضافيًا بمقدار :y%، والأعداء [الملعونون]{curse} يتلقون ضررًا إضافيًا بمقدار :z%.',
+            'en' => 'Summon the demons from hell to inflict :x% of your magic attack. Damage additionally when the enemy is [on fire]{flame}{burn} for :y%, and when it\'s [cursed]{curse} for :z%.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -498,8 +498,8 @@ return [
         'id' => 136,
         'name' => ['ar' => 'الحريق', 'en' => 'Burning'],
         'description' => [
-            'ar' => 'تحرق العدو بنيران جبارة لمدة :x ثواني. يمكن استخدامها مع مهارات النيران الأخرى أو الغضب بنفس الوقت.',
-            'en' => 'Burn the enemy by the strong power of the fire for :x seconds. It can be used with other fire skills or curses at the same time.',
+            'ar' => '[تحرق]{burn} العدو بنيران جبارة لمدة :x ثواني. يمكن استخدامها مع مهارات النيران الأخرى أو الغضب بنفس الوقت.',
+            'en' => '[Burn]{burn} the enemy by the strong power of the fire for :x seconds. It can be used with other fire skills or curses at the same time.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -558,8 +558,8 @@ return [
         'id' => 138,
         'name' => ['ar' => 'التخفي', 'en' => 'Invisibility'],
         'description' => [
-            'ar' => 'مهارة تمكنك من إخفاء نفسك لمدة :x ثواني. وتزداد المسافة التي لا يتعرف بها أحد عليك، لكن في حال اقترابك كثيرا فيكتشفك الخصم.',
-            'en' => 'Chant the spell of invisibility to hide the body for :x seconds. Recognizable distance will increase, but if you come too close, you can be found.',
+            'ar' => 'مهارة تمكنك من [إخفاء نفسك]{stealth} لمدة :x ثواني. وتزداد المسافة التي لا يتعرف بها أحد عليك، لكن في حال اقترابك كثيرا فيكتشفك الخصم.',
+            'en' => 'Chant the spell of [invisibility]{stealth} to hide the body for :x seconds. Recognizable distance will increase, but if you come too close, you can be found.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -588,8 +588,8 @@ return [
         'id' => 139,
         'name' => ['ar' => 'شقاء العلاج', 'en' => 'Cursed Recovery'],
         'description' => [
-            'ar' => 'القي لعنة على عدوك لمدة :x دقائق. يتعرض عدوك لانخفاض بنسبة :y% من نقاط صحة الإسعاف بسبب اللعنة.',
-            'en' => 'Cast a cursed recovery spell on enemy for :x minutes. The enemy will have a decrease of :y% of the recover HP because of cursing.',
+            'ar' => 'القي لعنة على عدوك لمدة :x دقائق. يتعرض عدوك لانخفاض بنسبة :y% من [نقاط صحة الإسعاف]{heal-curse} بسبب اللعنة.',
+            'en' => 'Cast a cursed recovery spell on enemy for :x minutes. The enemy will have a decrease of :y% of the [recover HP]{heal-curse} because of cursing.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -652,8 +652,8 @@ return [
         'id' => 141,
         'name' => ['ar' => 'الهجوم الضار', 'en' => 'Countercurrent Recovery'],
         'description' => [
-            'ar' => 'ألحق :x% من ضرر الاسترداد بفرصة نجاح :y% عندما يحاول الشخص الملعون (الذي تم تطبيق مهارة شقاء العلاج عليه) أن يتعافى (الإسترداد أو الإسعاف).',
-            'en' => 'Inflict :x% damage of recovery for a :y% chance when the person who is cursed (cursed recovery applied on him) tries to recover.',
+            'ar' => 'ألحق :x% من ضرر الاسترداد بفرصة نجاح :y% عندما يحاول الشخص [الملعون]{heal-curse} (الذي تم تطبيق مهارة شقاء العلاج عليه) أن يتعافى (الإسترداد أو الإسعاف).',
+            'en' => 'Inflict :x% damage of recovery for a :y% chance when the person who is [cursed]{heal-curse} (cursed recovery applied on him) tries to recover.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -717,8 +717,8 @@ return [
         'id' => 143,
         'name' => ['ar' => 'الشقاء المهلك', 'en' => 'Witch\'s Curse'],
         'description' => [
-            'ar' => 'تصيب خصمك بنسبة :x% من الضرر. يتعرض الخصوم للعنة لمدة :y ثواني وبنسبة 95%.',
-            'en' => 'Inflict :x% splash damage on the enemies around the target with the curse of the witch J. Dunkin who was falsely killed in a witch hunt. The enemies are cursed for :y seconds with a 95% chance.',
+            'ar' => 'تصيب خصمك بنسبة :x% من الضرر. يتعرض الخصوم [للعنة]{curse} لمدة :y ثواني وبنسبة 95%.',
+            'en' => 'Inflict :x% splash damage on the enemies around the target with the curse of the witch J. Dunkin who was falsely killed in a witch hunt. The enemies are [cursed]{curse} for :y seconds with a 95% chance.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -751,8 +751,8 @@ return [
         'id' => 144,
         'name' => ['ar' => 'الاصابة النارية', 'en' => 'Curse of Fire'],
         'description' => [
-            'ar' => 'تقلل من مستوى المقاومة النارية بمقدار :x ولمدة 2 دقائق.',
-            'en' => 'Reduce fire resistance level by :x for 2 minutes.',
+            'ar' => 'تقلل من مستوى [المقاومة النارية]{fire-res-down} بمقدار :x ولمدة 2 دقائق.',
+            'en' => 'Reduce [fire resistance level]{fire-res-down} by :x for 2 minutes.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -783,8 +783,8 @@ return [
         'id' => 145,
         'name' => ['ar' => 'الاصابة الظلامية', 'en' => 'Curse of Darkness'],
         'description' => [
-            'ar' => 'تقلل من مستوى المقاومة الظلامية بمقدر :x لمدة 2 دقائق.',
-            'en' => 'Reduce darkness resistance level by :x for 2 minutes.',
+            'ar' => 'تقلل من مستوى [المقاومة الظلامية]{dark-res-down} بمقدر :x لمدة 2 دقائق.',
+            'en' => 'Reduce [darkness resistance level]{dark-res-down} by :x for 2 minutes.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -815,8 +815,8 @@ return [
         'id' => 146,
         'name' => ['ar' => 'ضربة الحياة أو الموت', 'en' => 'Life or Death Blow'],
         'description' => [
-            'ar' => 'تقوم بتحجير كل الأعداء من حولك باستهلاك نقاط الطاقة لديك بفرصة نجاح 95%. الأعداء المتحجرين لن يكونوا قادرين على الحركة أو الهجوم لمدة :x ثانية.',
-            'en' => 'Lapidify all the enemies around you by consuming all your MP with a 95% chance. The lapidified enemies cannot attack or move for :x seconds.',
+            'ar' => 'تقوم [بتحجير]{petrify} كل الأعداء من حولك باستهلاك نقاط الطاقة لديك بفرصة نجاح 95%. الأعداء المتحجرين لن يكونوا قادرين على الحركة أو الهجوم لمدة :x ثانية.',
+            'en' => '[Lapidify]{petrify} all the enemies around you by consuming all your MP with a 95% chance. The lapidified enemies cannot attack or move for :x seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -845,8 +845,8 @@ return [
         'id' => 147,
         'name' => ['ar' => 'العمل الخطير', 'en' => 'Dangerous Business'],
         'description' => [
-            'ar' => 'تنقص من مقدار نقاط الصحة بنسبة :x% من نقاط الصحة المتبقية كل 2 ثواني ولمدة 20 ثانية، ويزيد هجومك السحري بنسبة :y%. المهارة لا تستطيع قتلك. -- استنزاف نقاط الصحة يوقظك من النوم. --',
-            'en' => 'Decrease your HP by :x% of the remaining HP every 2 seconds for 20 seconds, and increase magic attack by :y%. Skill cannot kill you. -- The HP drain wakes you up from sleep. --',
+            'ar' => 'تنقص من مقدار [نقاط الصحة]{hp-drain} بنسبة :x% من نقاط الصحة المتبقية كل 2 ثواني ولمدة 20 ثانية، ويزيد [هجومك السحري]{magic-focus} بنسبة :y%. المهارة لا تستطيع قتلك. -- استنزاف نقاط الصحة يوقظك من [النوم]{sleep}. --',
+            'en' => 'Decrease your [HP]{hp-drain} by :x% of the remaining HP every 2 seconds for 20 seconds, and increase [magic attack]{magic-focus} by :y%. Skill cannot kill you. -- The HP drain wakes you up from [sleep]{sleep}. --',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -935,8 +935,8 @@ return [
         'id' => 150,
         'name' => ['ar' => 'الألم', 'en' => 'Pain'],
         'description' => [
-            'ar' => 'تهدد عدوك (الخوف) لمدة :x ثواني وتصيبه آلام متواصلة (اللعنة) لمدة :y ثانية.',
-            'en' => 'Threaten the enemy for :x seconds and give him unstoppable pain for :y seconds.',
+            'ar' => '[تهدد]{fear} عدوك لمدة :x ثواني وتصيبه [بآلام متواصلة]{curse} لمدة :y ثانية.',
+            'en' => '[Threaten the enemy]{fear} for :x seconds and give him [unstoppable pain]{curse} for :y seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -1063,8 +1063,8 @@ return [
         'id' => 154,
         'name' => ['ar' => 'الطاقة المدعمة', 'en' => 'Enhanced Energy'],
         'description' => [
-            'ar' => 'زيادة طاقة اللاعب بنسبة :x%. مع أن هذه الزيادة لا تتضمن النقاط المضافة من الدروع والمهارات الأخرى.',
-            'en' => 'Inject the magic power to the target to increase energy point by :x%. However this skill does not include the points increased for items or other skills.',
+            'ar' => 'زيادة [طاقة اللاعب]{energy-blessing} بنسبة :x%. مع أن هذه الزيادة لا تتضمن النقاط المضافة من الدروع والمهارات الأخرى.',
+            'en' => 'Inject the magic power to the target to increase [energy point]{energy-blessing} by :x%. However this skill does not include the points increased for items or other skills.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -1284,8 +1284,8 @@ return [
         'id' => 161,
         'name' => ['ar' => 'طاقة الفريق المدعمة', 'en' => 'Enhanced Party Energy'],
         'description' => [
-            'ar' => 'تزيد نقاط الطاقة لدى أعضاء الفريق بنسبة :x%، وهذه المهارة لا تطبق إلا عندما تكون ضمن فريق.',
-            'en' => 'Increase your party members energy by :x%. This skill can only be used in a party.',
+            'ar' => 'تزيد [نقاط الطاقة]{energy-blessing} لدى أعضاء الفريق بنسبة :x%، وهذه المهارة لا تطبق إلا عندما تكون ضمن فريق.',
+            'en' => 'Increase your party members [energy]{energy-blessing} by :x%. This skill can only be used in a party.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -1314,8 +1314,8 @@ return [
         'id' => 162,
         'name' => ['ar' => 'بودرة الأحلام', 'en' => 'Dream Witcheryer'],
         'description' => [
-            'ar' => 'تقوم برش بودرة الأحلام في حال وجود أي من المزعجين عندها ينام العدو لمدة :x ثانية وبنسبة :y%، لكن العدو يستيقظ عند تعرضه لأي هجوم.',
-            'en' => 'Sprinkle the dream powder if there\'s a trouble maker. It makes an enemy fall asleep for :x seconds with a :y% chance. However, the enemy will awake when attacked.',
+            'ar' => 'تقوم برش بودرة الأحلام في حال وجود أي من المزعجين عندها [ينام]{sleep} العدو لمدة :x ثانية وبنسبة :y%، لكن العدو يستيقظ عند تعرضه لأي هجوم.',
+            'en' => 'Sprinkle the dream powder if there\'s a trouble maker. It makes an enemy [fall asleep]{sleep} for :x seconds with a :y% chance. However, the enemy will awake when attacked.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -1378,8 +1378,8 @@ return [
         'id' => 164,
         'name' => ['ar' => 'الإزالة', 'en' => 'Dispel'],
         'description' => [
-            'ar' => 'إزالة حالة DOT (ضرر مع مرور الوقت كالنزيف، الحريق، اللعنة، التسمم) بنسبة 100%، عدد الإزالات :x.',
-            'en' => 'Remove DOT Status at 100%. Number of Status removed :x.',
+            'ar' => 'إزالة حالة DOT (ضرر مع مرور الوقت [كالنزيف]{bleed}، [الحريق]{burn}، [اللعنة]{curse}، [التسمم]{poison}، [العدوى القاتلة]{infection}) بنسبة 100%، عدد الإزالات :x.',
+            'en' => 'Remove DOT Status (damage over time such as [bleeding]{bleed}, [burning]{burn}, [curse]{curse}, [poison]{poison}, [infection]{infection}) at 100%. Number of Status removed :x.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -1477,8 +1477,8 @@ return [
         'id' => 167,
         'name' => ['ar' => 'قنبلة الرعد', 'en' => 'Thunder Bomb'],
         'description' => [
-            'ar' => 'تهاجم الخصم بنسبة :x% من هجومك السحري، وتمنع العدو من استعمال أي مهارة سحرية لمدة 6 ثواني وبنسبة نجاح :y%.',
-            'en' => 'Summon a mark in the air to inflict :x% of your magic attack on your enemy. Prevent your enemy from using spells for 6 seconds with a :y% chance.',
+            'ar' => 'تهاجم الخصم بنسبة :x% من هجومك السحري، مع فرصة نجاح :y% لإصابته [بالصمت]{silence} لمدة 6 ثواني، فلا يستطيع استعمال المهارات السحرية.',
+            'en' => 'Summon a mark in the air to inflict :x% of your magic attack on your enemy, with a :y% chance to [silence]{silence} them for 6 seconds so they cannot use magic skills.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -1599,8 +1599,8 @@ return [
         'id' => 171,
         'name' => ['ar' => 'التطهير', 'en' => 'Purification'],
         'description' => [
-            'ar' => 'تلغي كل الضرر السحري والقاتل وتحوله إلى نقاط صحة لمدة :x ثواني، لكن لن تلغي الضرر المستديم (DOT).',
-            'en' => 'Cancel all magical and fatal damage and convert it to the HP for :x seconds. However, it does not cancel DOT damage.',
+            'ar' => 'تلغي كل الضرر السحري والقاتل [وتحوله إلى نقاط صحة]{magic-conversion} لمدة :x ثواني، لكن لن تلغي الضرر المستديم (DOT).',
+            'en' => 'Cancel all magical and fatal damage and [convert it to the HP]{magic-conversion} for :x seconds. However, it does not cancel DOT damage.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2028,8 +2028,8 @@ return [
         'id' => 185,
         'name' => ['ar' => 'اللمسة السحرية', 'en' => 'Healing Light'],
         'description' => [
-            'ar' => 'تتمتع الشخصية التي تستخدم هذه المهارة بالحماية عند استخدامه أي مهارة من مهارات الإسعاف. لديها نفس التأثير من مهارة الحماية.',
-            'en' => 'Character under the spell will be protected. If he received the healing kinds spell effect it has the same effect has common protection.',
+            'ar' => 'تتمتع الشخصية التي تستخدم هذه المهارة [بالحماية]{healing-light} عند استخدامه أي مهارة من مهارات الإسعاف. لديها نفس التأثير من مهارة الحماية.',
+            'en' => 'Character under the spell will be [protected]{healing-light}. If he received the healing kinds spell effect it has the same effect has common protection.',
         ],
         'levels' => null,
         'image' => 'mage/heavenly_light/healing_light.webp',
@@ -2055,8 +2055,8 @@ return [
         'id' => 186,
         'name' => ['ar' => 'شفرة الرياح', 'en' => 'Wind Blade'],
         'description' => [
-            'ar' => 'تصيب العدو بضرر نسبته :x% من هجومك السحري على مرتين. تقلل من سرعة هجوم الهدف بنسبة :y% ومن سرعة حركته بنسبة :z% لمدة 15 ثانية وبفرصة نجاح 50%.',
-            'en' => 'Create a sharp blade with a strong wind and inflict twice :x% of your magic attack on the enemy. Decrease the target\'s attack speed by :y% and moving speed by :z% for 15 seconds with a 50% chance.',
+            'ar' => 'تصيب العدو بضرر نسبته :x% من هجومك السحري على مرتين. تقلل من [سرعة هجوم الهدف]{attack-slow} بنسبة :y% ومن [سرعة حركته]{slow} بنسبة :z% لمدة 15 ثانية وبفرصة نجاح 50%.',
+            'en' => 'Create a sharp blade with a strong wind and inflict twice :x% of your magic attack on the enemy. Decrease the target\'s [attack speed]{attack-slow} by :y% and [moving speed]{slow} by :z% for 15 seconds with a 50% chance.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -2089,8 +2089,8 @@ return [
         'id' => 187,
         'name' => ['ar' => 'زلزال', 'en' => 'Earthquake'],
         'description' => [
-            'ar' => 'تعطي ضرر :x% من هجومك السحري على العدو عبر إحداث زلزال، وتغشي العدو لمدة 2 ثواني وبنسبة :y%.',
-            'en' => 'Inflict :x% of the magic attack on the enemy by causing earthquakes. Stun the opponent for 2 seconds with :y% chance.',
+            'ar' => 'تعطي ضرر :x% من هجومك السحري على العدو عبر إحداث زلزال، [وتغشي]{stun} العدو لمدة 2 ثواني وبنسبة :y%.',
+            'en' => 'Inflict :x% of the magic attack on the enemy by causing earthquakes. [Stun]{stun} the opponent for 2 seconds with :y% chance.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -2123,8 +2123,8 @@ return [
         'id' => 188,
         'name' => ['ar' => 'الصبر', 'en' => 'Patience'],
         'description' => [
-            'ar' => 'اكتسب القدرة على تحمل الألم بزيادة الحد الأقصى لنقاط الصحة بنسبة :x%.',
-            'en' => 'Gain the power to endure the pain to increase your maximum hp by :x%.',
+            'ar' => 'اكتسب القدرة على تحمل الألم بزيادة [الحد الأقصى لنقاط الصحة]{hp-increase} بنسبة :x%.',
+            'en' => 'Gain the power to endure the pain to increase your [maximum hp]{hp-increase} by :x%.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2157,8 +2157,8 @@ return [
         'id' => 189,
         'name' => ['ar' => 'دوامات الماء', 'en' => 'Ice Pillar'],
         'description' => [
-            'ar' => 'تصيب الخصوم من حولك بنسبة 100% من هجومك السحري. تجمد العدو لمدة :x ثواني وبنسبة :y%.',
-            'en' => 'Summon a swirl water to inflict 100% of magic attack on the enemies around you. Freeze your enemies for :x seconds with :y% chance.',
+            'ar' => 'تصيب الخصوم من حولك بنسبة 100% من هجومك السحري. [تجمد]{freeze} العدو لمدة :x ثواني وبنسبة :y%.',
+            'en' => 'Summon a swirl water to inflict 100% of magic attack on the enemies around you. [Freeze]{freeze} your enemies for :x seconds with :y% chance.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -2191,8 +2191,8 @@ return [
         'id' => 190,
         'name' => ['ar' => 'سرعة الهجوم', 'en' => 'Haste'],
         'description' => [
-            'ar' => 'تمنح طاقة سحرية لأي لاعب كي تزيد من سرعة هجومه بنسبة :x% (تعمل على الهجوم العادي بالسلاح وليس على المهارات).',
-            'en' => 'Give your magic power to a player to increase the player\'s attack speed by :x%.',
+            'ar' => 'تمنح طاقة سحرية لأي لاعب كي تزيد من [سرعة هجومه]{attack-speed-up} بنسبة :x% (تعمل على الهجوم العادي بالسلاح وليس على المهارات).',
+            'en' => 'Give your magic power to a player to increase the player\'s [attack speed]{attack-speed-up} by :x%.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2225,8 +2225,8 @@ return [
         'id' => 191,
         'name' => ['ar' => 'صبر الفريق', 'en' => 'Party Patience'],
         'description' => [
-            'ar' => 'زيادة نقاط الصحة عند كامل الفريق بنسبة :x%. هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
-            'en' => 'Increase all your party members maximum hp by :x%. This skill can only be used in party.',
+            'ar' => 'زيادة [نقاط الصحة]{hp-increase} عند كامل الفريق بنسبة :x%. هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
+            'en' => 'Increase all your party members [maximum hp]{hp-increase} by :x%. This skill can only be used in party.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2255,8 +2255,8 @@ return [
         'id' => 192,
         'name' => ['ar' => 'حماية', 'en' => 'Protection'],
         'description' => [
-            'ar' => 'حماية تمتص :x% نسبة من الحد الأقصى لنقاط الطاقة، تستمر الحماية لمدة دقيقة واحدة وتمتص 20% من كل هجوم.',
-            'en' => 'A protection is created to absorb damage which is equal to :x% of max MP. The protection lasts for 1 minute and 20% of each attack will be absorbed.',
+            'ar' => '[حماية]{protection-shield} تمتص :x% نسبة من الحد الأقصى لنقاط الطاقة، تستمر الحماية لمدة دقيقة واحدة وتمتص 20% من كل هجوم.',
+            'en' => 'A [protection]{protection-shield} is created to absorb damage which is equal to :x% of max MP. The protection lasts for 1 minute and 20% of each attack will be absorbed.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2289,8 +2289,8 @@ return [
         'id' => 193,
         'name' => ['ar' => 'درع الثلج', 'en' => 'Ice Shield'],
         'description' => [
-            'ar' => 'تلغي الإغشاء والخوف عندما تجمد نفسك لمدة :x ثانية، وعندها لن أحد قادرا على الهجوم عليك خلال هذا الوقت.',
-            'en' => 'Cancel stun and fear by casting freeze on oneself for :x seconds. No attack can be made or taken during this time',
+            'ar' => 'تلغي [الإغشاء]{stun} [والخوف]{fear} عندما [تجمد]{freezing-escape} نفسك لمدة :x ثانية، وعندها لن يكون أحد قادرا على الهجوم عليك خلال هذا الوقت.',
+            'en' => 'Cancel [stun]{stun} and [fear]{fear} by casting [freeze]{freezing-escape} on oneself for :x seconds. No attack can be made or taken during this time.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2319,8 +2319,8 @@ return [
         'id' => 194,
         'name' => ['ar' => 'سرعة هجوم الفريق', 'en' => 'Party Haste'],
         'description' => [
-            'ar' => 'تزيد سرعة الهجوم العادي (وليس المهارات) عند كافة أعضاء الفريق بنسبة :x%. هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
-            'en' => 'Increase your party members attack speed by :x%. This skill can only be used in party.',
+            'ar' => 'تزيد [سرعة الهجوم العادي]{attack-speed-up} (وليس المهارات) عند كافة أعضاء الفريق بنسبة :x%. هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
+            'en' => 'Increase your party members [attack speed]{attack-speed-up} by :x%. This skill can only be used in party.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2481,8 +2481,8 @@ return [
         'id' => 199,
         'name' => ['ar' => 'التركيز السحري', 'en' => 'Magic Concentration'],
         'description' => [
-            'ar' => 'تستجمع كل تركيزك لتقليل من استهلاك الطاقة لديك نسبة :x% ولمدة 4 دقائق و30 ثانية. يمكن استخدامها مع مهارة الإنارة المادية بنفس الوقت.',
-            'en' => 'Instantly concentrate your magic power to reduce your MP consumption by :x% for 4 minutes 30 seconds. It can be used with Elemental Enlightenment at the same time.',
+            'ar' => 'تستجمع كل تركيزك لتقليل من [استهلاك الطاقة]{mana-shock} لديك نسبة :x% ولمدة 4 دقائق و30 ثانية. يمكن استخدامها مع مهارة الإنارة المادية بنفس الوقت.',
+            'en' => 'Instantly concentrate your magic power to reduce your [MP consumption]{mana-shock} by :x% for 4 minutes 30 seconds. It can be used with Elemental Enlightenment at the same time.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2512,8 +2512,8 @@ return [
         'id' => 200,
         'name' => ['ar' => 'الإستفزاز الدموي', 'en' => 'Bloody Provocation'],
         'description' => [
-            'ar' => 'استدعي عاصفة من الدم لتسبب ضرر للعدو بنسبة :x% من هجومك السحري، بالإضافة إلى تنويم العدو لمدة 8 ثواني وبفرصة نجاح نسبتها :y%.',
-            'en' => 'Summon a storm of blood to inflict :x% of magic attack on the enemies around you. In addition, make the enemies fall asleep for 8 seconds with a :y% chance.',
+            'ar' => 'استدعي عاصفة من الدم لتسبب ضرر للعدو بنسبة :x% من هجومك السحري، بالإضافة إلى [تنويم]{sleep} العدو لمدة 8 ثواني وبفرصة نجاح نسبتها :y%.',
+            'en' => 'Summon a storm of blood to inflict :x% of magic attack on the enemies around you. In addition, make the enemies [fall asleep]{sleep} for 8 seconds with a :y% chance.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -2577,8 +2577,8 @@ return [
         'id' => 202,
         'name' => ['ar' => 'الغطاء', 'en' => 'Cover Up'],
         'description' => [
-            'ar' => 'استخدم مهارة الغطاء لتقليل مستوى تهديد المهارات بنسبة :x% ولمدة :y دقائق و:z ثانية.',
-            'en' => 'Cast the spell to reduce the threat level of skills by :x% for :y minutes :z seconds.',
+            'ar' => 'استخدم مهارة الغطاء لتقليل [مستوى تهديد المهارات]{aggro-reduction} بنسبة :x% ولمدة :y دقائق و:z ثانية.',
+            'en' => 'Cast the spell to reduce the [threat level of skills]{aggro-reduction} by :x% for :y minutes :z seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -2641,8 +2641,8 @@ return [
         'id' => 204,
         'name' => ['ar' => 'الاستعادة السريعة للطاقة', 'en' => 'Rapid Mana Recovery'],
         'description' => [
-            'ar' => 'إحدى المهارات السحرية الرائعة التي يستخدمها الحكماء الأقوياء لإستعادة نقاط الطاقة عند اللاعب بمقدار :x في كل :y ثواني ولمدة :z ثانية.',
-            'en' => 'This is one of the high level spells used by advanced sorcerers to rapidly regenerate a player\'s mana for :x at every :y seconds for :z seconds',
+            'ar' => 'إحدى المهارات السحرية الرائعة التي يستخدمها الحكماء الأقوياء لإستعادة [نقاط الطاقة]{mana-recovery} عند اللاعب بمقدار :x في كل :y ثواني ولمدة :z ثانية.',
+            'en' => 'This is one of the high level spells used by advanced sorcerers to rapidly regenerate a player\'s [mana]{mana-recovery} for :x at every :y seconds for :z seconds',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -2671,8 +2671,8 @@ return [
         'id' => 205,
         'name' => ['ar' => 'نعمة الإستعادة', 'en' => 'Blessed Recovery'],
         'description' => [
-            'ar' => 'امنح نفسك البركة لزيادة العلاج الذي تتلقاه بنسبة :x% من مهارات الإسعاف، الإسترداد أو الترياق.',
-            'en' => 'Bless yourself to increase the amount of regeneration by :x% when getting healing, recovery or using potion.',
+            'ar' => 'امنح نفسك البركة لزيادة [العلاج الذي تتلقاه]{blessed-healing} بنسبة :x% من مهارات الإسعاف، الإسترداد أو الترياق.',
+            'en' => 'Bless yourself to increase the [amount of regeneration]{blessed-healing} by :x% when getting healing, recovery or using potion.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2737,8 +2737,8 @@ return [
         'id' => 207,
         'name' => ['ar' => 'العلاج المفيد', 'en' => 'Mental Cure'],
         'description' => [
-            'ar' => 'تلغي الصعق، الإغشاء، النوم والصمت. لكنها لا تلغي التجميد والتحجير، ولا يمكن للشخص أن يستخدمها على نفسه ولا حتى إلغاء DOT (ضرر مع مرور الوقت).',
-            'en' => 'Cancel Stun, Sleep and Silence. It cannot be used on oneself and it cannot cancel DOT (Damage Over Time).',
+            'ar' => 'تلغي [الصعق]{stun}، [النوم]{sleep} [والصمت]{silence}. لكنها لا تلغي [التجميد]{freeze} [والتحجير]{petrify}، ولا يمكن للشخص أن يستخدمها على نفسه ولا حتى إلغاء DOT (ضرر مع مرور الوقت).',
+            'en' => 'Cancel [Stun]{stun}, [Sleep]{sleep} and [Silence]{silence}. It cannot be used on oneself and it cannot cancel DOT (Damage Over Time).',
         ],
         'levels' => null,
         'image' => 'mage/flooded_land/mental_cure.webp',
@@ -2764,8 +2764,8 @@ return [
         'id' => 208,
         'name' => ['ar' => 'حماية الفريق', 'en' => 'Party Protection'],
         'description' => [
-            'ar' => 'مهارة تستخدم فقط لأعضاء الفريق, يستعيد كل أعضاء الفريق نقاط صحة بمقدار :x كل 2 ثواني، ويتم امتصاص :y من الضرر كل 30 ثانية. لا يمكن استخدامها مع مهارة الحماية، والمهارة لها نسبة تهديد عالية.',
-            'en' => 'Recover all party members HP by :x every 2 seconds and absorb :y damage for 30 seconds. However, it cannot be used with other protection and it has a high threat ratio.',
+            'ar' => 'مهارة تستخدم فقط لأعضاء الفريق, يستعيد كل أعضاء الفريق نقاط صحة بمقدار :x كل 2 ثواني، ويتم [امتصاص :y من الضرر]{party-protection} كل 30 ثانية. لا يمكن استخدامها مع مهارة الحماية، والمهارة لها نسبة تهديد عالية.',
+            'en' => 'Recover all party members HP by :x every 2 seconds and [absorb :y damage]{party-protection} for 30 seconds. However, it cannot be used with other protection and it has a high threat ratio.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -2794,8 +2794,8 @@ return [
         'id' => 209,
         'name' => ['ar' => 'تجارة الشر', 'en' => 'Pact with the Angel of Death'],
         'description' => [
-            'ar' => 'تلغي كل الضرر الجسدي والقاتل وتحوله إلى نقاط صحة لمدة :x ثواني، لكن لن تلغي الضرر المستديم (DOT).',
-            'en' => 'Cancel all physical and fatal damage and convert it to HP for :x seconds. DOT Damage are not included.',
+            'ar' => 'تلغي كل الضرر الجسدي والقاتل [وتحوله إلى نقاط صحة]{physical-conversion} لمدة :x ثواني، لكن لن تلغي الضرر المستديم (DOT).',
+            'en' => 'Cancel all physical and fatal damage and [convert it to HP]{physical-conversion} for :x seconds. DOT Damage are not included.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2824,8 +2824,8 @@ return [
         'id' => 210,
         'name' => ['ar' => 'الأمنية الأخيرة', 'en' => 'Final Wish'],
         'description' => [
-            'ar' => 'عندما تموت يتم إنعاش كل أعضاء الفريق وإعطائهم :x نقاط صحة في الحال مع فرصة نجاح :y%، كما يتم حمايتهم ببركة الملاك الحارس لمدة :z دقيقة.',
-            'en' => 'When you die, it will heal all your party members HP by :x instantly with a :y% chance. Also they will be protected by the guardian angel\'s blessing for :z minutes.',
+            'ar' => 'عندما تموت يتم إنعاش كل أعضاء الفريق وإعطائهم :x نقاط صحة في الحال مع فرصة نجاح :y%، كما يتم حمايتهم [ببركة الملاك الحارس]{upgraded-shield} لمدة :z دقيقة.',
+            'en' => 'When you die, it will heal all your party members HP by :x instantly with a :y% chance. Also they will be protected by the [guardian angel\'s blessing]{upgraded-shield} for :z minutes.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -2854,8 +2854,8 @@ return [
         'id' => 211,
         'name' => ['ar' => 'جدار الحماية', 'en' => 'Guardian Wall'],
         'description' => [
-            'ar' => 'يمتص جدار الحماية مقدار :x من الضرر. يستمر هذا الجدار لمدة 2 دقائق ويمتص 20% من كل ضربة، لا يمكن استخدامها مع مهارة الحماية.',
-            'en' => 'A Guardian wall is created which can absorb a total of :x damage. This wall last for 2 minutes and absorb 20% of each attacks. Cannot be used with protection skill.',
+            'ar' => 'يمتص [جدار الحماية]{guarding-wall} مقدار :x من الضرر. يستمر هذا الجدار لمدة 2 دقائق ويمتص 20% من كل ضربة، لا يمكن استخدامها مع مهارة الحماية.',
+            'en' => 'A [Guardian wall]{guarding-wall} is created which can absorb a total of :x damage. This wall last for 2 minutes and absorb 20% of each attacks. Cannot be used with protection skill.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2888,8 +2888,8 @@ return [
         'id' => 212,
         'name' => ['ar' => 'الفخ الترابي', 'en' => 'Sand Trap'],
         'description' => [
-            'ar' => 'تسبب إرتجاجا عنيفا وضررا بنسبة 100% من هجومك السحري للأعداء المحيطين بك، بالإضافة إلى صعق العدو وإغشائه لمدة :x ثواني وبنسبة نجاح :y%.',
-            'en' => 'Shake the earth to inflict 100% of the magic attack on the enemies around you. In addition, stun the enemies for :x seconds for :y%.',
+            'ar' => 'تسبب إرتجاجا عنيفا وضررا بنسبة 100% من هجومك السحري للأعداء المحيطين بك، بالإضافة إلى [صعق]{stun} العدو وإغشائه لمدة :x ثواني وبنسبة نجاح :y%.',
+            'en' => 'Shake the earth to inflict 100% of the magic attack on the enemies around you. In addition, [stun]{stun} the enemies for :x seconds for :y%.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -2922,8 +2922,8 @@ return [
         'id' => 213,
         'name' => ['ar' => 'ختم الجليد', 'en' => 'Ice Seal'],
         'description' => [
-            'ar' => 'تجمد عدوك لمدة :x ثانية. هذه المهارة لا يمكن للشخص أن يستخدمها على نفسه.',
-            'en' => 'Freeze the opponent to trap for :x seconds. But it cannot be used for oneself.',
+            'ar' => 'تُستخدم [لتجميد]{freeze} الحلفاء لمدة :x ثانية لحمايتهم من هجمات الأعداء، ولا يمكن استخدامها على الأعداء.',
+            'en' => 'Used to [freeze]{freeze} allies for :x seconds to protect them from enemy attacks, cannot be used on enemies.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -2952,8 +2952,8 @@ return [
         'id' => 214,
         'name' => ['ar' => 'العلاج الشامل للفريق', 'en' => 'Party Mental Cure'],
         'description' => [
-            'ar' => 'لمعالجة الإغشاء والتجميد والتحجير والنوم والخوف عند أعضاء الفريق',
-            'en' => 'In usable highest grade skill when is party, remove perfectly stun, freezing, sleep, fear, lapidify, more than state of silence that take to party circle whole.',
+            'ar' => 'تعالج فورا أعضاء الفريق في المنطقة من [الإغشاء]{stun} [والتجميد]{freeze} [والنوم]{sleep} [والخوف]{fear} [والتحجير]{petrify} [والصمت]{silence}. هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
+            'en' => 'Instantly cures party members in the area of [stun]{stun}, [freezing]{freeze}, [sleep]{sleep}, [fear]{fear}, [petrification]{petrify} and [silence]{silence}. This skill can only be used in a party.',
         ],
         'levels' => null,
         'image' => 'mage/flooded_land/party_mental_cure.webp',
@@ -3009,8 +3009,8 @@ return [
         'id' => 216,
         'name' => ['ar' => 'تعزيز سرعة هجوم الفريق', 'en' => 'Enhanced Party Haste'],
         'description' => [
-            'ar' => 'المقدام يمكنه زيادة سرعة الهجوم العادي (وليس المهارات) بنسبة :x% لتخفيف مقاومة الهواء حول الفريق. هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
-            'en' => 'Mighty Archmage can increase the attack speed :x% to reduce the resistance of Air around their party. This skill can be used only when you\'re in a party.',
+            'ar' => 'المقدام يمكنه زيادة [سرعة الهجوم العادي]{attack-speed-up} (وليس المهارات) بنسبة :x% لتخفيف مقاومة الهواء حول الفريق. هذه المهارة لا تستخدم إلا عندما تكون ضمن فريق.',
+            'en' => 'Mighty Archmage can increase the [attack speed]{attack-speed-up} :x% to reduce the resistance of Air around their party. This skill can be used only when you\'re in a party.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -3230,8 +3230,8 @@ return [
         'id' => 223,
         'name' => ['ar' => 'تحرير الظلام', 'en' => 'Dark Release'],
         'description' => [
-            'ar' => 'جعل نفسك مركزا للهجوم على الوحوش المحيطة بالخصائص الظلامية بنسبة :x% من الضرر السحري، وتقليل سرعة هجومهم بنسبة :y% لمدة :z ثانية.',
-            'en' => 'Sets self as the center and attacks surrounding enemies with a dark attribute attack which does :x% magical damage. Decreases enemies\' attack speed by :y% for :z seconds.',
+            'ar' => 'جعل نفسك مركزا للهجوم على الوحوش المحيطة بالخصائص الظلامية بنسبة :x% من الضرر السحري، وتقليل كل [إحصائياتهم]{decreased-morale} (القوة، الحظ، الذكاء...) بنسبة :y% لمدة :z ثانية.',
+            'en' => 'Sets self as the center and attacks surrounding enemies with a dark attribute attack which does :x% magical damage. Decreases all enemies\' [stats]{decreased-morale} (Strength, Luck, Intelligence...) by :y% for :z seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -3295,8 +3295,8 @@ return [
         'id' => 225,
         'name' => ['ar' => 'الرذاذ', 'en' => 'Spray'],
         'description' => [
-            'ar' => 'مهاجمة الهدف وكل الأعداء المحيطين بنسبة :x% من الضرر السحري، وتقليل سرعة هجومهم بنسبة :y% لمدة :z ثانية.',
-            'en' => 'Attacks the target and all surrounding enemies with :x% magical damage and decreases their attack speed by :y% for :z seconds.',
+            'ar' => 'مهاجمة الهدف وكل الأعداء المحيطين بنسبة :x% من الضرر السحري، وتقليل [سرعة هجومهم]{attack-slow} بنسبة :y% لمدة :z ثانية.',
+            'en' => 'Attacks the target and all surrounding enemies with :x% magical damage and decreases their [attack speed]{attack-slow} by :y% for :z seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -3329,8 +3329,8 @@ return [
         'id' => 226,
         'name' => ['ar' => 'الاستيعاب الوهاج', 'en' => 'Radiant Understanding'],
         'description' => [
-            'ar' => 'إصابة الهدف بضرر مناخي نسبته :x% من الهجوم السحري، وتقليل سرعة حركته بنسبة :y% لمدة :z ثانية.',
-            'en' => 'Damages the target with a climate attribute attack that does :x% magical damage and decreases its movement speed by :y% for :z seconds.',
+            'ar' => 'إصابة الهدف بضرر مناخي نسبته :x% من الهجوم السحري، وتقليل [سرعة حركته]{slow} بنسبة :y% لمدة :z ثانية.',
+            'en' => 'Damages the target with a climate attribute attack that does :x% magical damage and decreases its [movement speed]{slow} by :y% for :z seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
@@ -3363,8 +3363,8 @@ return [
         'id' => 227,
         'name' => ['ar' => 'لهيب التفجير', 'en' => 'Flame Explosion'],
         'description' => [
-            'ar' => 'إصابة الهدف بضرر ناري نسبته :x% من الهجوم السحري، ويزداد الضرر بنسبة :y% إذا كان الهدف محترقا.',
-            'en' => 'Damages the target with a fire attribute attack that does :x% magical damage. The damage is increased by :y% when the target is burning.',
+            'ar' => 'إصابة الهدف بضرر ناري نسبته :x% من الهجوم السحري، ويزداد الضرر بنسبة :y% إذا كان الهدف [محترقا]{flame}{burn}.',
+            'en' => 'Damages the target with a fire attribute attack that does :x% magical damage. The damage is increased by :y% when the target is [burning]{flame}{burn}.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0],
@@ -3527,8 +3527,8 @@ return [
         'id' => 232,
         'name' => ['ar' => 'برعم الحياة', 'en' => 'Origin of Life'],
         'description' => [
-            'ar' => 'زيادة نسبة الاستعادة بنسبة :x% لمدة 3 دقائق، وخلال هذا التأثير تمنع نقاط صحتك من الوصول إلى الصفر لمرة واحدة. يزول هذا التأثير بمجرد تفعيل منع الموت.',
-            'en' => 'Increases the amount of recovery by :x% for 3 minutes. While this effect is in place, it will prevent the character\'s HP from dropping to zero one time. This effect disappears once the death prevention is applied.',
+            'ar' => 'زيادة [نسبة الاستعادة]{life-vitality} بنسبة :x% لمدة 3 دقائق، وخلال هذا التأثير [تمنع نقاط صحتك من الوصول إلى الصفر لمرة واحدة]{life-protection}. يزول هذا التأثير بمجرد تفعيل منع الموت.',
+            'en' => 'Increases the [amount of recovery]{life-vitality} by :x% for 3 minutes. While this effect is in place, it will [prevent the character\'s HP from dropping to zero one time]{life-protection}. This effect disappears once the death prevention is applied.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -3624,8 +3624,8 @@ return [
         'id' => 235,
         'name' => ['ar' => 'حد اللهب', 'en' => 'Hell\'s Blaze'],
         'description' => [
-            'ar' => 'زيادة الضرر الناري والظلامي عند الهدف بنسبة :x% عند استخدام المهارات النارية والظلامية.',
-            'en' => 'Increases fire and darkness damage to the target by :x% when using fire or darkness attribute skills.',
+            'ar' => 'زيادة [الضرر الناري]{mighty-flame} [والظلامي]{deep-darkness} عند الهدف بنسبة :x% عند استخدام المهارات النارية والظلامية.',
+            'en' => 'Increases [fire]{mighty-flame} and [darkness]{deep-darkness} damage to the target by :x% when using fire or darkness attribute skills.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -3689,8 +3689,8 @@ return [
         'id' => 237,
         'name' => ['ar' => 'نبع الحياة', 'en' => 'Life\'s Source'],
         'description' => [
-            'ar' => 'زيادة نسبة التعويض بنسبة :x% لمدة 3 دقائق لكل أعضاء الفريق، وخلال هذا التأثير تمنع وصول نقاط صحتهم إلى الصفر لمرة واحدة. يزول هذا التأثير بمجرد تفعيل منع الموت.',
-            'en' => 'Increases the amount of recovery by :x% for 3 minutes to all party members. While this effect is in place, it will prevent the character\'s HP from dropping to zero one time. This effect disappears once the death prevention is applied.',
+            'ar' => 'زيادة [نسبة التعويض]{life-vitality} بنسبة :x% لمدة 3 دقائق لكل أعضاء الفريق، وخلال هذا التأثير [تمنع وصول نقاط صحتهم إلى الصفر لمرة واحدة]{life-protection}. يزول هذا التأثير بمجرد تفعيل منع الموت.',
+            'en' => 'Increases the [amount of recovery]{life-vitality} by :x% for 3 minutes to all party members. While this effect is in place, it will [prevent the character\'s HP from dropping to zero one time]{life-protection}. This effect disappears once the death prevention is applied.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -3819,8 +3819,8 @@ return [
         'id' => 241,
         'name' => ['ar' => 'زيادة سرعة الإلقاء', 'en' => 'Increase Skill Casting Speed'],
         'description' => [
-            'ar' => 'عند الهجوم، فرصة 50% لزيادة سرعة إلقاء المهارات بنسبة :x% لمدة 60 ثانية.',
-            'en' => 'When you attack, 50% chance to increase your skill casting speed by :x% for 60 seconds.',
+            'ar' => 'عند الهجوم، فرصة 50% لزيادة [سرعة إلقاء المهارات]{cast-speed} بنسبة :x% لمدة 60 ثانية.',
+            'en' => 'When you attack, 50% chance to increase your [skill casting speed]{cast-speed} by :x% for 60 seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0],
@@ -3853,16 +3853,16 @@ return [
         'id' => 242,
         'name' => ['ar' => 'ثقب الظلام', 'en' => 'Dark Hole'],
         'description' => [
-            'ar' => 'جعل الهدف مركزا للهجوم بالسحر الأسود على الوحوش المحيطة بنسبة :x% من الضرر السحري، وتقليل سرعة حركتهم بنسبة :y% لمدة :z ثانية.',
-            'en' => 'Sets the target as the center and attacks surrounding enemies with dark magic, doing :x% magical damage and decreasing their movement speed by :y% for :z seconds.',
+            'ar' => 'جعل الهدف مركزا للهجوم بالسحر الأسود على الوحوش المحيطة بنسبة :x% من الضرر السحري، وإيقاعهم في [الفخ]{trap} لمدة :y ثانية.',
+            'en' => 'Sets the target as the center and attacks surrounding enemies with dark magic, doing :x% magical damage and [trapping]{trap} them for :y seconds.',
         ],
         'levels' => [
-            ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],
-            ['level' => 1, 'x' => 455, 'y' => 72, 'z' => 4],
-            ['level' => 2, 'x' => 535, 'y' => 84, 'z' => 6],
-            ['level' => 3, 'x' => 615, 'y' => 96, 'z' => 8],
-            ['level' => 4, 'x' => 695, 'y' => 108, 'z' => 10],
-            ['level' => 5, 'x' => 775, 'y' => 120, 'z' => 12],
+            ['level' => 0, 'x' => 0, 'y' => 0],
+            ['level' => 1, 'x' => 455, 'y' => 4],
+            ['level' => 2, 'x' => 535, 'y' => 6],
+            ['level' => 3, 'x' => 615, 'y' => 8],
+            ['level' => 4, 'x' => 695, 'y' => 10],
+            ['level' => 5, 'x' => 775, 'y' => 12],
         ],
         'image' => 'mage/fourth_job/dark_hole.webp',
         'skill_tree_id' => 8,
@@ -3918,8 +3918,8 @@ return [
         'id' => 244,
         'name' => ['ar' => 'الزلزال العظيم', 'en' => 'Grand Earthquake'],
         'description' => [
-            'ar' => 'جعل نفسك مركزا للهجوم على الوحوش المحيطة بالخصائص الأرضية لإحداث ضرر سحري نسبته :x%، ثم إصابتهم بضرر سحري نسبته :y% كل ثانية لمدة :z ثانية، وتكسب مناعة ضد الهجمات الجسدية والسحرية لمدة 7 ثوان.',
-            'en' => 'Sets self as the center and attacks surrounding enemies with an earth attribute attack which does :x% magical damage, then deals :y% magical damage every second for :z seconds. The user also becomes invincible to physical and magical attacks for 7 seconds.',
+            'ar' => 'جعل نفسك مركزا للهجوم على الوحوش المحيطة بالخصائص الأرضية لإحداث ضرر سحري نسبته :x%، ثم إصابتهم بضرر سحري نسبته :y% كل ثانية لمدة :z ثانية، وتكسب [مناعة ضد الهجمات الجسدية والسحرية]{immune-skills} لمدة 7 ثوان.',
+            'en' => 'Sets self as the center and attacks surrounding enemies with an earth attribute attack which does :x% magical damage, then deals :y% magical damage every second for :z seconds. The user also becomes [invincible to physical and magical attacks]{immune-skills} for 7 seconds.',
         ],
         'levels' => [
             ['level' => 0, 'x' => 0, 'y' => 0, 'z' => 0],

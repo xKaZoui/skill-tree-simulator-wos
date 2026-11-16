@@ -28,6 +28,8 @@ class SkillTreeController extends Controller
 
         $assets = [
             'tree' => asset('images/tree'),
+            'states' => asset('images/states'),
+            'state_colors' => config('states'),
             'orbs' => [
                 asset('images/tree/first_guardian.webp'),
                 asset('images/tree/second_guardian.webp'),

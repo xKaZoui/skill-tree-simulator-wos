@@ -46,6 +46,28 @@ class ChangeLogController extends Controller
         ]);
     }
 
+    // {state} tags become the game's state icon,
+    // [words]{state}: the words are underlined in the icon's colour
+    private function stateIcons(string $text): string
+    {
+        $colors = config('states');
+
+        return preg_replace_callback('/(?:\[([^\]]*)\])?(\{[a-z-]+\}(?:\s*\{[a-z-]+\})*)/', function (array $match) use ($colors): string {
+            preg_match_all('/\{([a-z-]+)\}/', $match[2], $tags);
+            $states = array_values(array_filter($tags[1], fn (string $state) => isset($colors[$state])));
+            $icons = array_map(function (string $state): string {
+                $info = trans()->has("states.{$state}") ? __("states.{$state}") : [];
+
+                return view('components.state-icon', ['state' => $state, ...$info])->render();
+            }, $states);
+            $words = $match[1] !== '' && $states
+                ? "<span class=\"underline decoration-2 underline-offset-4 {$colors[$states[0]]}\">{$match[1]}</span>"
+                : $match[1];
+
+            return $words.implode(' -', $icons);
+        }, $text);
+    }
+
     private function countByClass(Collection $rows): array
     {
         return collect(SkillTreeController::CLASSES)
@@ -69,7 +91,7 @@ class ChangeLogController extends Controller
                 'note' => $log->isNote(),
                 'up' => $log->is_up,
                 'buff' => $log->is_buff,
-                'text' => $log->description,
+                'text' => $this->stateIcons($log->description),
                 'before' => $log->isNote() ? [] : explode('/', (string) $log->first_part),
                 'after' => $log->isNote() ? [] : explode('/', (string) $log->second_part),
             ])->values()->all(),

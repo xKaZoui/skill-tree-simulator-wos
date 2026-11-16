@@ -320,6 +320,8 @@ export function skillTreePage(payload) {
                 locale: payload.locale,
                 treeName: treeNames.get(skill.treeId) ?? '',
                 required: requiredBy.get(skill.id) ?? [],
+                statesUrl: payload.assets.states,
+                stateColors: payload.assets.state_colors,
             });
         },
 
