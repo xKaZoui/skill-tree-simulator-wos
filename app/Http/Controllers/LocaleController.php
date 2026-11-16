@@ -9,11 +9,10 @@ class LocaleController extends Controller
 {
     public function __invoke(Request $request, string $locale): RedirectResponse
     {
-        session()->put('locale', $locale);
-
         $to = $request->query('to');
         $safe = is_string($to) && preg_match('#^/(?![/\\\\])#', $to);
 
-        return redirect()->to($safe ? $to : route('Home'));
+        return redirect()->to($safe ? $to : route('Home'))
+            ->withCookie(cookie()->forever('locale', $locale));
     }
 }

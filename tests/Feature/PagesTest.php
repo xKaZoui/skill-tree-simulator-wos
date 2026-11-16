@@ -11,8 +11,7 @@ it('opens in Arabic on a first visit, even for an English browser', function () 
     $this->withHeader('Accept-Language', 'en')
         ->get('/mage')
         ->assertOk()
-        ->assertSee('الساحر')
-        ->assertSessionHas('locale', 'ar');
+        ->assertSee('الساحر');
 });
 
 it('shows the three classes on the home page', function () {
@@ -38,11 +37,10 @@ it('returns 404 for an unknown class', function () {
 });
 
 it('shows the 404 page in the chosen language and keeps that language', function () {
-    $this->withSession(['locale' => 'ar'])
+    $this->withCookie('locale', 'ar')
         ->get('/no-such-page')
         ->assertNotFound()
-        ->assertSee('الصفحة غير موجودة')
-        ->assertSessionHas('locale', 'ar');
+        ->assertSee('الصفحة غير موجودة');
 });
 
 it('lists every patch on the change log, newest first', function () {
@@ -50,7 +48,7 @@ it('lists every patch on the change log, newest first', function () {
         ->map(fn ($dt) => Carbon::parse($dt)->locale('en')->translatedFormat('F j, Y'))
         ->all();
 
-    $this->withSession(['locale' => 'en'])
+    $this->withCookie('locale', 'en')
         ->get('/changelog')
         ->assertOk()
         ->assertSeeInOrder($dates);
@@ -60,9 +58,12 @@ it('goes back to the same page in English after a language switch', function () 
     $this->from('/mage')
         ->get('/locale/en?to=%2Fchangelog')
         ->assertRedirect('/changelog')
-        ->assertSessionHas('locale', 'en');
+        ->assertCookie('locale', 'en');
 
-    $this->get('/changelog')->assertOk();
+    $this->withCookie('locale', 'en')
+        ->get('/changelog')
+        ->assertOk()
+        ->assertSee('Change Log');
 });
 
 it('keeps the query string after a language switch', function () {
@@ -75,6 +76,13 @@ it('never redirects to another site after a language switch', function () {
         $this->get('/locale/en?to='.urlencode($to))->assertRedirect(route('Home'));
     }
     $this->get('/locale/en')->assertRedirect(route('Home'));
+});
+
+it('ignores an unknown language in the cookie', function () {
+    $this->withCookie('locale', 'xx')
+        ->get('/mage')
+        ->assertOk()
+        ->assertSee('الساحر');
 });
 
 it('the language link points back to the current page', function () {

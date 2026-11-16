@@ -5,7 +5,6 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Session;
 
 class LocaleMiddleware
 {
@@ -16,15 +15,14 @@ class LocaleMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        $supportedLocales = config('app.supported_locales');
-        $locale = Session::get('locale', config('app.locale'));
+        // the chosen language is kept in its own cookie (set by LocaleController)
+        $locale = $request->cookie('locale');
 
-        if (!array_key_exists($locale, $supportedLocales)) {
+        if (! is_string($locale) || ! array_key_exists($locale, config('app.supported_locales'))) {
             $locale = config('app.locale');
         }
 
         App::setLocale($locale);
-        Session::put('locale', $locale);
 
         return $next($request);
     }
